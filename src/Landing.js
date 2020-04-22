@@ -14,7 +14,10 @@ const Landing = () => {
       </Grid>
       <Grid item xs={12}>
         <Typography align="center" variant="h2">
-          {t("welcome")} Déborah <span role="img">👩‍🏫</span>
+          {t("welcome")} Déborah{" "}
+          <span role="img" aria-label="teacher">
+            👩‍🏫
+          </span>
         </Typography>
       </Grid>
     </Grid>
