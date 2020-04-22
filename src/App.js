@@ -1,18 +1,21 @@
+import "./i18n";
 import React from "react";
-import { Box, Container, Grid } from "@material-ui/core";
-import Logo from "./svg/Logo";
+import { Container, ThemeProvider } from "@material-ui/core";
+import { BrowserRouter as Router } from "react-router-dom";
+import theme from "./theme";
+import Landing from "./Landing";
+import LanguageChoice from "./LanguageChoice";
 
 const App = () => {
   return (
-    <Container>
-      <Grid container justify="center">
-        <Grid item xs={6}>
-          <Box mt={4}>
-            <Logo />
-          </Box>
-        </Grid>
-      </Grid>
-    </Container>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <Container>
+          <LanguageChoice />
+          <Landing />
+        </Container>
+      </Router>
+    </ThemeProvider>
   );
 };
 
