@@ -77,7 +77,7 @@ const SvgLogoTtc = styled(({ className }) => {
   },
   "&:hover": {
     "& .leafs": {
-      fill: "green",
+      fill: "#33D990",
     },
   },
 });
