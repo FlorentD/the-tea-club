@@ -8,11 +8,17 @@ i18n
       en: {
         translation: {
           welcome: "With",
+          map: {
+            title: "Where to find me",
+          },
         },
       },
       fr: {
         translation: {
           welcome: "Avec",
+          map: {
+            title: "Ou me trouver",
+          },
         },
       },
     },
