@@ -1,11 +1,9 @@
 import React from "react";
-import { ParallaxBanner } from "react-scroll-parallax";
 import {
   Container,
   Grid,
   Box,
   Typography,
-  Tooltip,
   makeStyles,
 } from "@material-ui/core";
 import { styled } from "@material-ui/core";
@@ -18,8 +16,6 @@ const useStyles = makeStyles({
     backgroundColor: "rgba(255,255,255,0.8)",
   },
 });
-
-const StyledParallax = styled(ParallaxBanner)({});
 
 const Text = styled(({ className }) => {
   const styles = useStyles();
