@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Grid, Typography } from "@material-ui/core";
 import Logo from "./svg/Logo";
 import { useTranslation } from "react-i18next";
+import Debo from "./svg/Debo";
 
 const Landing = () => {
   const { t } = useTranslation();
@@ -16,7 +17,7 @@ const Landing = () => {
         <Typography align="center" variant="h2">
           {t("welcome")} Déborah{" "}
           <span role="img" aria-label="teacher">
-            👩‍🏫
+            <Debo height={60} />
           </span>
         </Typography>
       </Grid>
