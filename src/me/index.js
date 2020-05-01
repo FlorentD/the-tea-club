@@ -9,15 +9,15 @@ import Today from "./today";
 
 const Me = () => {
   return (
-    <Box mt={10}>
+    <Box mt={{ xs: 5, md: 10 }}>
       <ParallaxProvider>
         <Childhood />
       </ParallaxProvider>
       <Studies />
-      <Box mb={10}>
+      <Box mb={{ xs: 5, md: 10 }}>
         <England />
       </Box>
-      <Box mb={10}>
+      <Box mb={{ xs: 5, md: 10 }}>
         <ParallaxProvider>
           <Teach />
         </ParallaxProvider>

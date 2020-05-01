@@ -24,8 +24,8 @@ const Text = styled(({ className }) => {
   const styles = useStyles();
   return (
     <Grid container className={className}>
-      <Grid item xs={8}>
-        <Box mt={10} p={5} className={styles.box}>
+      <Grid item xs={12} md={8}>
+        <Box mt={{ xs: 4, md: 10 }} p={{ xs: 2, md: 5 }} className={styles.box}>
           <Typography variant="h4" classes={styles}>
             A mon retour en France j’ai poursuivi mon autre passion, la
             pédagogie, en passant mon concours de professeur des écoles tout en

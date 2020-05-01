@@ -21,13 +21,18 @@ const Text = styled(({ className }) => {
   const styles = useStyles();
   return (
     <Grid container className={className}>
-      <Grid item xs={4}>
-        <Box p={5}>
+      <Grid item xs={12} md={4}>
+        <Box p={{ xs: 0, md: 5 }}>
           <Image src="/static/nantes.jpg" alt="Nantes" />
         </Box>
       </Grid>
-      <Grid item xs={8}>
-        <Box mb={5} p={10} pt={5} className={styles.box}>
+      <Grid item xs={12} md={8}>
+        <Box
+          mb={5}
+          p={{ xs: 0, md: 10 }}
+          pt={{ xs: 2, md: 5 }}
+          className={styles.box}
+        >
           <Typography variant="h4" classes={styles}>
             En 2018 je suis devenue maman d’une petite fille et afin de la
             suivre dans ses premiers apprentissages dans un cadre plus naturel,

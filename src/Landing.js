@@ -7,7 +7,7 @@ const Landing = () => {
   const { t } = useTranslation();
   return (
     <Grid container justify="center">
-      <Grid item xs={6}>
+      <Grid item xs={12} md={6}>
         <Box p={5}>
           <Logo />
         </Box>
