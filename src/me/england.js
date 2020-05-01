@@ -9,26 +9,22 @@ const England = () => {
         <Grid item xs={12} md={6}>
           <Box m={{ xs: 0, md: 5 }} ml={0} mb={{ xs: 2, md: 0 }}>
             <Typography variant="h4">
-              J’ai passé une année scolaire entière, en immersion dans trois
-              écoles primaires britanniques dans la ville de{" "}
-              <a
-                href="https://fr.wikipedia.org/wiki/Milton_Keynes"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Milton Keynes
-              </a>{" "}
-              où j’étais assistante de français. Logée chez ma chère{" "}
-              <i>landlady</i>&nbsp; Pat, qui m’a également tant appris, et
-              entourée d’assistants étrangers du monde entier, j’ai eu le déclic
-              pour enfin <strong>PARLER</strong> anglais.
+              Après ces premières études, j’ai pris mon courage à deux mains et
+              j’ai fait mes valises pour aller vivre{" "}
+              <strong>une année en Angleterre</strong>
+              comme assistante de français dans les écoles primaires
+              britanniques. J’espérais secrètement croiser la famille royale
+              lors d’un “teatime” mais j’ai surtout fait une multitude de
+              rencontres avec des personnes formidables dans les écoles, chez ma
+              landlady, au détour des pubs, et même lors d’une simple balade.
             </Typography>
           </Box>
           <Box m={{ xs: 0, md: 5 }} ml={0} mb={{ xs: 2, md: 0 }}>
             <Typography variant="h4">
-              La peur de s’exprimer s’est estompée au fil des mois pour laisser
-              place au plaisir d’échanger avec les personnes de toutes
-              nationalités confondues dans une langue commune.
+              J’ai eu le déclic pour enfin <strong>PARLER</strong> anglais car,
+              il faut l’avouer je n’avais de toute façon pas vraiment le choix
+              dans ce contexte. Mais la peur de s’exprimer s’est estompée pour
+              laisser place au <strong>plaisir d’échanger</strong>.
             </Typography>
           </Box>
         </Grid>

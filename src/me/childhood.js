@@ -23,35 +23,18 @@ const Text = styled(({ className }) => {
   const styleBox = useStyleBox();
   return (
     <Grid container className={className}>
-      <Grid item xs={12} md={6}>
+      <Grid item xs={12} md={8}>
         <Box
-          mt={{ xs: 4, md: 5 }}
+          mt={{ xs: 4, md: 10 }}
           ml={{ xs: 0, md: 5 }}
           m={{ xs: 1, md: 10 }}
           className={styleBox.root}
         >
-          <Typography variant="h5">
-            Je suis née en Lorraine, dans un bain linguistique plutôt allemand
-            car ma famille le parlait de manière bilingue et j’apprenais
-            également cette langue à l’école primaire. En même temps j’étais
-            très curieuse de découvrir cette “langue des chansons” apprise par
-            les copines des autres classes : <strong>l’ANGLAIS</strong>.
-          </Typography>
-        </Box>
-      </Grid>
-      <Grid item xs={12} md={6}>
-        <Box
-          mt={{ xs: 4, md: 30 }}
-          ml={{ xs: 0, md: 5 }}
-          m={{ xs: 1, md: 10 }}
-          className={styleBox.root}
-        >
-          <Typography variant="h5">
-            Avec une marraine professeure d’anglais qui m’a également transmis
-            cette passion et qui a aiguisé encore ma curiosité pour la langue de
-            Shakespeare, je me suis dirigée après un baccalauréat scientifique
-            (qui n’était pas tant ma voie que ça) vers ce fameux chemin des
-            langues.
+          <Typography variant="h4">
+            Je suis née à <strong>Metz</strong> en Lorraine, dans un bain
+            linguistique plutôt allemand et en même temps très curieuse de
+            découvrir cette “langue des chansons” apprise par les copines des
+            autres classes : <strong>l’ANGLAIS</strong>.
           </Typography>
         </Box>
       </Grid>
@@ -66,7 +49,7 @@ const Childhood = () => {
   return (
     <ParallaxBanner
       style={{
-        height: "75vh",
+        height: "60vh",
       }}
       layers={[{ image: "/static/apples.jpg", amount: 0.1 }]}
     >
