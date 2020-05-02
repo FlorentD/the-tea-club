@@ -10,6 +10,7 @@ import {
 import { styled } from "@material-ui/core";
 import Background1 from "../svg/Background1";
 import BackgroundBottom from "../svg/BackgroundBottom";
+import ShowOnView from "../components/ShowOnView";
 
 const useStyleBox = makeStyles((theme) => ({
   root: {
@@ -21,28 +22,26 @@ const useStyleBox = makeStyles((theme) => ({
   },
 }));
 
-const useBannerStyle = makeStyles({
-  root: {},
-});
-
 const Text = styled(({ className }) => {
   const styleBox = useStyleBox();
   return (
     <Grid container className={className}>
       <Grid item xs={12} md={8}>
-        <Box
-          mt={{ xs: 4, md: 10 }}
-          ml={{ xs: 0, md: 5 }}
-          m={{ xs: 1, md: 10 }}
-          className={styleBox.root}
-        >
-          <Typography variant="h4">
-            Je suis née à <strong>Metz</strong> en Lorraine, dans un bain
-            linguistique plutôt allemand et en même temps très curieuse de
-            découvrir cette “langue des chansons” apprise par les copines des
-            autres classes : <strong>l’ANGLAIS</strong>.
-          </Typography>
-        </Box>
+        <ShowOnView>
+          <Box
+            mt={{ xs: 4, md: 10 }}
+            ml={{ xs: 0, md: 5 }}
+            m={{ xs: 1, md: 10 }}
+            className={styleBox.root}
+          >
+            <Typography variant="h4">
+              Je suis née à <strong>Metz</strong> en Lorraine, dans un bain
+              linguistique plutôt allemand et en même temps très curieuse de
+              découvrir cette “langue des chansons” apprise par les copines des
+              autres classes : <strong>l’ANGLAIS</strong>.
+            </Typography>
+          </Box>
+        </ShowOnView>
       </Grid>
     </Grid>
   );
