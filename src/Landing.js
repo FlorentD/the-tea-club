@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, Typography } from "@material-ui/core";
+import { Box, Grid, Typography, Fade } from "@material-ui/core";
 import Logo from "./svg/Logo";
 import { useTranslation } from "react-i18next";
 import Debo from "./svg/Debo";
@@ -10,7 +10,11 @@ const Landing = () => {
     <Grid container justify="center">
       <Grid item xs={12} md={6}>
         <Box p={5}>
-          <Logo />
+          <Fade in={true} timeout={800}>
+            <div>
+              <Logo />
+            </div>
+          </Fade>
         </Box>
       </Grid>
       <Grid item xs={12}>
