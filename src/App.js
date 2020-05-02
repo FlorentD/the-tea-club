@@ -7,6 +7,7 @@ import Landing from "./Landing";
 import Me from "./me";
 import LanguageChoice from "./LanguageChoice";
 import Map from "./Map";
+import Footer from "./Footer";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Me />
         <Map />
       </Router>
+      <Footer />
     </ThemeProvider>
   );
 };

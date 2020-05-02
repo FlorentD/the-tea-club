@@ -11,6 +11,7 @@ import VectorSource from "ol/source/Vector";
 import Vector from "ol/layer/Vector";
 import { Typography, Box, styled } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
+import BackgroundBottom from "./svg/BackgroundBottom";
 
 const MapBox = styled(Box)({ width: "100%", height: 500 });
 const Home = fromLonLat([-1.7572, 47.19815]);
@@ -54,11 +55,12 @@ const Map = () => {
   }, []);
   const { t } = useTranslation();
   return (
-    <Box mt={5}>
+    <Box mt={5} style={{ position: "relative" }}>
       <Typography variant="h2" align="center">
         {t("map.title")}
       </Typography>
       <MapBox id="map"></MapBox>
+      <BackgroundBottom style={{ position: "absolute", bottom: -1 }} />
     </Box>
   );
 };
