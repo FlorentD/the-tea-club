@@ -8,6 +8,8 @@ import {
   makeStyles,
 } from "@material-ui/core";
 import { styled } from "@material-ui/core";
+import Background1 from "../svg/Background1";
+import BackgroundBottom from "../svg/BackgroundBottom";
 
 const useStyleBox = makeStyles((theme) => ({
   root: {
@@ -18,6 +20,10 @@ const useStyleBox = makeStyles((theme) => ({
     },
   },
 }));
+
+const useBannerStyle = makeStyles({
+  root: {},
+});
 
 const Text = styled(({ className }) => {
   const styleBox = useStyleBox();
@@ -53,9 +59,11 @@ const Childhood = () => {
       }}
       layers={[{ image: "/static/apples.jpg", amount: 0.1 }]}
     >
+      <Background1 style={{ position: "absolute" }} />
       <Container>
         <Text />
       </Container>
+      <BackgroundBottom style={{ position: "absolute", bottom: -1 }} />
     </ParallaxBanner>
   );
 };
