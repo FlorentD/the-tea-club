@@ -2,6 +2,7 @@ import i18n from "i18next";
 import flow from "lodash/fp/flow";
 import mapValues from "lodash/fp/mapValues";
 import reduce from "lodash/fp/reduce";
+import merge from "lodash/fp/merge";
 import translations from "./translations";
 import { initReactI18next } from "react-i18next";
 
@@ -20,7 +21,7 @@ const resources = (languages) => {
       translation: flow(
         mapValues(lang),
         reduce.convert({ cap: false })((acc, value, key) => {
-          return { ...acc, ...explode({ [key]: value }) };
+          return merge(acc, explode({ [key]: value }));
         }, {})
       )(translations),
     };

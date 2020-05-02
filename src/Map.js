@@ -56,9 +56,11 @@ const Map = () => {
   const { t } = useTranslation();
   return (
     <Box mt={5} style={{ position: "relative" }}>
-      <Typography variant="h2" align="center">
-        {t("map.title")}
-      </Typography>
+      <Box mb={5}>
+        <Typography variant="h2" align="center">
+          {t("map.title")}
+        </Typography>
+      </Box>
       <MapBox id="map"></MapBox>
       <BackgroundBottom style={{ position: "absolute", bottom: -1 }} />
     </Box>

@@ -8,6 +8,7 @@ import Me from "./me";
 import LanguageChoice from "./LanguageChoice";
 import Map from "./Map";
 import Footer from "./Footer";
+import Contact from "./Contact";
 
 const App = () => {
   return (
@@ -18,6 +19,9 @@ const App = () => {
           <Landing />
         </Container>
         <Me />
+        <Container>
+          <Contact />
+        </Container>
         <Map />
       </Router>
       <Footer />
