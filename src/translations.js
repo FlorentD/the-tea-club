@@ -4,7 +4,7 @@ export default {
     en: "With",
   },
   "map.title": {
-    fr: "Ou me trouver",
+    fr: "Où me trouver",
     en: "Where to find me",
   },
   "contact.title": {

@@ -23,7 +23,7 @@ const iconStyle = new Style({
   image: new Icon({
     anchorXUnits: "fraction",
     anchorYUnits: "pixels",
-    src: "/static/house.png",
+    src: "/static/house.svg",
   }),
 });
 

@@ -33,7 +33,7 @@ const Text = styled(({ className }) => {
             p={{ xs: 2, md: 5 }}
             className={styles.box}
           >
-            <Typography variant="h4" classes={styles}>
+            <Typography variant="h5" classes={styles}>
               A mon retour en France j’ai poursuivi mes études pour devenir{" "}
               <strong>professeur des écoles</strong> et comme j’avais désormais
               compris{" "}
@@ -51,7 +51,7 @@ const Text = styled(({ className }) => {
               exceptionnelle.
             </Typography>
             <br />
-            <Typography variant="h4" classes={styles}>
+            <Typography variant="h5" classes={styles}>
               S’en sont suivies six belles années en région parisienne où j’ai
               pu porter ma double casquette de <i>maîtresse/teacher</i> de la
               maternelle au CM2. C’était{" "}

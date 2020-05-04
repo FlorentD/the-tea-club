@@ -36,7 +36,7 @@ const Text = styled(({ className }) => {
           className={styles.box}
         >
           <ShowOnView>
-            <Typography variant="h4" classes={styles}>
+            <Typography variant="h5" classes={styles}>
               En 2018 je suis devenue maman d’une petite fille et afin de la
               suivre dans ses premiers apprentissages{" "}
               <strong>dans un cadre plus naturel</strong>, j’ai décidé de

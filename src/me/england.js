@@ -10,7 +10,7 @@ const England = () => {
         <Grid item xs={12} md={6}>
           <ShowOnView>
             <Box m={{ xs: 0, md: 5 }} ml={0} mb={{ xs: 2, md: 0 }}>
-              <Typography variant="h4">
+              <Typography variant="h5">
                 Après ces premières études, j’ai pris mon courage à deux mains
                 et j’ai fait mes valises pour aller vivre{" "}
                 <strong>une année en Angleterre</strong>
@@ -25,7 +25,7 @@ const England = () => {
           </ShowOnView>
           <ShowOnView>
             <Box m={{ xs: 0, md: 5 }} ml={0} mb={{ xs: 2, md: 0 }}>
-              <Typography variant="h4">
+              <Typography variant="h5">
                 J’ai eu le déclic pour enfin <strong>PARLER</strong> anglais
                 car, il faut l’avouer je n’avais de toute façon pas vraiment le
                 choix dans ce contexte. Mais la peur de s’exprimer s’est

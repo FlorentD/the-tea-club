@@ -15,7 +15,7 @@ const Studies = () => {
         <Grid item xs={12} md={6}>
           <Box p={{ xs: 0, md: 3 }} mb={{ xs: 2, md: 0 }}>
             <ShowOnView>
-              <Typography variant="h4">
+              <Typography variant="h5">
                 Avec une marraine professeure d’anglais qui a aiguisé ma
                 curiosité pour la langue de Shakespeare, je me suis dirigée
                 après quelques soubresauts scientifiques vers ce{" "}
