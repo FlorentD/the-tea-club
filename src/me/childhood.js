@@ -4,7 +4,7 @@ import ParallaxImage from "../components/ParallaxImage";
 
 const Childhood = () => {
   return (
-    <ParallaxImage src="/static/apples.jpg">
+    <ParallaxImage src="/static/apples.jpg" topSoft>
       <ParallaxImage.Container xs={12} md={8}>
         <ParallaxImage.Box
           mt={{ xs: 4, md: 10 }}

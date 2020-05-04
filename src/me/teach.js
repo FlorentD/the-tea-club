@@ -6,7 +6,7 @@ import ParallaxImage from "../components/ParallaxImage";
 const Teach = () => {
   return (
     <ParallaxImage src="/static/bike.jpg" height="90vh" soft={false}>
-      <ParallaxImage.Container xs={12} md={8} justify="center">
+      <ParallaxImage.Container xs={12} md={8} justify="flex-end">
         <ParallaxImage.Box mt={{ xs: 2, md: 8 }} p={{ xs: 2, md: 5 }} dark>
           <Typography variant="h5">
             A mon retour en France j’ai poursuivi mes études pour devenir{" "}
