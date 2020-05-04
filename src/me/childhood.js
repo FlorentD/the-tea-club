@@ -1,16 +1,8 @@
 import React from "react";
-import { ParallaxBanner } from "react-scroll-parallax";
-import {
-  Container,
-  Grid,
-  Box,
-  Typography,
-  makeStyles,
-} from "@material-ui/core";
+import { Grid, Box, Typography, makeStyles } from "@material-ui/core";
 import { styled } from "@material-ui/core";
-import Background1 from "../svg/Background1";
-import BackgroundBottom from "../svg/BackgroundBottom";
 import ShowOnView from "../components/ShowOnView";
+import ParallaxImage from "../components/ParallaxImage";
 
 const useStyleBox = makeStyles((theme) => ({
   root: {
@@ -52,18 +44,9 @@ const Text = styled(({ className }) => {
 
 const Childhood = () => {
   return (
-    <ParallaxBanner
-      style={{
-        height: "60vh",
-      }}
-      layers={[{ image: "/static/apples.jpg", amount: 0.1 }]}
-    >
-      <Background1 style={{ position: "absolute" }} />
-      <Container>
-        <Text />
-      </Container>
-      <BackgroundBottom style={{ position: "absolute", bottom: -1 }} />
-    </ParallaxBanner>
+    <ParallaxImage src="/static/apples.jpg">
+      <Text />
+    </ParallaxImage>
   );
 };
 
