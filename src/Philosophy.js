@@ -4,8 +4,8 @@ import Image from "./components/Image";
 
 const Paragraph = ({ children }) => {
   return (
-    <Box mb={5}>
-      <Typography variant="h5">{children}</Typography>
+    <Box mt={3} mb={10}>
+      <Typography>{children}</Typography>
     </Box>
   );
 };
@@ -25,42 +25,40 @@ const Philosophy = () => {
             </Box>
           </Grid>
           <Grid item xs={12} md={7}>
-            <Box mb={10}>
+            <Box mb={8}>
               <Typography variant="h2">What is it?</Typography>
             </Box>
-            <Typography variant="h4">APPRENDRE avec plaisir</Typography>
+            <Typography variant="h4" style={{ fontWeight: "bold" }}>
+              APPRENDRE AVEC PLAISIR
+            </Typography>
             <Paragraph>
-              Les ateliers The Tea club ont été créés pour apprendre l'anglais à
-              votre enfant de manière naturelle grâce à des activités ludiques
-              comme le chant, la danse, les histoires, les créations manuelles,
-              et bien d’autres jeux encore.
-              <br />
-              Au cours de ces ateliers et/ou stages durant les vacances, il
-              s’imprègne d’un environnement totalement anglais en s’amusant, en
-              échangeant, en créant autour de thèmes comme la culture, les
-              traditions, la vie de tous les jours, ses passions.
+              L’objectif est d’apprendre l'anglais à votre enfant de manière
+              ludique. Grâce à des activités comme le chant, la danse, les
+              histoires, les créations manuelles, il s’amuse et créé dans un
+              bain exclusivement anglais autour de thèmes qui le concerne,
+              l’intéresse, le motive.
             </Paragraph>
-            <Typography variant="h4">NATURELLEMENT EN IMMERSION</Typography>
+            <Typography variant="h4" style={{ fontWeight: "bold" }}>
+              NATURELLEMENT EN IMMERSION
+            </Typography>
             <Paragraph>
               L’essentiel passe par l’oral: les sons, les rythmes s’acquièrent
-              dès le plus jeune âge très facilement. Les enfants possèdent des
-              capacités exceptionnelles ,une formidable curiosité, une grande
-              spontanéité, ainsi que des oreilles et une mémoire très
-              réceptives. Ils bénéficient de facultés naturelles à acquérir une
-              langue lorsqu’ils s’y trouvent régulièrement exposés.
+              dès le plus jeune âge très facilement. Les enfants ont des
+              capacités de mémorisation exceptionnelles, ils sont aussi curieux
+              et spontanés. Leurs jeunes oreilles très réceptives leur
+              permettront d’apprivoiser la langue lors de ces activités sans
+              même qu’ils s’en rendre compte.
             </Paragraph>
-            <Typography variant="h4">AVEC BIENVEILLANCE:</Typography>
+            <Typography variant="h4" style={{ fontWeight: "bold" }}>
+              AVEC BIENVEILLANCE
+            </Typography>
             <Paragraph>
               Pas de pression d’apprentissage, le but premier est d’acquérir
               l’envie d’échanger en anglais. On se familiarise avec la langue,
               on ouvre son regard sur le monde, on découvre d’autres cultures,
-              on partage et on échange dans une autre langue commune. Dans un
-              entraînement hebdomadaire, puis quotidien lorsque votre enfant
-              partagera ses découvertes avec vous,vous serez étonnés par la
-              capacité de votre enfant à répéter, imiter, chanter ce qu’il vit
-              dans ces ateliers, puis les mots viendront en anglais dans un
-              autre contexte. Les progrès fleuriront mais se réaliseront aussi
-              au fil des années.
+              on partage et on échange dans une autre langue commune. Les
+              progrès fleuriront progressivement grâce à une pratique régulière
+              et plaisante.
             </Paragraph>
           </Grid>
         </Grid>

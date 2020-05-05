@@ -22,6 +22,7 @@ const useStyle = makeStyles({
     backgroundColor: "rgba(255,255,255,1)",
     borderRadius: "5px",
     padding: "12px 8px",
+    boxShadow: "4px 4px 10px 0px rgba(0,0,0,0.75)",
   },
 });
 
@@ -56,7 +57,7 @@ const LogoComp = () => {
 
 const useMenuStyle = makeStyles({
   root: {
-    backgroundImage: "url('/static/band.jpg')",
+    backgroundImage: "url('/static/background.jpg')",
     backgroundSize: "cover",
     borderBottom: "2px solid #98C163",
   },
@@ -67,7 +68,7 @@ const Menu = () => {
   const style = useMenuStyle();
   return (
     <Grid container justify="center" alignItems="center" className={style.root}>
-      <MenuLink to={COMME_CA_SE_ASSE}>Comment ça se passe</MenuLink>
+      <MenuLink to={COMME_CA_SE_ASSE}>Comment ça se passe ?</MenuLink>
       <MenuLink to={MA_PHILOSOPHIE}>Philosophie</MenuLink>
       <Box
         p={3}
@@ -76,7 +77,7 @@ const Menu = () => {
       >
         <LogoComp />
       </Box>
-      <MenuLink to={QUI_JE_SUIS}>Qui suis-je</MenuLink>
+      <MenuLink to={QUI_JE_SUIS}>Qui suis-je ?</MenuLink>
       <MenuLink to={ME_CONTACTER}>Me Contacter</MenuLink>
     </Grid>
   );

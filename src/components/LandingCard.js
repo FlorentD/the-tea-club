@@ -25,7 +25,9 @@ const LandingCard = ({ icon, title, children, direction }) => {
               {title}
             </Typography>
           </Box>
-          <Typography color="secondary">{children}</Typography>
+          <Typography variant="h5" style={{ color: "#239719" }}>
+            {children}
+          </Typography>
         </Box>
         {direction === "right" && <Box p={5}>{icon}</Box>}
       </Grid>
