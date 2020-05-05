@@ -41,10 +41,8 @@ const Contact = () => {
               validationSchema={Yup.object().shape({
                 email: Yup.string()
                   .email(`L'email semble invalide`)
-                  .required(`L'email est requis`),
-                message: Yup.string().required(
-                  "N'oubliez pas de sélectionner un panier"
-                ),
+                  .required(t("form.error.email")),
+                message: Yup.string().required(t("form.error.message")),
               })}
               onSubmit={() => {
                 sendMessage(true);
