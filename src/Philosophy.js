@@ -5,7 +5,7 @@ import Image from "./components/Image";
 const Paragraph = ({ children }) => {
   return (
     <Box mt={3} mb={10}>
-      <Typography>{children}</Typography>
+      <Typography variant="h5">{children}</Typography>
     </Box>
   );
 };

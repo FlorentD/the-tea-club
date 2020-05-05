@@ -45,7 +45,7 @@ const England = () => {
               J’ai eu le déclic pour enfin <strong>PARLER</strong> anglais car,
               il faut l’avouer je n’avais de toute façon pas vraiment le choix
               dans ce contexte. Mais la peur de s’exprimer s’est estompée pour
-              laisser place au plaisir d’échanger.
+              laisser place au <strong>PLAISIR D'ÉCHANGER</strong>.
             </Typography>
           </ParallaxImage.Box>
         </Grid>

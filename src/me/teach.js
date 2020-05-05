@@ -31,8 +31,8 @@ const Teach = () => {
             porter ma double casquette de <strong>MAÎTRESSE-TEACHER</strong> de
             la maternelle au CM2. C’était un vrai challenge mais aussi un réel
             plaisir de faire découvrir l’anglais sous un aspect plus ludique et
-            vivant à mes chers élèves. Certaines chansons resteront je pense
-            gravées à vie dans la mémoire des enfants et la mienne ( voire celle
+            vivant à mes chers élèves. Certaines chansons resteront, je pense,
+            gravées à vie dans la mémoire des enfants et la mienne (voire celle
             des parents… ne me remerciez pas
             <span role="img" aria-label="funny">
               <Funny height={30} />
