@@ -10,6 +10,7 @@ const useStyle = makeStyles({
     paddingBottom: "20px",
     paddingTop: "20px",
     borderBottom: "1px dashed #98C163",
+    color: "#007A15",
   },
 });
 
@@ -25,7 +26,7 @@ const LandingCard = ({ icon, title, children, direction }) => {
               {title}
             </Typography>
           </Box>
-          <Typography variant="h5" style={{ color: "#239719" }}>
+          <Typography variant="h5" style={{ color: "#000000" }}>
             {children}
           </Typography>
         </Box>
