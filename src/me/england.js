@@ -24,12 +24,12 @@ const England = () => {
             <Typography variant="h5">
               Après ces premières études, j’ai pris mon courage à deux mains et
               j’ai fait mes valises pour aller vivre{" "}
-              <strong>UNE ANNÉE EN ANGLETERRE</strong>
-              comme assistante de français dans les écoles primaires
-              britanniques. J’espérais secrètement croiser la famille royale
-              lors d’un “teatime” mais j’ai surtout fait une multitude de
-              rencontres avec des personnes formidables dans les écoles, chez ma
-              landlady, au détour des pubs, et même lors de simples balades.
+              <strong>UNE ANNÉE EN ANGLETERRE</strong> comme assistante de
+              français dans les écoles primaires britanniques. J’espérais
+              secrètement croiser la famille royale lors d’un “teatime” mais
+              j’ai surtout fait une multitude de rencontres avec des personnes
+              formidables dans les écoles, chez ma landlady, au détour des pubs,
+              et même lors de simples balades.
             </Typography>
           </ParallaxImage.Box>
         </Grid>
