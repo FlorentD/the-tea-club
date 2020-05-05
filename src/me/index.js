@@ -11,11 +11,21 @@ const Me = () => {
   return (
     <ParallaxProvider>
       <Box mt={{ xs: 5, md: 10 }}>
-        <Childhood />
-        <Studies />
-        <England />
-        <Teach />
-        <Today />
+        <Box mb={10}>
+          <Childhood />
+        </Box>
+        <Box mb={10}>
+          <Studies />
+        </Box>
+        <Box mb={10}>
+          <England />
+        </Box>
+        <Box mb={10}>
+          <Teach />
+        </Box>
+        <Box mb={10}>
+          <Today />
+        </Box>
       </Box>
     </ParallaxProvider>
   );

@@ -1,9 +1,9 @@
 import React from "react";
 import { styled } from "@material-ui/core";
 
-const SvgLogoTtc = styled(({ className }) => {
+const SvgLogoTtc = styled((props) => {
   return (
-    <div className={className}>
+    <div {...props}>
       <svg viewBox="0 0 466.9 471.3">
         <style>
           {
