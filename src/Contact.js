@@ -26,11 +26,14 @@ const Contact = () => {
           <Typography variant="h2" align="center">
             {t("contact.title")}
           </Typography>
+          <Typography align="center" variant="h5">
+            Je vous répondrai avec plaisir
+          </Typography>
         </Box>
         <Grid container>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={4}>
             <Hidden mdDown>
-              <Box m={16} mt={0}>
+              <Box m={8} mt={0}>
                 <Postal />
               </Box>
             </Hidden>
@@ -44,11 +47,26 @@ const Contact = () => {
                   .required(t("form.error.email")),
                 message: Yup.string().required(t("form.error.message")),
               })}
-              onSubmit={() => {
-                sendMessage(true);
+              onSubmit={async (values) => {
+                try {
+                  await (
+                    await fetch("/contact", {
+                      method: "POST",
+                      headers: {
+                        Accept: "application/json",
+                        "Content-Type": "application/json",
+                      },
+                      body: JSON.stringify(values),
+                    })
+                  ).json();
+                } catch (e) {
+                  console.error(e);
+                } finally {
+                  sendMessage(true);
+                }
               }}
             >
-              {() => {
+              {({ isSubmitting }) => {
                 return (
                   <>
                     <Text

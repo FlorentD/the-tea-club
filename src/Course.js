@@ -17,11 +17,7 @@ const Course = () => {
         <Grid container>
           <Grid item xs={12} md={5}>
             <Box mr={10} mt={5}>
-              <Image
-                src="/static/kids.jpg"
-                alt="caterpilar"
-                style={{ borderRadius: "20%" }}
-              />
+              <Image src="/static/kids.jpg" alt="caterpilar" />
             </Box>
           </Grid>
           <Grid item xs={12} md={7}>

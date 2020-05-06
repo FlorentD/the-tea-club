@@ -8,8 +8,8 @@ export default {
     en: "Where to find me?",
   },
   "contact.title": {
-    fr: "Me contacter",
-    en: "To contact me",
+    fr: "Contactez-moi",
+    en: "Contact me",
   },
   "form.email": {
     fr: "Votre email",

@@ -18,27 +18,30 @@ const Philosophy = () => {
           <Grid item xs={12} md={5}>
             <Box mr={10} mt={5}>
               <Image
-                src="/static/chenille.jpg"
+                src="/static/speak-english.jpg"
                 alt="caterpilar"
-                style={{ borderRadius: "20%" }}
+                style={{ borderRadius: "50%" }}
               />
             </Box>
           </Grid>
           <Grid item xs={12} md={7}>
-            <Box mb={8}>
-              <Typography variant="h2">What is it?</Typography>
-            </Box>
-            <Typography variant="h4" style={{ fontWeight: "bold" }}>
+            <Typography
+              variant="h4"
+              style={{ fontWeight: "bold", color: "#007A15" }}
+            >
               APPRENDRE AVEC PLAISIR
             </Typography>
             <Paragraph>
               L’objectif est d’apprendre l'anglais à votre enfant de manière
               ludique. Grâce à des activités comme le chant, la danse, les
               histoires, les créations manuelles, il s’amuse et créé dans un
-              bain exclusivement anglais autour de thèmes qui le concerne,
-              l’intéresse, le motive.
+              bain exclusivement anglais autour de thèmes qui le concernent,
+              l’intéressent, le motivent.
             </Paragraph>
-            <Typography variant="h4" style={{ fontWeight: "bold" }}>
+            <Typography
+              variant="h4"
+              style={{ fontWeight: "bold", color: "#007A15" }}
+            >
               NATURELLEMENT EN IMMERSION
             </Typography>
             <Paragraph>
@@ -49,7 +52,10 @@ const Philosophy = () => {
               permettront d’apprivoiser la langue lors de ces activités sans
               même qu’ils s’en rendre compte.
             </Paragraph>
-            <Typography variant="h4" style={{ fontWeight: "bold" }}>
+            <Typography
+              variant="h4"
+              style={{ fontWeight: "bold", color: "#007A15" }}
+            >
               AVEC BIENVEILLANCE
             </Typography>
             <Paragraph>
