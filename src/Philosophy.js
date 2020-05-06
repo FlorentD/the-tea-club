@@ -50,7 +50,7 @@ const Philosophy = () => {
               capacités de mémorisation exceptionnelles, ils sont aussi curieux
               et spontanés. Leurs jeunes oreilles très réceptives leur
               permettront d’apprivoiser la langue lors de ces activités sans
-              même qu’ils s’en rendre compte.
+              même qu’ils s’en rendent compte.
             </Paragraph>
             <Typography
               variant="h4"

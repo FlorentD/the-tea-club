@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Grid, Typography, Box } from "@material-ui/core";
 import Image from "./components/Image";
 import EnglishHelper from "./components/EnglishHelper";
+import Fern from "./svg/Fern";
 
 const Paragraph = ({ children }) => {
   return (
@@ -99,7 +100,10 @@ const Course = () => {
             </Box>
             <Typography variant="h5">
               Quand il fait beau on s’installe dans le jardin et on pratique
-              tout ça dans la nature.
+              tout ça dans la nature…{" "}
+              <span role="img" aria-label="fern">
+                <Fern height={20} />
+              </span>
             </Typography>
           </Grid>
         </Grid>

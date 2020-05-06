@@ -15,7 +15,7 @@ const Today = () => {
       nom des fleurs en anglais à ma petite{" "}
       <EnglishHelper title="Coccinelle">Ladybug</EnglishHelper>{" "}
       <span role="img" aria-label="teacher">
-        <Bug height={30} />
+        <Bug height={20} />
       </span>
       .
     </MeCard>

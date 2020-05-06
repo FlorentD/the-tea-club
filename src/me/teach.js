@@ -5,7 +5,7 @@ import MeCard from "../components/MeCard";
 const Teach = () => {
   return (
     <MeCard src="/static/bike_square.jpg" alt="bike" direction="right">
-      A mon retour en France j’ai poursuivi mes études pour devenir professeur
+      À mon retour en France, j’ai poursuivi mes études pour devenir professeur
       des écoles et comme j’avais désormais compris l’importance de pratiquer
       l’anglais régulièrement, j’ai continué à me former et à{" "}
       <strong>PRATIQUER LA LANGUE</strong> en animant des ateliers d’anglais
@@ -25,11 +25,11 @@ const Teach = () => {
       ma double casquette de <strong>MAÎTRESSE-TEACHER</strong> de la maternelle
       au CM2. C’était un vrai challenge mais aussi un réel plaisir de faire
       découvrir l’anglais sous un aspect plus ludique et vivant à mes chers
-      élèves. Certaines chansons resteront, je pense, gravées à vie dans la
+      élèves. Certaines chansons resteront, je le pense, gravées à vie dans la
       mémoire des enfants et la mienne (voire celle des parents… ne me remerciez
-      pas
+      pas{" "}
       <span role="img" aria-label="funny">
-        <Funny height={30} />
+        <Funny height={20} />
       </span>
       )
     </MeCard>
