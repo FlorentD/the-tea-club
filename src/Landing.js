@@ -47,7 +47,8 @@ const Landing = () => {
           direction="right"
         >
           On bricole, on chante, on dessine, on joue... le tout en anglais pour
-          développer le plus naturellement possible l’échange en anglais.
+          développer le plus naturellement possible les échanges dans cette
+          langue.
         </LandingCard>
         <LandingCard
           title="Vos enfants ont entre 4 et 11 ans ?"
