@@ -13,7 +13,7 @@ import LandingCard from "./components/LandingCard";
 import Contact from "./Contact";
 import BackgroundBottom from "./svg/BackgroundBottom";
 import BigBen from "./svg/BigBen";
-import StatueOfLiberty from "./svg/StatusOfLiberty";
+import FillePinceau from "./svg/FillePinceau";
 
 const useTitleStyle = makeStyles((theme) => ({
   wrapper: {
@@ -59,7 +59,7 @@ const Landing = () => {
               Apprendre l’anglais naturellement en s’amusant !
             </Typography>
           </Box>
-          <StatueOfLiberty width={60} />
+          <FillePinceau height={80} />
         </div>
         <BackgroundBottom style={{ position: "absolute", bottom: "-1px" }} />
       </div>
