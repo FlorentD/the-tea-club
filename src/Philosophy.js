@@ -1,10 +1,10 @@
 import React from "react";
-import { Typography, Grid, Container, Box } from "@material-ui/core";
+import { Typography, Grid, Container, Box, Hidden } from "@material-ui/core";
 import Image from "./components/Image";
 
 const Paragraph = ({ children }) => {
   return (
-    <Box mt={3} mb={10}>
+    <Box mt={3} mb={{ xs: 4, md: 10 }}>
       <Typography variant="h5">{children}</Typography>
     </Box>
   );
@@ -12,17 +12,19 @@ const Paragraph = ({ children }) => {
 
 const Philosophy = () => {
   return (
-    <Box mt={10}>
+    <Box mt={{ xs: 4, md: 10 }}>
       <Container>
         <Grid container>
           <Grid item xs={12} md={5}>
-            <Box mr={10} mt={5}>
-              <Image
-                src="/static/speak-english.jpg"
-                alt="caterpilar"
-                style={{ borderRadius: "50%" }}
-              />
-            </Box>
+            <Hidden xsDown>
+              <Box mr={10} mt={5}>
+                <Image
+                  src="/static/speak-english.jpg"
+                  alt="caterpilar"
+                  style={{ borderRadius: "50%" }}
+                />
+              </Box>
+            </Hidden>
           </Grid>
           <Grid item xs={12} md={7}>
             <Typography

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Grid, Typography, Box } from "@material-ui/core";
+import { Container, Grid, Typography, Box, Hidden } from "@material-ui/core";
 import Image from "./components/Image";
 import EnglishHelper from "./components/EnglishHelper";
 import Fern from "./svg/Fern";
@@ -14,21 +14,23 @@ const Paragraph = ({ children }) => {
 
 const Course = () => {
   return (
-    <Box mt={10}>
+    <Box mt={{ xs: 4, md: 10 }}>
       <Container>
         <Grid container>
           <Grid item xs={12} md={5}>
-            <Box mr={10} mt={5}>
-              <Image
-                src="/static/kids_square.jpg"
-                alt="caterpilar"
-                style={{ borderRadius: "50%" }}
-              />
-            </Box>
+            <Hidden xsDown>
+              <Box mr={10} mt={5}>
+                <Image
+                  src="/static/kids_square.jpg"
+                  alt="caterpilar"
+                  style={{ borderRadius: "50%" }}
+                />
+              </Box>
+            </Hidden>
           </Grid>
           <Grid item xs={12} md={6}>
-            <Box mb={10}>
-              <Typography variant="h2">Comment ça se passe ?</Typography>
+            <Box mb={{ xs: 4, md: 10 }}>
+              <Typography variant="h2">Comment ça se passe&nbsp;?</Typography>
             </Box>
             <ul>
               <li>

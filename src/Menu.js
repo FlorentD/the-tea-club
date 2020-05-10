@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink, useHistory } from "react-router-dom";
-import { Box, Fade, Grid, makeStyles } from "@material-ui/core";
+import { Box, Fade, Grid, Hidden, makeStyles } from "@material-ui/core";
 import {
   COMME_CA_SE_ASSE,
   MA_PHILOSOPHIE,
@@ -35,21 +35,25 @@ const MenuLink = ({ children, to }) => {
   );
 };
 
-const useLogoStyle = makeStyles({
+const useLogoStyle = makeStyles((theme) => ({
   root: {
     backgroundColor: "rgba(255,255,255,0.8)",
     padding: "20px",
     borderRadius: "50%",
     border: "2px solid black",
   },
-});
+  image: {
+    width: "100px",
+    [theme.breakpoints.up("md")]: { width: "180px" },
+  },
+}));
 
 const LogoComp = () => {
   const style = useLogoStyle();
   return (
     <Fade in={true} timeout={800}>
       <div className={style.root}>
-        <Logo style={{ width: 180 }} />
+        <Logo className={style.image} />
       </div>
     </Fade>
   );
@@ -68,17 +72,21 @@ const Menu = () => {
   const style = useMenuStyle();
   return (
     <Grid container justify="center" alignItems="center" className={style.root}>
-      <MenuLink to={COMME_CA_SE_ASSE}>Comment ça se passe ?</MenuLink>
-      <MenuLink to={MA_PHILOSOPHIE}>Philosophie</MenuLink>
+      <Hidden xsDown>
+        <MenuLink to={COMME_CA_SE_ASSE}>Comment ça se passe ?</MenuLink>
+        <MenuLink to={MA_PHILOSOPHIE}>Philosophie</MenuLink>
+      </Hidden>
       <Box
-        p={3}
+        p={{ xs: 1, md: 3 }}
         onClick={() => history.push("/")}
         style={{ cursor: "pointer" }}
       >
         <LogoComp />
       </Box>
-      <MenuLink to={QUI_JE_SUIS}>Qui suis-je ?</MenuLink>
-      <MenuLink to={ME_CONTACTER}>Me Contacter</MenuLink>
+      <Hidden xsDown>
+        <MenuLink to={QUI_JE_SUIS}>Qui suis-je ?</MenuLink>
+        <MenuLink to={ME_CONTACTER}>Me Contacter</MenuLink>
+      </Hidden>
     </Grid>
   );
 };

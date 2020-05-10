@@ -3,40 +3,43 @@ import PropTypes from "prop-types";
 import { Box, makeStyles, Grid, Typography } from "@material-ui/core";
 import Image from "./Image";
 
-const useStyle = makeStyles({
+const useStyle = makeStyles((theme) => ({
   root: {
     display: "flex",
+    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    [theme.breakpoints.up("md")]: {
+      flexDirection: "row",
+    },
   },
-});
+  image: {
+    width: "100%",
+    [theme.breakpoints.up("md")]: {
+      width: "280px",
+      borderRadius: "50%",
+    },
+  },
+}));
 
 const MeCard = ({ src, alt, children, direction }) => {
   const style = useStyle();
   return (
     <Grid container justify="center">
-      <Grid item xs={8} className={style.root}>
+      <Grid item xs={12} md={8} className={style.root}>
         {direction === "left" && (
-          <Box pf={5} pr={5}>
-            <Image
-              src={src}
-              alt={alt}
-              style={{ borderRadius: "50%", width: "280px" }}
-            />
+          <Box pr={{ xs: 0, md: 5 }} mb={{ xs: 2, md: 0 }}>
+            <Image src={src} alt={alt} className={style.image} />
           </Box>
         )}
-        <Box>
+        <Box m={{ xs: 2, md: 0 }}>
           <Typography variant="h5" style={{ color: "#000000" }}>
             {children}
           </Typography>
         </Box>
         {direction === "right" && (
-          <Box pf={5} pr={5}>
-            <Image
-              src={src}
-              alt={alt}
-              style={{ borderRadius: "50%", width: "280px" }}
-            />
+          <Box pl={{ xs: 0, md: 5 }}>
+            <Image src={src} alt={alt} className={style.image} />
           </Box>
         )}
       </Grid>

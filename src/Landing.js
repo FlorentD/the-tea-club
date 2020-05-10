@@ -1,6 +1,10 @@
 import React from "react";
-import { Typography } from "@material-ui/core";
-import { Container } from "@material-ui/core";
+import {
+  Typography,
+  Container,
+  makeStyles,
+  useMediaQuery,
+} from "@material-ui/core";
 import Titeuf from "./svg/Titeuf";
 import Fille from "./svg/Fille";
 import Cheveux from "./svg/Cheveux";
@@ -8,42 +12,54 @@ import LandingCard from "./components/LandingCard";
 import Contact from "./Contact";
 import BackgroundBottom from "./svg/BackgroundBottom";
 
+const useTitleStyle = makeStyles((theme) => ({
+  wrapper: {
+    position: "relative",
+    display: "flex",
+    flexDirection: "column",
+    boxSizing: "border-box",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#012169",
+    letterSpacing: "-1px",
+    width: "100%",
+    padding: "20px 0px 20px 0px",
+    color: "#ffffff",
+    [theme.breakpoints.up("md")]: { padding: "30px 0px 40px 0px" },
+  },
+  title: {
+    lineHeight: "30px",
+    fontSize: "1.5rem",
+    fontWeight: "bold",
+    textAlign: "center",
+    [theme.breakpoints.up("md")]: {
+      fontSize: "3rem",
+      lineHeight: "60px",
+    },
+  },
+}));
+
 const Landing = () => {
+  const titleStyle = useTitleStyle();
+  const mobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
   return (
     <>
-      <div
-        style={{
-          position: "relative",
-          display: "flex",
-          flexDirection: "column",
-          boxSizing: "border-box",
-          justifyContent: "center",
-          alignItems: "center",
-          backgroundColor: "#012169",
-          letterSpacing: "-1px",
-          width: "100%",
-          padding: "30px 0px 40px 0px",
-          color: "#ffffff",
-        }}
-      >
-        <Typography
-          variant="h2"
-          style={{ lineHeight: "60px", fontSize: "3rem", fontWeight: "bold" }}
-        >
+      <div className={titleStyle.wrapper}>
+        <Typography variant="h2" className={titleStyle.title}>
           Apprendre l’anglais naturellement en s’amusant !
         </Typography>
         <BackgroundBottom style={{ position: "absolute", bottom: "-1px" }} />
       </div>
       <Container style={{ backgroundColor: "white" }}>
         <LandingCard
-          icon={<Titeuf width={140} />}
+          icon={<Titeuf width={mobile ? 100 : 140} />}
           title="The Tea Club c’est avant tout permettre aux enfants de se retrouver pour passer un bon moment en anglais."
         >
           Ce ne sont pas des cours ou des leçons ; on apprend tout en s’amusant.
         </LandingCard>
         <LandingCard
           title="L’oral et le jeu tiennent une place principale."
-          icon={<Fille width={140} />}
+          icon={<Fille width={mobile ? 100 : 140} />}
           direction="right"
         >
           On bricole, on chante, on dessine, on joue... le tout en anglais pour
@@ -52,7 +68,7 @@ const Landing = () => {
         </LandingCard>
         <LandingCard
           title="Vos enfants ont entre 4 et 11 ans ?"
-          icon={<Cheveux width={140} />}
+          icon={<Cheveux width={mobile ? 100 : 140} />}
         >
           Peu importe le niveau, chacun apprend à son rythme !
         </LandingCard>
