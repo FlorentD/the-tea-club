@@ -2,6 +2,7 @@ import React from "react";
 import {
   Typography,
   Container,
+  Box,
   makeStyles,
   useMediaQuery,
 } from "@material-ui/core";
@@ -11,6 +12,8 @@ import Cheveux from "./svg/Cheveux";
 import LandingCard from "./components/LandingCard";
 import Contact from "./Contact";
 import BackgroundBottom from "./svg/BackgroundBottom";
+import BigBen from "./svg/BigBen";
+import StatueOfLiberty from "./svg/StatusOfLiberty";
 
 const useTitleStyle = makeStyles((theme) => ({
   wrapper: {
@@ -26,6 +29,10 @@ const useTitleStyle = makeStyles((theme) => ({
     padding: "20px 0px 20px 0px",
     color: "#ffffff",
     [theme.breakpoints.up("md")]: { padding: "30px 0px 40px 0px" },
+  },
+  subWrapper: {
+    display: "flex",
+    alignItems: "center",
   },
   title: {
     lineHeight: "30px",
@@ -45,9 +52,15 @@ const Landing = () => {
   return (
     <>
       <div className={titleStyle.wrapper}>
-        <Typography variant="h2" className={titleStyle.title}>
-          Apprendre l’anglais naturellement en s’amusant !
-        </Typography>
+        <div className={titleStyle.subWrapper}>
+          <BigBen width={60} />
+          <Box ml={2} mr={2}>
+            <Typography variant="h2" className={titleStyle.title}>
+              Apprendre l’anglais naturellement en s’amusant !
+            </Typography>
+          </Box>
+          <StatueOfLiberty width={60} />
+        </div>
         <BackgroundBottom style={{ position: "absolute", bottom: "-1px" }} />
       </div>
       <Container style={{ backgroundColor: "white" }}>
