@@ -1,6 +1,14 @@
-import React from "react";
-import { NavLink, useHistory } from "react-router-dom";
-import { Box, Fade, Grid, Hidden, makeStyles } from "@material-ui/core";
+import React, { useState, useEffect } from "react";
+import { NavLink, useHistory, useLocation } from "react-router-dom";
+import {
+  Box,
+  Fade,
+  Grid,
+  Hidden,
+  Typography,
+  makeStyles,
+  Drawer,
+} from "@material-ui/core";
 import {
   COMME_CA_SE_ASSE,
   MA_PHILOSOPHIE,
@@ -8,6 +16,7 @@ import {
   QUI_JE_SUIS,
 } from "./routes";
 import Logo from "./svg/Logo";
+import Signs from "./svg/Signs";
 
 const useStyle = makeStyles({
   root: {
@@ -26,10 +35,10 @@ const useStyle = makeStyles({
   },
 });
 
-const MenuLink = ({ children, to }) => {
+const MenuLink = ({ children, to, onClick = () => null }) => {
   const style = useStyle();
   return (
-    <NavLink to={to} className={style.root}>
+    <NavLink to={to} className={style.root} onClick={onClick}>
       {children}
     </NavLink>
   );
@@ -59,35 +68,95 @@ const LogoComp = () => {
   );
 };
 
-const useMenuStyle = makeStyles({
+const useMenuStyle = makeStyles((theme) => ({
   root: {
     backgroundImage: "url('/static/background.jpg')",
     backgroundSize: "cover",
     borderBottom: "2px solid #98C163",
+    [theme.breakpoints.down("md")]: { marginTop: "50px" },
+  },
+}));
+
+const useMobileMenuStyle = makeStyles({
+  root: {
+    position: "fixed",
+    top: 0,
+    zIndex: 100,
+    padding: "10px",
+    backgroundColor: "#000",
+    color: "#fff",
+    cursor: "pointer",
   },
 });
+
+const MobileMenu = () => {
+  const style = useMobileMenuStyle();
+  const [open, setOpen] = useState(false);
+  return (
+    <Hidden mdUp>
+      <Grid
+        container
+        justify="flex-start"
+        alignItems="center"
+        className={style.root}
+        onClick={() => setOpen(true)}
+      >
+        <Signs width={20} heiht={20} />
+        <Box ml={1}>
+          <Typography variant="h4">menu</Typography>
+        </Box>
+      </Grid>
+      <Drawer anchor="left" open={open} onClose={() => setOpen(false)}>
+        <MenuLink to={COMME_CA_SE_ASSE} onClick={() => setOpen(false)}>
+          Comment ça se passe ?
+        </MenuLink>
+        <MenuLink to={MA_PHILOSOPHIE} onClick={() => setOpen(false)}>
+          Philosophie
+        </MenuLink>
+        <MenuLink to={QUI_JE_SUIS} onClick={() => setOpen(false)}>
+          Qui suis-je ?
+        </MenuLink>
+        <MenuLink to={ME_CONTACTER} onClick={() => setOpen(false)}>
+          Me Contacter
+        </MenuLink>
+      </Drawer>
+    </Hidden>
+  );
+};
 
 const Menu = () => {
   const history = useHistory();
   const style = useMenuStyle();
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
-    <Grid container justify="center" alignItems="center" className={style.root}>
-      <Hidden xsDown>
-        <MenuLink to={COMME_CA_SE_ASSE}>Comment ça se passe ?</MenuLink>
-        <MenuLink to={MA_PHILOSOPHIE}>Philosophie</MenuLink>
-      </Hidden>
-      <Box
-        p={{ xs: 1, md: 3 }}
-        onClick={() => history.push("/")}
-        style={{ cursor: "pointer" }}
+    <>
+      <MobileMenu />
+      <Grid
+        container
+        justify="center"
+        alignItems="center"
+        className={style.root}
       >
-        <LogoComp />
-      </Box>
-      <Hidden xsDown>
-        <MenuLink to={QUI_JE_SUIS}>Qui suis-je ?</MenuLink>
-        <MenuLink to={ME_CONTACTER}>Me Contacter</MenuLink>
-      </Hidden>
-    </Grid>
+        <Hidden xsDown>
+          <MenuLink to={COMME_CA_SE_ASSE}>Comment ça se passe ?</MenuLink>
+          <MenuLink to={MA_PHILOSOPHIE}>Philosophie</MenuLink>
+        </Hidden>
+        <Box
+          p={{ xs: 1, md: 3 }}
+          onClick={() => history.push("/")}
+          style={{ cursor: "pointer" }}
+        >
+          <LogoComp />
+        </Box>
+        <Hidden xsDown>
+          <MenuLink to={QUI_JE_SUIS}>Qui suis-je ?</MenuLink>
+          <MenuLink to={ME_CONTACTER}>Me Contacter</MenuLink>
+        </Hidden>
+      </Grid>
+    </>
   );
 };
 
