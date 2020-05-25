@@ -72,7 +72,7 @@ const Landing = () => {
         </LandingCard>
         <LandingCard
           title="L’oral et le jeu tiennent une place principale."
-          icon={<Fille width={mobile ? 100 : 140} />}
+          icon={<Fille width={mobile ? 140 : 280} />}
           direction="right"
         >
           On bricole, on chante, on dessine, on joue... le tout en anglais pour
