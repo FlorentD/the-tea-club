@@ -12,11 +12,15 @@ import Philosophy from "./Philosophy";
 import Course from "./Course";
 import Menu from "./Menu";
 import {
+  ATELIERS,
   COMME_CA_SE_ASSE,
   MA_PHILOSOPHIE,
   ME_CONTACTER,
   QUI_JE_SUIS,
+  STAGES,
 } from "./routes";
+import Ateliers from "./Ateliers";
+import Stages from "./Stages";
 
 const App = () => {
   return (
@@ -36,6 +40,12 @@ const App = () => {
           <Route path={ME_CONTACTER}>
             <Contact />
             <Map />
+          </Route>
+          <Route path={ATELIERS}>
+            <Ateliers />
+          </Route>
+          <Route path={STAGES}>
+            <Stages />
           </Route>
           <Route>
             <Landing />

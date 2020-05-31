@@ -56,7 +56,7 @@ const Map = () => {
   const { t } = useTranslation();
   return (
     <Box style={{ position: "relative" }}>
-      <Box mb={5}>
+      <Box mb={5} mt={5}>
         <Typography variant="h2" align="center">
           {t("map.title")}
         </Typography>
