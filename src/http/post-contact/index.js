@@ -1,5 +1,9 @@
 let arc = require("@architect/functions");
 let data = require("@begin/data");
+let mailjet = require("node-mailjet").connect(
+  process.env.MJ_APIKEY_PUBLIC,
+  process.env.MJ_APIKEY_PRIVATE
+);
 let table = "contacts";
 
 let parseBody = arc.http.helpers.bodyParser;
@@ -7,6 +11,34 @@ let parseBody = arc.http.helpers.bodyParser;
 exports.handler = async function http(request) {
   let body = parseBody(request);
   await data.set({ table, message: { ...body, createdAt: Date.now() } });
+  await mailjet.post("send", { version: "v3.1" }).request({
+    Messages: [
+      {
+        From: {
+          Email: "contact@theteaclub.fr",
+          Name: "The Tea Club",
+        },
+        To: [
+          {
+            Email: "florent.duveau@gmail.com",
+            Name: "Florent DUVEAU",
+          },
+          {
+            Email: "deborahwack@gmail.com",
+            Name: "Déborah WACK",
+          },
+        ],
+        Subject: "Nouveau mail de contact !",
+        TemplateID: 1471759,
+        TemplateLanguage: true,
+        Subject: "Nouveau message !",
+        Variables: {
+          email: body.email,
+          message: body.message,
+        },
+      },
+    ],
+  });
   return {
     headers: {
       "content-type": "application/json; charset=utf8",

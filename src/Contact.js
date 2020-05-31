@@ -56,7 +56,10 @@ const Contact = () => {
                         Accept: "application/json",
                         "Content-Type": "application/json",
                       },
-                      body: JSON.stringify(values),
+                      body: JSON.stringify({
+                        ...values,
+                        message: values.message.replace(/\n/g, "<br/>"),
+                      }),
                     })
                   ).json();
                 } catch (e) {
