@@ -24,11 +24,11 @@ const LandingCard = ({ icon, title, children, direction }) => {
         {direction === "left" && <Box p={{ xs: 2, md: 5 }}>{icon}</Box>}
         <Box>
           <Box mb={2}>
-            <Typography variant="h4" display="block">
+            <Typography variant="h5" display="block">
               {title}
             </Typography>
           </Box>
-          <Typography variant="h5" style={{ color: "#000000" }}>
+          <Typography variant="h6" style={{ color: "#000000" }}>
             {children}
           </Typography>
         </Box>

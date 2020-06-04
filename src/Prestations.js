@@ -95,7 +95,7 @@ const Prestations = () => {
               </ListItemIcon>
               <ListItemText>
                 Animations ponctuelles / intervention dans les écoles, centre de
-                loisirs, crèches, médiathèques… :
+                loisirs, crèches, médiathèques… :{" "}
                 <Link to={ME_CONTACTER}>devis sur demande</Link>.
               </ListItemText>
             </ListItem>

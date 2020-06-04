@@ -65,7 +65,7 @@ const Landing = () => {
       </div>
       <Container style={{ backgroundColor: "white" }}>
         <LandingCard
-          icon={<Titeuf width={mobile ? 100 : 140} />}
+          icon={<Cheveux width={mobile ? 100 : 140} />}
           title="The Tea Club c’est avant tout permettre aux enfants de se retrouver pour passer un bon moment en anglais."
         >
           Ce ne sont pas des cours ou des leçons ; on apprend tout en s’amusant.
@@ -81,7 +81,7 @@ const Landing = () => {
         </LandingCard>
         <LandingCard
           title="Vos enfants ont entre 4 et 11 ans ?"
-          icon={<Cheveux width={mobile ? 100 : 140} />}
+          icon={<Titeuf width={mobile ? 100 : 140} />}
         >
           Peu importe le niveau, chacun apprend à son rythme !
         </LandingCard>

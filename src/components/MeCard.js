@@ -33,9 +33,7 @@ const MeCard = ({ src, alt, children, direction }) => {
           </Box>
         )}
         <Box m={{ xs: 2, md: 0 }}>
-          <Typography variant="h5" style={{ color: "#000000" }}>
-            {children}
-          </Typography>
+          <Typography style={{ color: "#000000" }}>{children}</Typography>
         </Box>
         {direction === "right" && (
           <Box pl={{ xs: 0, md: 5 }}>

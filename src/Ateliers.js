@@ -42,7 +42,7 @@ const Card = ({ title, icon, background, children, price }) => {
   return (
     <Grid item xs={12} md={6}>
       <Box className={style.root}>
-        <Typography variant="h4" className={style.title}>
+        <Typography variant="h5" className={style.title}>
           {title}
         </Typography>
         <Box className={style.picto}>{icon}</Box>
@@ -120,7 +120,7 @@ const Ateliers = () => {
             <Typography>
               Ouverture d’ateliers à partir de 4 enfants minimum inscrits.
             </Typography>
-            <Typography>Groupes limités à 6 enfants maximum.</Typography>
+            <Typography>Petits groupes : 6 enfants maximum.</Typography>
           </Infos>
           <Infos icon={<Discount width={100} />}>
             <Typography>

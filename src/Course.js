@@ -7,7 +7,7 @@ import Fern from "./svg/Fern";
 const Paragraph = ({ children }) => {
   return (
     <Box mb={2}>
-      <Typography variant="h5">{children}</Typography>
+      <Typography>{children}</Typography>
     </Box>
   );
 };
@@ -30,7 +30,7 @@ const Course = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <Box mb={{ xs: 4, md: 10 }}>
-              <Typography variant="h2">Comment ça se passe&nbsp;?</Typography>
+              <Typography variant="h3">Comment ça se passe&nbsp;?</Typography>
             </Box>
             <ul>
               <li>

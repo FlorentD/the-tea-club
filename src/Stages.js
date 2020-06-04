@@ -40,7 +40,7 @@ const Card = ({ title, icon, background, children }) => {
   return (
     <Grid item xs={12} md={6}>
       <Box className={style.root}>
-        <Typography variant="h4" className={style.title}>
+        <Typography variant="h5" className={style.title}>
           {title}
         </Typography>
         <Box className={style.picto}>{icon}</Box>
