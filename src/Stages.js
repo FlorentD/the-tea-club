@@ -16,6 +16,7 @@ import Forest from "./svg/Forest";
 import Forest1 from "./svg/Forest1";
 import Trees from "./svg/Trees";
 import Travel from "./svg/Travel";
+import SignDialog from "./SignDialog";
 
 const useCardStyle = makeStyles({
   root: {
@@ -34,7 +35,7 @@ const useCardStyle = makeStyles({
   }),
 });
 
-const Card = ({ title, icon, background, children, price }) => {
+const Card = ({ title, icon, background, children }) => {
   const style = useCardStyle({ background });
   return (
     <Grid item xs={12} md={6}>
@@ -138,6 +139,15 @@ const Stages = () => {
             insectes, bateaux- bâtons peinture, découpages, collages, créations
             naturelles !
           </Typography>
+          <Box mt={4}>
+            <SignDialog type="STAGE // 4-7 ans">
+              Pour les Little EXPLORERS 4-7 ans du 06/07/2020 au 10/07/2020.
+              <Typography>
+                Je vous recontacterai rapidement après l'envoi du formulaire
+                pour faire connaissance et valider votre inscription !
+              </Typography>
+            </SignDialog>
+          </Box>
         </Card>
         <Card
           title="BIG TRAVELLERS 8-11 ans"
@@ -162,6 +172,15 @@ const Stages = () => {
             oiseaux du monde compositions, pliages, peintures, découvertes
             photographiques et animalières !
           </Typography>
+          <Box mt={4}>
+            <SignDialog type="STAGE // 8-11 ans">
+              Pour les BIG TRAVELLERS 8-11 ans du 06/07/2020 au 10/07/2020.
+              <Typography>
+                Je vous recontacterai rapidement après l'envoi du formulaire
+                pour faire connaissance et valider votre inscription !
+              </Typography>
+            </SignDialog>
+          </Box>
         </Card>
       </Grid>
     </Container>

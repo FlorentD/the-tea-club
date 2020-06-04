@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import {
   Container,
   Typography,
@@ -9,6 +9,8 @@ import {
   ListItem,
   ListItemText,
   ListItemIcon,
+  Box,
+  Button,
 } from "@material-ui/core";
 import Group from "./svg/Group";
 import Student from "./svg/Student";
@@ -31,6 +33,7 @@ const useStyle = makeStyles({
 
 const Prestations = () => {
   const style = useStyle();
+  const history = useHistory();
   return (
     <Container>
       <Typography variant="h2" className={style.title}>
@@ -92,13 +95,22 @@ const Prestations = () => {
               </ListItemIcon>
               <ListItemText>
                 Animations ponctuelles / intervention dans les écoles, centre de
-                loisirs, crèches, médiathèques… :{" "}
+                loisirs, crèches, médiathèques… :
                 <Link to={ME_CONTACTER}>devis sur demande</Link>.
               </ListItemText>
             </ListItem>
           </List>
         </Grid>
       </Grid>
+      <Box display="flex" justifyContent="center">
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => history.push(ME_CONTACTER)}
+        >
+          <Box m={2}>Me contacter</Box>
+        </Button>
+      </Box>
     </Container>
   );
 };
