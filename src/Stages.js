@@ -15,7 +15,6 @@ import PropTypes from "prop-types";
 import Forest from "./svg/Forest";
 import Forest1 from "./svg/Forest1";
 import Trees from "./svg/Trees";
-import Travel from "./svg/Travel";
 import SignDialog from "./SignDialog";
 
 const useCardStyle = makeStyles({
@@ -28,22 +27,25 @@ const useCardStyle = makeStyles({
     padding: "10px",
     fontWeight: "bold",
   }),
-  picto: (props) => ({
+  image: (props) => ({
     padding: "30px",
+    height: 240,
     textAlign: "center",
-    backgroundColor: props.background,
+    backgroundImage: `url("${props.image}")`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
   }),
 });
 
-const Card = ({ title, icon, background, children }) => {
-  const style = useCardStyle({ background });
+const Card = ({ title, icon, background, image, children }) => {
+  const style = useCardStyle({ background, image });
   return (
     <Grid item xs={12} md={6}>
       <Box className={style.root}>
         <Typography variant="h5" className={style.title}>
           {title}
         </Typography>
-        <Box className={style.picto}>{icon}</Box>
+        <Box className={style.image} />
         {children}
       </Box>
     </Grid>
@@ -52,10 +54,12 @@ const Card = ({ title, icon, background, children }) => {
 
 Card.propTypes = {
   background: PropTypes.string,
+  image: PropTypes.string,
 };
 
 Card.defaultProps = {
   background: "black",
+  image: "",
 };
 
 const useStyle = makeStyles({
@@ -109,13 +113,13 @@ const Stages = () => {
       <Grid container>
         <Card
           title="Little EXPLORERS 4-7 ans"
-          icon={<Forest width={120} />}
+          image="/static/stage_little_explorers.jpg"
           background="#4FBA6F"
         >
           <List>
             <ListItem>
               <ListItemIcon>
-                <Trees width={30} />
+                <Trees width={40} />
               </ListItemIcon>
               <ListItemText>
                 Formule 3 demi-journées :{" "}
@@ -125,12 +129,12 @@ const Stages = () => {
             </ListItem>
             <ListItem>
               <ListItemIcon>
-                <Forest1 width={30} />
+                <Forest1 width={40} />
               </ListItemIcon>
               <ListItemText>
                 Formule 5 demi-journées :{" "}
-                <DateFormat>du 06/07/2020 au 10/07/2020</DateFormat> de 14h30 à
-                16h30
+                <DateFormat>du 06/07/2020 au 10/07/2020</DateFormat> de 9h30 à
+                11h30
               </ListItemText>
             </ListItem>
           </List>
@@ -151,19 +155,28 @@ const Stages = () => {
         </Card>
         <Card
           title="BIG TRAVELLERS 8-11 ans"
-          icon={<Travel width={120} />}
+          image="/static/stage_big_travellers.jpg"
           background="#FF757C"
-          price={450}
         >
           <List>
             <ListItem>
               <ListItemIcon>
-                <Forest1 width={30} />
+                <Trees width={40} />
+              </ListItemIcon>
+              <ListItemText>
+                Formule 3 demi-journées :{" "}
+                <DateFormat>du 06/07/2020 au 08/07/2020</DateFormat> de 14h30 à
+                16h30
+              </ListItemText>
+            </ListItem>
+            <ListItem>
+              <ListItemIcon>
+                <Forest1 width={40} />
               </ListItemIcon>
               <ListItemText>
                 Formule 5 demi-journées :{" "}
-                <DateFormat>du 06/07/2020 au 10/07/2020</DateFormat> de 9h30 à
-                12h00
+                <DateFormat>du 06/07/2020 au 10/07/2020</DateFormat> de 14h30 à
+                16h30
               </ListItemText>
             </ListItem>
           </List>
