@@ -12,6 +12,7 @@ import Travel from "./svg/Travel";
 import Friends from "./svg/Friends";
 import Discount from "./svg/Discount";
 import Receipt from "./svg/Receipt";
+import SignDialog from "./SignDialog";
 
 const useCardStyle = makeStyles({
   root: {
@@ -29,7 +30,8 @@ const useCardStyle = makeStyles({
     backgroundColor: props.background,
   }),
   description: {
-    marginTop: "10px",
+    marginTop: 10,
+    marginBottom: 10,
     textAlign: "center",
     fontWeight: "bold",
   },
@@ -52,6 +54,14 @@ const Card = ({ title, icon, background, children, price }) => {
           <Typography variant="h6">30 séances</Typography>
         </Box>
         {children}
+        <SignDialog type={title}>
+          Pour les {title}.
+          <Typography>Le prix pour 30 séances est de {price}€.</Typography>
+          <Typography>
+            Je vous recontacterai rapidement après l'envoi du formulaire pour
+            faire connaissance et valider votre inscription !
+          </Typography>
+        </SignDialog>
       </Box>
     </Grid>
   );
@@ -74,7 +84,7 @@ const useInfoStyle = makeStyles({
 const Infos = ({ icon, children }) => {
   const style = useInfoStyle();
   return (
-    <Grid xs={12} md={6} className={style.root}>
+    <Grid item xs={12} md={6} className={style.root}>
       <Box className={style.icon}>
         <div>{icon}</div>
       </Box>

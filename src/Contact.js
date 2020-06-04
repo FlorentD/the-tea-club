@@ -69,7 +69,7 @@ const Contact = () => {
                 }
               }}
             >
-              {({ isSubmitting }) => {
+              {() => {
                 return (
                   <>
                     <Text

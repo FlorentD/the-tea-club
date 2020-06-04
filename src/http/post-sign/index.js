@@ -4,7 +4,7 @@ let mailjet = require("node-mailjet").connect(
   process.env.MJ_APIKEY_PUBLIC,
   process.env.MJ_APIKEY_PRIVATE
 );
-let table = "contacts";
+let table = "sign";
 
 let parseBody = arc.http.helpers.bodyParser;
 
@@ -28,12 +28,16 @@ exports.handler = async function http(request) {
             Name: "Déborah WACK",
           },
         ],
-        Subject: "Nouveau mail de contact !",
-        TemplateID: 1471759,
+        Subject: "Nouvelle inscription !",
+        TemplateID: 1482189,
         TemplateLanguage: true,
         Variables: {
+          type: body.type,
+          firstName: body.firstName,
+          lastName: body.lastName,
           email: body.email,
-          message: body.message,
+          phone: body.phone,
+          details: body.details,
         },
       },
     ],
