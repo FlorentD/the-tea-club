@@ -74,7 +74,7 @@ const useInfoStyle = makeStyles({
 const Infos = ({ icon, children }) => {
   const style = useInfoStyle();
   return (
-    <Grid xs={12} md={7} className={style.root}>
+    <Grid xs={12} md={6} className={style.root}>
       <Box className={style.icon}>
         <div>{icon}</div>
       </Box>
@@ -105,7 +105,7 @@ const Ateliers = () => {
           background="#FF757C"
           price={450}
         ></Card>
-        <Grid container direction="column" alignItems="center">
+        <Grid container alignItems="center">
           <Infos icon={<Friends width={100} />}>
             <Typography>
               Ouverture d’ateliers à partir de 4 enfants minimum inscrits.

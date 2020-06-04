@@ -16,11 +16,13 @@ import {
   COMME_CA_SE_ASSE,
   MA_PHILOSOPHIE,
   ME_CONTACTER,
+  PRESTATIONS,
   QUI_JE_SUIS,
   STAGES,
 } from "./routes";
 import Ateliers from "./Ateliers";
 import Stages from "./Stages";
+import Prestations from "./Prestations";
 
 const App = () => {
   return (
@@ -46,6 +48,9 @@ const App = () => {
           </Route>
           <Route path={STAGES}>
             <Stages />
+          </Route>
+          <Route path={PRESTATIONS}>
+            <Prestations />
           </Route>
           <Route>
             <Landing />

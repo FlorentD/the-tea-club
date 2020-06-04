@@ -14,6 +14,7 @@ import {
   COMME_CA_SE_ASSE,
   MA_PHILOSOPHIE,
   ME_CONTACTER,
+  PRESTATIONS,
   QUI_JE_SUIS,
   STAGES,
 } from "./routes";
@@ -146,6 +147,15 @@ const MobileMenu = () => {
         <MenuLink to={QUI_JE_SUIS} onClick={() => setOpen(false)}>
           Qui suis-je ?
         </MenuLink>
+        <MenuLink to={ATELIERS} onClick={() => setOpen(false)}>
+          Les Ateliers
+        </MenuLink>
+        <MenuLink to={STAGES} onClick={() => setOpen(false)}>
+          Les Stages
+        </MenuLink>
+        <MenuLink to={PRESTATIONS} onClick={() => setOpen(false)}>
+          Prestations
+        </MenuLink>
         <MenuLink to={ME_CONTACTER} onClick={() => setOpen(false)}>
           Me Contacter
         </MenuLink>
@@ -186,6 +196,7 @@ const Menu = () => {
           <NewMenuLink to={QUI_JE_SUIS}>Qui suis-je ?</NewMenuLink>
           <NewMenuLink to={ATELIERS}>Les Ateliers</NewMenuLink>
           <NewMenuLink to={STAGES}>Les Stages</NewMenuLink>
+          <NewMenuLink to={PRESTATIONS}>Prestations</NewMenuLink>
           <NewMenuLink to={ME_CONTACTER}>Me Contacter</NewMenuLink>
         </Grid>
       </Hidden>
