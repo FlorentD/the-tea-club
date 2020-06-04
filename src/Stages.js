@@ -12,7 +12,6 @@ import {
 } from "@material-ui/core";
 import EnglishHelper from "./components/EnglishHelper";
 import PropTypes from "prop-types";
-import Forest from "./svg/Forest";
 import Forest1 from "./svg/Forest1";
 import Trees from "./svg/Trees";
 import SignDialog from "./SignDialog";
@@ -37,7 +36,7 @@ const useCardStyle = makeStyles({
   }),
 });
 
-const Card = ({ title, icon, background, image, children }) => {
+const Card = ({ title, background, image, children }) => {
   const style = useCardStyle({ background, image });
   return (
     <Grid item xs={12} md={6}>

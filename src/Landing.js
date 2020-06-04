@@ -39,6 +39,7 @@ const useTitleStyle = makeStyles((theme) => ({
     fontSize: "1.5rem",
     fontWeight: "bold",
     textAlign: "center",
+    fontFamily: "Itim",
     [theme.breakpoints.up("md")]: {
       fontSize: "3rem",
       lineHeight: "60px",
