@@ -106,7 +106,11 @@ const SignDialog = ({ children, type }) => {
                       <Text name="firstName" placeholder="Prénom" />
                       <Text name="lastName" placeholder="Nom" />
                       <Text name="email" placeholder="E-mail" type="email" />
-                      <Text name="phone" placeholder="Numéro de téléphone" />
+                      <Text
+                        name="phone"
+                        placeholder="Numéro de téléphone"
+                        type="phone"
+                      />
                       <TextArea name="details" placeholder="Remarques" />
                     </>
                   )}

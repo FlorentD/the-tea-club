@@ -51,7 +51,7 @@ const Prestations = () => {
           <List dense>
             <ListItem>
               <ListItemIcon>
-                <Group width={30} />
+                <Group width={40} />
               </ListItemIcon>
               <ListItemText>
                 Ateliers sur mesure pour un groupe constitué (tarifs variables
@@ -60,7 +60,7 @@ const Prestations = () => {
             </ListItem>
             <ListItem>
               <ListItemIcon>
-                <Student width={30} />
+                <Student width={40} />
               </ListItemIcon>
               <ListItemText>
                 Cours particuliers anglais adolescents (collège 11-15 ans).
@@ -68,7 +68,7 @@ const Prestations = () => {
             </ListItem>
             <ListItem>
               <ListItemIcon>
-                <English width={30} />
+                <English width={40} />
               </ListItemIcon>
               <ListItemText>
                 Remise à niveau / approfondissement des bases / séances
@@ -82,7 +82,7 @@ const Prestations = () => {
           <List dense>
             <ListItem>
               <ListItemIcon>
-                <Cultures width={30} />
+                <Cultures width={40} />
               </ListItemIcon>
               <ListItemText>
                 Animations thématiques lors d'événements / manifestations
@@ -91,7 +91,7 @@ const Prestations = () => {
             </ListItem>
             <ListItem>
               <ListItemIcon>
-                <School width={30} />
+                <School width={40} />
               </ListItemIcon>
               <ListItemText>
                 Animations ponctuelles / intervention dans les écoles, centre de
