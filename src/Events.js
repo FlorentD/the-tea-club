@@ -36,8 +36,20 @@ const Events = () => {
         </Box>
         <Box mt={2}>
           <Typography variant="h6">
-            🇬🇧🌿 Une matinée (10h - midi) en anglais dans la nature pour vos
-            enfants, ça vous tente ? 🌿🇬🇧
+            <span role="img" aria-label="drapeau du royaume-uni">
+              🇬🇧
+            </span>
+            <span role="img" aria-label="emoji feuille">
+              🌿
+            </span>{" "}
+            Une matinée (10h - midi) en anglais dans la nature pour vos enfants,
+            ça vous tente ?{" "}
+            <span role="img" aria-label="emoji feuille">
+              🌿
+            </span>
+            <span role="img" aria-label="drapeau du royaume-uni">
+              🇬🇧
+            </span>
           </Typography>
         </Box>
         <Box display="flex" mt={2} className={style.bodyBox}>
@@ -58,7 +70,10 @@ const Events = () => {
           </Box>
           <Box ml={{ xs: 0, md: 5 }}>
             <Typography>
-              🌿 Dans le chouette écrin de{" "}
+              <span role="img" aria-label="emoji feuille">
+                🌿
+              </span>{" "}
+              Dans le chouette écrin de{" "}
               <a
                 href="https://marmaille-et-pissenlit.fr/"
                 target="_blank"
@@ -70,20 +85,32 @@ const Events = () => {
               anglais.
             </Typography>
             <Typography className={style.typo}>
-              👍 Aucun niveau n’est requis, les enfants ont déjà de formidables
+              <span role="img" aria-label="emoji pouce en l'air">
+                👍
+              </span>{" "}
+              Aucun niveau n’est requis, les enfants ont déjà de formidables
               oreilles et capacités de compréhension. Le matériel ludique
               adapté, les mimes et la bonne humeur permettront à tous de passer
               un bon moment.
             </Typography>
             <Typography className={style.typo}>
-              🤩 Au programme chasse aux trésors de la nature, jeux de
-              devinettes, créations naturelles, chants et histoires en anglais.
+              <span role="img" aria-label="emoji étoiles dans les yeux">
+                🤩
+              </span>{" "}
+              Au programme chasse aux trésors de la nature, jeux de devinettes,
+              créations naturelles, chants et histoires en anglais.
             </Typography>
             <Typography className={style.typo}>
-              👍 Tarif découverte : <strong>20€ par enfant</strong>
+              <span role="img" aria-label="emoji pouce en l'air">
+                👍
+              </span>{" "}
+              Tarif découverte : <strong>20€ par enfant</strong>
             </Typography>
             <Typography className={style.typo}>
-              🙌 en cette période de crise sanitaire, un protocole sanitaire est
+              <span role="img" aria-label="emoji mains en l'air">
+                🙌
+              </span>{" "}
+              en cette période de crise sanitaire, un protocole sanitaire est
               mis en place sur le lieu, et devra être lu en amont.
               <br /> Nous veillerons au lavage des mains, nous serons en petits
               groupes de 6 enfants maximum et je privilégie l’utilisation du
