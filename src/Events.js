@@ -53,7 +53,7 @@ const Events = () => {
                 28 juin), l'age et le nombre d'enfants que vous souhaitez
                 inscrire dans la partie "remarques".
               </Typography>
-              <Typography>Tarif découverte : 20 euros par enfant</Typography>
+              <Typography>Tarif découverte : 20€ par enfant</Typography>
             </SignDialog>
           </Box>
           <Box ml={{ xs: 0, md: 5 }}>
