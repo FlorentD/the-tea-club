@@ -146,6 +146,10 @@ const Stages = () => {
             <SignDialog type="STAGE // 4-7 ans">
               Pour les Little EXPLORERS 4-7 ans du 06/07/2020 au 10/07/2020.
               <Typography>
+                Merci d'indiquer l'age et le nombre d'enfants que vous souhaitez
+                inscrire dans la partie "remarques".
+              </Typography>
+              <Typography>
                 Je vous recontacterai rapidement après l'envoi du formulaire
                 pour faire connaissance et valider votre inscription !
               </Typography>
@@ -187,6 +191,10 @@ const Stages = () => {
           <Box mt={4}>
             <SignDialog type="STAGE // 8-11 ans">
               Pour les BIG TRAVELLERS 8-11 ans du 06/07/2020 au 10/07/2020.
+              <Typography>
+                Merci d'indiquer l'age et le nombre d'enfants que vous souhaitez
+                inscrire dans la partie "remarques".
+              </Typography>
               <Typography>
                 Je vous recontacterai rapidement après l'envoi du formulaire
                 pour faire connaissance et valider votre inscription !

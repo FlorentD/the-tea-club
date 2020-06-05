@@ -58,6 +58,10 @@ const Card = ({ title, icon, background, children, price }) => {
           Pour les {title}.
           <Typography>Le prix pour 30 séances est de {price}€.</Typography>
           <Typography>
+            Merci d'indiquer l'age et le nombre d'enfants que vous souhaitez
+            inscrire dans la partie "remarques".
+          </Typography>
+          <Typography>
             Je vous recontacterai rapidement après l'envoi du formulaire pour
             faire connaissance et valider votre inscription !
           </Typography>

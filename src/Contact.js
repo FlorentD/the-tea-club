@@ -7,6 +7,7 @@ import {
   Hidden,
   Fade,
   Container,
+  makeStyles,
 } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
 import * as Yup from "yup";
@@ -15,20 +16,43 @@ import TextArea from "./components/form/TextArea";
 import Submit from "./components/form/Submit";
 import Postal from "./svg/Postal";
 import Letter from "./svg/Letter";
+import Image from "./components/Image";
+
+const useStyles = makeStyles({
+  titleBox: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  image: {
+    width: 200,
+    height: 200,
+    borderRadius: "50%",
+    marginLeft: 100,
+  },
+});
 
 const Contact = () => {
   const [messageSent, sendMessage] = useState(false);
   const { t } = useTranslation();
+  const style = useStyles();
   return (
     <Container>
       <Box mt={5} style={{ position: "relative" }}>
-        <Box mb={5}>
-          <Typography variant="h2" align="center">
-            {t("contact.title")}
-          </Typography>
-          <Typography align="center" variant="h5">
-            Je vous répondrai avec plaisir
-          </Typography>
+        <Box mb={5} className={style.titleBox}>
+          <Box>
+            <Typography variant="h2" align="center">
+              {t("contact.title")}
+            </Typography>
+            <Typography align="center" variant="h5">
+              Je vous répondrai avec plaisir
+            </Typography>
+          </Box>
+          <Image
+            src="/static/deborah.jpg"
+            alt="photo de profil de deborah"
+            className={style.image}
+          />
         </Box>
         <Grid container>
           <Grid item xs={12} md={4}>
