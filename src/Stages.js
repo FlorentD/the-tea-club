@@ -27,6 +27,7 @@ const useCardStyle = makeStyles({
     fontWeight: "bold",
   }),
   image: (props) => ({
+    position: "relative",
     padding: "30px",
     height: 240,
     textAlign: "center",
@@ -34,9 +35,14 @@ const useCardStyle = makeStyles({
     backgroundSize: "cover",
     backgroundPosition: "center",
   }),
+  credits: {
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+  },
 });
 
-const Card = ({ title, background, image, children }) => {
+const Card = ({ title, background, image, children, credits }) => {
   const style = useCardStyle({ background, image });
   return (
     <Grid item xs={12} md={6}>
@@ -44,7 +50,13 @@ const Card = ({ title, background, image, children }) => {
         <Typography variant="h5" className={style.title}>
           {title}
         </Typography>
-        <Box className={style.image} />
+        <Box className={style.image}>
+          {credits && (
+            <Typography variant="caption" className={style.credits}>
+              {credits}
+            </Typography>
+          )}
+        </Box>
         {children}
       </Box>
     </Grid>
@@ -190,6 +202,18 @@ const Stages = () => {
           title="BIG TRAVELLERS 8-11 ans"
           image="/static/stage_big_travellers.jpg"
           background="#FF757C"
+          credits={
+            <span>
+              Photo by{" "}
+              <a
+                href="http://www.lamaisondeloulou.com/blog/3382-2/insect-4/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                La Maison de Loulou
+              </a>
+            </span>
+          }
         >
           <List>
             <ListItem>
