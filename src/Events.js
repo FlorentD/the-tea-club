@@ -63,7 +63,7 @@ const Events = () => {
               <Typography>
                 Merci d'indiquer la date souhaitée (vendredi 26 juin ou dimanche
                 28 juin), l'age et le nombre d'enfants que vous souhaitez
-                inscrire dans la partie "remarques".
+                inscrire dans la partie "Remarques".
               </Typography>
               <Typography>Tarif découverte : 20€ par enfant</Typography>
             </SignDialog>

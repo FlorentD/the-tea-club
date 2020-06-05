@@ -193,7 +193,7 @@ const Stages = () => {
               Pour les Little EXPLORERS 4-7 ans du 06/07/2020 au 10/07/2020.
               <Typography>
                 Merci d'indiquer l'age et le nombre d'enfants que vous souhaitez
-                inscrire dans la partie "remarques".
+                inscrire dans la partie "Remarques".
               </Typography>
               <Typography>
                 Je vous recontacterai rapidement après l'envoi du formulaire
@@ -265,7 +265,7 @@ const Stages = () => {
               Pour les BIG TRAVELLERS 8-11 ans du 06/07/2020 au 10/07/2020.
               <Typography>
                 Merci d'indiquer l'age et le nombre d'enfants que vous souhaitez
-                inscrire dans la partie "remarques".
+                inscrire dans la partie "Remarques".
               </Typography>
               <Typography>
                 Je vous recontacterai rapidement après l'envoi du formulaire
