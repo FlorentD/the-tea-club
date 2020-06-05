@@ -80,7 +80,14 @@ const Events = () => {
               devinettes, créations naturelles, chants et histoires en anglais.
             </Typography>
             <Typography className={style.typo}>
-              👍 Tarif découverte : 20 euros par enfant
+              👍 Tarif découverte : <strong>20€ par enfant</strong>
+            </Typography>
+            <Typography className={style.typo}>
+              🙌 en cette période de crise sanitaire, un protocole sanitaire est
+              mis en place sur le lieu, et devra être lu en amont.
+              <br /> Nous veillerons au lavage des mains, nous serons en petits
+              groupes de 6 enfants maximum et je privilégie l’utilisation du
+              matériel individuel pour chaque enfant.
             </Typography>
             <Typography className={style.typo}>
               <EnglishHelper title="À bientôt !">See you soon!</EnglishHelper>
