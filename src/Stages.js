@@ -108,6 +108,12 @@ const Stages = () => {
           Découvrir le jardin, la faune, la flore, s’exprimer à partir de jeux,
           chansons et créations artistiques sur le thème de la nature.
         </Typography>
+        <Typography>
+          On apprend les formes, les couleurs, les noms des outils, les verbes
+          d’action liés à l’art, on développe son imagination et sa créativité
+          en inventant une histoire, en découvrant le vocabulaire de la nature
+          des plantes et des animaux.
+        </Typography>
       </Box>
       <Grid container>
         <Card
@@ -137,11 +143,35 @@ const Stages = () => {
               </ListItemText>
             </ListItem>
           </List>
-          <Typography>
-            Landart, animaux fantastiques, chasse au trésor, mini hôtel à
-            insectes, bateaux- bâtons peinture, découpages, collages, créations
-            naturelles !
-          </Typography>
+          <List dense>
+            <ListItem>
+              <ListItemText>
+                <strong>DAY 1</strong> : Portraits nature et Land art / Nature
+                portraits and Land art
+              </ListItemText>
+            </ListItem>
+            <ListItem>
+              <ListItemText>
+                <strong>DAY 2</strong> : La chenille qui fait des trous dans le
+                potager / The very hungry Caterpillar in the garden.
+              </ListItemText>
+            </ListItem>
+            <ListItem>
+              <ListItemText>
+                <strong>DAY 3</strong> : Petits insectes / Little insects
+              </ListItemText>
+            </ListItem>
+            <ListItem>
+              <ListItemText>
+                <strong>DAY 4</strong> : Chasse aux trésors / Treasure hunt
+              </ListItemText>
+            </ListItem>
+            <ListItem>
+              <ListItemText>
+                <strong>DAY 5</strong> : Oiseaux perchés / Fly little birds
+              </ListItemText>
+            </ListItem>
+          </List>
           <Box mt={4}>
             <SignDialog type="STAGE // 4-7 ans">
               Pour les Little EXPLORERS 4-7 ans du 06/07/2020 au 10/07/2020.
@@ -183,11 +213,36 @@ const Stages = () => {
               </ListItemText>
             </ListItem>
           </List>
-          <Typography>
-            Landart, les insectes, la chasse au trésor, safari photo, les
-            oiseaux du monde compositions, pliages, peintures, découvertes
-            photographiques et animalières !
-          </Typography>
+          <List dense>
+            <ListItem>
+              <ListItemText>
+                <strong>DAY 1</strong> : Portraits nature et Land art / Nature
+                portraits and Land art
+              </ListItemText>
+            </ListItem>
+            <ListItem>
+              <ListItemText>
+                <strong>DAY 2</strong> : Grillon qui n’a pas de chanson d’Eric
+                Carle / The very quiet cricket by Eric Carle
+              </ListItemText>
+            </ListItem>
+            <ListItem>
+              <ListItemText>
+                <strong>DAY 3</strong> : Insectes fantastiques / Crazy insects
+              </ListItemText>
+            </ListItem>
+            <ListItem>
+              <ListItemText>
+                <strong>DAY 4</strong> : Chasse aux trésors / Treasure hunt
+              </ListItemText>
+            </ListItem>
+            <ListItem>
+              <ListItemText>
+                <strong>DAY 5</strong> : Les oiseaux du paradis / Wonderful
+                birds
+              </ListItemText>
+            </ListItem>
+          </List>
           <Box mt={4}>
             <SignDialog type="STAGE // 8-11 ans">
               Pour les BIG TRAVELLERS 8-11 ans du 06/07/2020 au 10/07/2020.
