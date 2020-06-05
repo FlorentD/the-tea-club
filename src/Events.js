@@ -36,8 +36,8 @@ const Events = () => {
         </Box>
         <Box mt={2}>
           <Typography variant="h6">
-            Une matinée en anglais dans la nature pour vos enfants, ça vous
-            tente ?
+            🇬🇧🌿 Une matinée (10h - midi) en anglais dans la nature pour vos
+            enfants, ça vous tente ? 🌿🇬🇧
           </Typography>
         </Box>
         <Box display="flex" mt={2} className={style.bodyBox}>
@@ -49,14 +49,16 @@ const Events = () => {
             />
             <SignDialog type="marmaille-et-pissenlit">
               <Typography>
-                Merci d'indiquer la date souhaitée, l'age et le nombre d'enfants
-                que vous souhaitez inscrire dans la partie "remarques".
+                Merci d'indiquer la date souhaitée (vendredi 26 juin ou dimanche
+                28 juin), l'age et le nombre d'enfants que vous souhaitez
+                inscrire dans la partie "remarques".
               </Typography>
+              <Typography>Tarif découverte : 20 euros par enfant</Typography>
             </SignDialog>
           </Box>
           <Box ml={{ xs: 0, md: 5 }}>
             <Typography>
-              Dans le chouette écrin de{" "}
+              🌿 Dans le chouette écrin de{" "}
               <a
                 href="https://marmaille-et-pissenlit.fr/"
                 target="_blank"
@@ -68,14 +70,17 @@ const Events = () => {
               anglais.
             </Typography>
             <Typography className={style.typo}>
-              Aucun niveau n’est requis, les enfants ont déjà de formidables
+              👍 Aucun niveau n’est requis, les enfants ont déjà de formidables
               oreilles et capacités de compréhension. Le matériel ludique
               adapté, les mimes et la bonne humeur permettront à tous de passer
               un bon moment.
             </Typography>
             <Typography className={style.typo}>
-              Au programme chasse aux trésors de la nature, jeux de devinettes,
-              créations naturelles, chants et histoires en anglais.
+              🤩 Au programme chasse aux trésors de la nature, jeux de
+              devinettes, créations naturelles, chants et histoires en anglais.
+            </Typography>
+            <Typography className={style.typo}>
+              👍 Tarif découverte : 20 euros par enfant
             </Typography>
             <Typography className={style.typo}>
               <EnglishHelper title="À bientôt !">See you soon!</EnglishHelper>
