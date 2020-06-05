@@ -37,8 +37,12 @@ const useCardStyle = makeStyles({
   }),
   credits: {
     position: "absolute",
+    color: "gray",
     bottom: 0,
     left: 0,
+    "> a": {
+      color: "gray",
+    },
   },
 });
 
@@ -100,7 +104,7 @@ const Stages = () => {
   return (
     <Container style={{ marginTop: "40px" }}>
       <Typography variant="h3" className={style.title}>
-        <EnglishHelper title="Stages vacances">Holiday clubs</EnglishHelper>
+        <EnglishHelper title="Stages d'été">Summer clubs</EnglishHelper>
       </Typography>
       <Box mt={4}>
         <Typography variant="h4" className={style.title}>
@@ -202,18 +206,7 @@ const Stages = () => {
           title="BIG TRAVELLERS 8-11 ans"
           image="/static/stage_big_travellers.jpg"
           background="#FF757C"
-          credits={
-            <span>
-              Photo by{" "}
-              <a
-                href="http://www.lamaisondeloulou.com/blog/3382-2/insect-4/"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                La Maison de Loulou
-              </a>
-            </span>
-          }
+          credits={<span>Photo by La Maison de Loulou</span>}
         >
           <List>
             <ListItem>
