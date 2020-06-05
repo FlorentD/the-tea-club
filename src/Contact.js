@@ -18,19 +18,25 @@ import Postal from "./svg/Postal";
 import Letter from "./svg/Letter";
 import Image from "./components/Image";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   titleBox: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    flexDirection: "column",
+    [theme.breakpoints.up("md")]: {
+      flexDirection: "row",
+    },
   },
   image: {
     width: 200,
     height: 200,
     borderRadius: "50%",
-    marginLeft: 100,
+    [theme.breakpoints.up("md")]: {
+      marginLeft: 100,
+    },
   },
-});
+}));
 
 const Contact = () => {
   const [messageSent, sendMessage] = useState(false);
