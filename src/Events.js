@@ -60,7 +60,7 @@ const Events = () => {
               <a
                 href="https://marmaille-et-pissenlit.fr/"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 Marmaille et Pissenlit
               </a>{" "}
