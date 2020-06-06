@@ -128,7 +128,7 @@ const Ateliers = () => {
           </Infos>
           <Infos icon={<Discount width={100} />}>
             <Typography>
-              (montant recalculé si démarrage des cours après le 21/09/2020)
+              (montant recalculé si démarrage des ateliers après le 21/09/2020)
             </Typography>
             <Typography>
               Réductions : -10% pour le 2ème enfant. -15% pour le 3ème enfant.
