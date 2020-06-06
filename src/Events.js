@@ -42,8 +42,8 @@ const Events = () => {
             <span role="img" aria-label="emoji feuille">
               🌿
             </span>{" "}
-            Une matinée (10h - midi) en anglais dans la nature pour vos enfants,
-            ça vous tente ?{" "}
+            Une matinée en anglais dans la nature pour vos enfants, ça vous
+            tente ?{" "}
             <span role="img" aria-label="emoji feuille">
               🌿
             </span>
@@ -85,8 +85,8 @@ const Events = () => {
               anglais.
             </Typography>
             <Typography className={style.typo}>
-              <span role="img" aria-label="emoji pouce en l'air">
-                👍
+              <span role="img" aria-label="emoji feuille">
+                🌿
               </span>{" "}
               Aucun niveau n’est requis, les enfants ont déjà de formidables
               oreilles et capacités de compréhension. Le matériel ludique
@@ -94,21 +94,27 @@ const Events = () => {
               un bon moment.
             </Typography>
             <Typography className={style.typo}>
-              <span role="img" aria-label="emoji étoiles dans les yeux">
-                🤩
+              <span role="img" aria-label="emoji feuille">
+                🌿
               </span>{" "}
               Au programme chasse aux trésors de la nature, jeux de devinettes,
               créations naturelles, chants et histoires en anglais.
             </Typography>
             <Typography className={style.typo}>
-              <span role="img" aria-label="emoji pouce en l'air">
-                👍
+              <span role="img" aria-label="emoji feuille">
+                🌿
+              </span>{" "}
+              Horaires : <strong>10h à 12h</strong>
+            </Typography>
+            <Typography className={style.typo}>
+              <span role="img" aria-label="emoji feuille">
+                🌿
               </span>{" "}
               Tarif découverte : <strong>20€ par enfant</strong>
             </Typography>
             <Typography className={style.typo}>
-              <span role="img" aria-label="emoji mains en l'air">
-                🙌
+              <span role="img" aria-label="emoji feuille">
+                🌿
               </span>{" "}
               en cette période de crise sanitaire, un protocole sanitaire est
               mis en place sur le lieu, et devra être lu en amont.

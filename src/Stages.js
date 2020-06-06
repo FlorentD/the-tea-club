@@ -143,7 +143,7 @@ const Stages = () => {
                 <Trees width={40} />
               </ListItemIcon>
               <ListItemText>
-                Formule 3 demi-journées :{" "}
+                <strong>Formule 3 demi-journées (75€) : </strong>
                 <DateFormat>du 06/07/2020 au 08/07/2020</DateFormat> de 9h30 à
                 11h30
               </ListItemText>
@@ -153,7 +153,7 @@ const Stages = () => {
                 <Forest1 width={40} />
               </ListItemIcon>
               <ListItemText>
-                Formule 5 demi-journées :{" "}
+                <strong>Formule 5 demi-journées (115€) : </strong>
                 <DateFormat>du 06/07/2020 au 10/07/2020</DateFormat> de 9h30 à
                 11h30
               </ListItemText>
@@ -214,7 +214,7 @@ const Stages = () => {
                 <Trees width={40} />
               </ListItemIcon>
               <ListItemText>
-                Formule 3 demi-journées :{" "}
+                <strong>Formule 3 demi-journées (75€) : </strong>
                 <DateFormat>du 06/07/2020 au 08/07/2020</DateFormat> de 14h30 à
                 16h30
               </ListItemText>
@@ -224,7 +224,7 @@ const Stages = () => {
                 <Forest1 width={40} />
               </ListItemIcon>
               <ListItemText>
-                Formule 5 demi-journées :{" "}
+                <strong>Formule 5 demi-journées (115€) : </strong>
                 <DateFormat>du 06/07/2020 au 10/07/2020</DateFormat> de 14h30 à
                 16h30
               </ListItemText>

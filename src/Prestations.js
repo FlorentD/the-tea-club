@@ -14,7 +14,6 @@ import {
 } from "@material-ui/core";
 import Group from "./svg/Group";
 import Student from "./svg/Student";
-import English from "./svg/English";
 import { ME_CONTACTER } from "./routes";
 import Cultures from "./svg/Cultures";
 import School from "./svg/School";
@@ -43,7 +42,7 @@ const Prestations = () => {
         <Grid item xs={12} md={8}>
           <Typography>
             Je propose aussi, tout au long de l'année, des prestations sur
-            mesure selon vos besoins
+            mesure selon vos besoins.
           </Typography>
           <Typography color="secondary" className={style.category}>
             Pour les particuliers :
@@ -62,17 +61,11 @@ const Prestations = () => {
               <ListItemIcon>
                 <Student width={40} />
               </ListItemIcon>
-              <ListItemText>
+              <ListItemText
+                secondary="Remise à niveau / approfondissement des bases / séances
+                  thématiques en immersion."
+              >
                 Cours particuliers anglais adolescents (collège 11-15 ans).
-              </ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <English width={40} />
-              </ListItemIcon>
-              <ListItemText>
-                Remise à niveau / approfondissement des bases / séances
-                thématiques en immersion.
               </ListItemText>
             </ListItem>
           </List>
@@ -94,8 +87,8 @@ const Prestations = () => {
                 <School width={40} />
               </ListItemIcon>
               <ListItemText>
-                Animations ponctuelles / intervention dans les écoles, centre de
-                loisirs, crèches, médiathèques… :{" "}
+                Animations ponctuelles / intervention dans les écoles, centres
+                de loisirs, crèches, médiathèques… :{" "}
                 <Link to={ME_CONTACTER}>devis sur demande</Link>.
               </ListItemText>
             </ListItem>
