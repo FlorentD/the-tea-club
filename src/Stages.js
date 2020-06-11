@@ -261,7 +261,7 @@ const Stages = () => {
             </ListItem>
           </List>
           <Box mt={4}>
-            <SignDialog type="STAGE // 8-11 ans">
+            <SignDialog type="STAGE // 8-11 ans" complete>
               Pour les BIG TRAVELLERS 8-11 ans du 06/07/2020 au 10/07/2020.
               <Typography>
                 Merci d'indiquer l'age et le nombre d'enfants que vous souhaitez

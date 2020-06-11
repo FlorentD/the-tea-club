@@ -27,7 +27,7 @@ const useStyle = makeStyles({
   },
 });
 
-const SignDialog = ({ children, type }) => {
+const SignDialog = ({ children, type, complete = false }) => {
   const style = useStyle();
   const [open, setOpen] = useState(false);
   const [messageSent, sendMessage] = useState(false);
@@ -35,10 +35,11 @@ const SignDialog = ({ children, type }) => {
     <>
       <Button
         variant="contained"
+        disabled={complete}
         className={style.button}
         onClick={() => setOpen(true)}
       >
-        S'inscrire
+        {complete ? "Complet !" : "S'inscrire"}
       </Button>
       <Dialog
         open={open}
