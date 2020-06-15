@@ -11,7 +11,7 @@ import {
 } from "@material-ui/core";
 import {
   ATELIERS,
-  COMME_CA_SE_ASSE,
+  COMME_CA_SE_PASSE,
   MA_PHILOSOPHIE,
   ME_CONTACTER,
   PRESTATIONS,
@@ -20,6 +20,7 @@ import {
 } from "./routes";
 import Logo from "./svg/Logo";
 import Signs from "./svg/Signs";
+import Facebook from "./svg/Facebook";
 
 const useStyle = makeStyles({
   root: {
@@ -106,6 +107,9 @@ const useMenuStyle = makeStyles((theme) => ({
     borderBottom: "2px solid #98C163",
     [theme.breakpoints.down("md")]: { marginTop: "50px" },
   },
+  link: {
+    display: "flex",
+  },
 }));
 
 const useMobileMenuStyle = makeStyles({
@@ -138,7 +142,7 @@ const MobileMenu = () => {
         </Box>
       </Grid>
       <Drawer anchor="left" open={open} onClose={() => setOpen(false)}>
-        <MenuLink to={COMME_CA_SE_ASSE} onClick={() => setOpen(false)}>
+        <MenuLink to={COMME_CA_SE_PASSE} onClick={() => setOpen(false)}>
           Comment ça se passe ?
         </MenuLink>
         <MenuLink to={MA_PHILOSOPHIE} onClick={() => setOpen(false)}>
@@ -191,13 +195,23 @@ const Menu = () => {
       </Grid>
       <Hidden xsDown>
         <Grid container justify="center" className={menu.root}>
-          <NewMenuLink to={COMME_CA_SE_ASSE}>Comment ça se passe ?</NewMenuLink>
+          <NewMenuLink to={COMME_CA_SE_PASSE}>
+            Comment ça se passe ?
+          </NewMenuLink>
           <NewMenuLink to={MA_PHILOSOPHIE}>Philosophie</NewMenuLink>
           <NewMenuLink to={QUI_JE_SUIS}>Qui suis-je ?</NewMenuLink>
           <NewMenuLink to={ATELIERS}>Les Ateliers</NewMenuLink>
           <NewMenuLink to={STAGES}>Les Stages</NewMenuLink>
           <NewMenuLink to={PRESTATIONS}>Prestations</NewMenuLink>
           <NewMenuLink to={ME_CONTACTER}>Me Contacter</NewMenuLink>
+          <a
+            className={style.link}
+            href="https://www.facebook.com/debtheteaclub"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <Facebook width={40} style={{ marginLeft: 10 }} />
+          </a>
         </Grid>
       </Hidden>
     </>

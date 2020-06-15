@@ -21,8 +21,22 @@ const Course = () => {
             <Hidden xsDown>
               <Box mr={10} mt={5}>
                 <Image
-                  src="/static/kids_square.jpg"
-                  alt="caterpilar"
+                  src="/static/CCSP_1.jpg"
+                  alt="Mains autour d'une oeuvre nature"
+                  style={{ borderRadius: "50%" }}
+                />
+              </Box>
+              <Box mr={10} mt={5}>
+                <Image
+                  src="/static/CCSP_3.jpg"
+                  alt="Oeuvre faite de feuilles"
+                  style={{ borderRadius: "50%" }}
+                />
+              </Box>
+              <Box mr={10} mt={5}>
+                <Image
+                  src="/static/CCSP_2.jpg"
+                  alt="Enfants marchant sur une poutre"
                   style={{ borderRadius: "50%" }}
                 />
               </Box>

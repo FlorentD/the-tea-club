@@ -13,7 +13,7 @@ import Course from "./Course";
 import Menu from "./Menu";
 import {
   ATELIERS,
-  COMME_CA_SE_ASSE,
+  COMME_CA_SE_PASSE,
   MA_PHILOSOPHIE,
   ME_CONTACTER,
   PRESTATIONS,
@@ -30,7 +30,7 @@ const App = () => {
       <Router>
         <Menu />
         <Switch>
-          <Route path={COMME_CA_SE_ASSE}>
+          <Route path={COMME_CA_SE_PASSE}>
             <Course />
           </Route>
           <Route path={MA_PHILOSOPHIE}>
