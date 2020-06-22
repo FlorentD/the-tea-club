@@ -31,7 +31,11 @@ const Events = () => {
       <Grid item xs={12} md={10}>
         <Box mt={4}>
           <Typography variant="h4" color="primary">
-            Prochains rendez-vous le 26 et 28 juin 2020…
+            Prochains rendez-vous : Matinées Happy Nature
+          </Typography>
+          <Typography variant="h5" color="secondary">
+            Le dimanche 28 juin pour les 7/10 ans et le samedi 11 juillet pour
+            les 4/6 ans…
           </Typography>
         </Box>
         <Box mt={2}>

@@ -131,7 +131,7 @@ const Stages = () => {
           des plantes et des animaux.
         </Typography>
       </Box>
-      <Grid container>
+      <Grid container style={{ marginBottom: 40 }}>
         <Card
           title="Little EXPLORERS 4-7 ans"
           image="/static/stage_little_explorers.jpg"
@@ -189,7 +189,7 @@ const Stages = () => {
             </ListItem>
           </List>
           <Box mt={4}>
-            <SignDialog type="STAGE // 4-7 ans">
+            <SignDialog type="STAGE // 4-7 ans" complete>
               Pour les Little EXPLORERS 4-7 ans du 06/07/2020 au 10/07/2020.
               <Typography>
                 Merci d'indiquer l'age et le nombre d'enfants que vous souhaitez
