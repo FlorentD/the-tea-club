@@ -34,8 +34,7 @@ const Events = () => {
             Prochains rendez-vous : Matinées Happy Nature
           </Typography>
           <Typography variant="h5" color="secondary">
-            Le dimanche 28 juin pour les 7/10 ans et le samedi 11 juillet pour
-            les 4/6 ans…
+            le samedi 11 juillet pour les 4/6 ans…
           </Typography>
         </Box>
         <Box mt={2}>

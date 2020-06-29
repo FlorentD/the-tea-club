@@ -46,10 +46,10 @@ const useCardStyle = makeStyles({
   },
 });
 
-const Card = ({ title, background, image, children, credits }) => {
+const Card = ({ title, background, image, children, credits, fullWidth }) => {
   const style = useCardStyle({ background, image });
   return (
-    <Grid item xs={12} md={6}>
+    <Grid item xs={12} md={fullWidth ? 12 : 6}>
       <Box className={style.root}>
         <Typography variant="h5" className={style.title}>
           {title}
@@ -70,11 +70,13 @@ const Card = ({ title, background, image, children, credits }) => {
 Card.propTypes = {
   background: PropTypes.string,
   image: PropTypes.string,
+  fullWidth: PropTypes.bool,
 };
 
 Card.defaultProps = {
   background: "black",
   image: "",
+  fullWidth: false,
 };
 
 const useStyle = makeStyles({
@@ -106,6 +108,100 @@ const Stages = () => {
       <Typography variant="h3" className={style.title}>
         <EnglishHelper title="Stages d'été">Summer clubs</EnglishHelper>
       </Typography>
+      <Box mt={4}>
+        <Typography variant="h4" className={style.title}>
+          Thème :{" "}
+          <EnglishHelper title="Des ados qui continuent d’apprendre l’anglais">
+            Teens keep learning English
+          </EnglishHelper>
+        </Typography>
+      </Box>
+      <Box mt={4}>
+        <Typography variant="h4" color="secondary" className={style.dates}>
+          Du 24 au 28 août 2020
+        </Typography>
+      </Box>
+      <Grid container style={{ marginBottom: 40 }}>
+        <Card
+          title="Une reprise de l’anglais en douceur pour les collégiens"
+          image="/static/english-college.jpg"
+          background="#012169"
+          fullWidth
+        >
+          <Box mt={2}>
+            <Typography>Pour aider votre enfant à :</Typography>
+            <ul>
+              <li>
+                <Typography>
+                  reprendre les repères et les bases de la langue
+                </Typography>
+              </li>
+              <li>
+                <Typography>renforcer ses apprentissages</Typography>
+              </li>
+              <li>
+                <Typography>retrouver le goût de l’anglais</Typography>
+              </li>
+            </ul>
+          </Box>
+          <List>
+            <ListItem>
+              <ListItemIcon>
+                <Forest1 width={40} />
+              </ListItemIcon>
+              <ListItemText>
+                <strong>Formule 5 matinées (150€) : </strong>
+                <DateFormat>
+                  du lundi 24/08/2020 au vendredi 28/08/2020
+                </DateFormat>{" "}
+                de 10h00 à 12h00
+              </ListItemText>
+            </ListItem>
+          </List>
+          <List dense>
+            <ListItem>
+              <ListItemText>
+                <strong>Monday</strong> : Introduce yourself / Se présenter
+              </ListItemText>
+            </ListItem>
+            <ListItem>
+              <ListItemText>
+                <strong>Tuesday</strong> : Let’s bake some cookies ! / Préparons
+                des cookies !
+              </ListItemText>
+            </ListItem>
+            <ListItem>
+              <ListItemText>
+                <strong>Wednesday</strong> : We love sports / On aime les sports
+                (déplacement sur le site de la Martinière)
+              </ListItemText>
+            </ListItem>
+            <ListItem>
+              <ListItemText>
+                <strong>Thursday</strong> : Discover nature / Découvre la nature
+              </ListItemText>
+            </ListItem>
+            <ListItem>
+              <ListItemText>
+                <strong>Friday</strong> : Scientific day / Journée scientifique
+              </ListItemText>
+            </ListItem>
+          </List>
+          <Box mt={4}>
+            <SignDialog type="STAGE // Les Ados">
+              Pour les collégiens du 24 au 28 août 2020.
+              <Typography>
+                Merci d'indiquer l'age et le nombre d'enfants que vous souhaitez
+                inscrire dans la partie "Remarques".
+              </Typography>
+              <Typography>
+                Je vous recontacterai rapidement après l'envoi du formulaire
+                pour faire connaissance et valider votre inscription !
+              </Typography>
+            </SignDialog>
+          </Box>
+        </Card>
+      </Grid>
       <Box mt={4}>
         <Typography variant="h4" className={style.title}>
           Thème :{" "}
