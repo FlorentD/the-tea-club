@@ -57,7 +57,9 @@ const CardLittleExplorer = ({ title, icon, background, children, price }) => {
             {price}€ l’année
           </Typography>
           <Typography variant="h6">
-            15 séances de 9h30 à 11h30 (un mercredi sur deux)
+            15 séances de 2 heures
+            <br />
+            un mercredi sur deux de 9h30 à 11h30
           </Typography>
         </Box>
         {children}
@@ -95,7 +97,9 @@ const Card = ({ title, icon, background, children, price }) => {
             {price}€ l’année
           </Typography>
           <Typography variant="h6">
-            30 séances les lundis ou mardis de 17h à 18h.
+            30 séances d'1 heure
+            <br />
+            les lundis ou mardis de 17h à 18h.
           </Typography>
         </Box>
         {children}
