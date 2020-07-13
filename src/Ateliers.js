@@ -143,19 +143,6 @@ const Infos = ({ icon, children }) => {
 const Ateliers = () => {
   return (
     <Container style={{ marginTop: "40px" }}>
-      <Typography
-        variant="h5"
-        style={{ textAlign: "center", fontWeight: "bold" }}
-      >
-        Du 21/09/2020 au 12/06/2021
-      </Typography>
-      <Typography
-        color="secondary"
-        style={{ textAlign: "center", fontWeight: "bold" }}
-      >
-        Une progression naturelle sur 5 périodes avec des thèmes variés et
-        motivants pour les enfants au fil des fêtes calendaires.
-      </Typography>
       <Grid container>
         <CardLittleExplorer
           title="Little EXPLORERS 4-7 ans"
@@ -169,7 +156,14 @@ const Ateliers = () => {
           background="#FF757C"
           price={450}
         ></Card>
-
+        <Typography
+          variant="h4"
+          color="secondary"
+          style={{ textAlign: "center", fontWeight: "bold" }}
+        >
+          Une progression naturelle sur 5 périodes avec des thèmes variés et
+          motivants pour les enfants au fil des fêtes calendaires.
+        </Typography>
         <Grid container spacing={6}>
           <Grid item xs={12} md={6}>
             <Box mt={4} mb={2}>
