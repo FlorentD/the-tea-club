@@ -13,6 +13,7 @@ import Friends from "./svg/Friends";
 import Discount from "./svg/Discount";
 import Receipt from "./svg/Receipt";
 import SignDialog from "./SignDialog";
+import Image from "./components/Image";
 
 const useCardStyle = makeStyles({
   root: {
@@ -37,6 +38,46 @@ const useCardStyle = makeStyles({
   },
 });
 
+const CardLittleExplorer = ({ title, icon, background, children, price }) => {
+  const style = useCardStyle({ background });
+  return (
+    <Grid item xs={12} md={6}>
+      <Box className={style.root}>
+        <Typography variant="h5" className={style.title}>
+          {title}
+        </Typography>
+        <Box className={style.picto}>{icon}</Box>
+        <Box className={style.description}>
+          <Typography variant="h6">
+            du mercredi 23/09/2020 au mercredi 16/06/2021
+          </Typography>
+          <Typography variant="h5" style={{ fontWeight: "bold" }}>
+            {price}€ l’année
+          </Typography>
+          <Typography variant="h6">
+            15 séances de 9h30 à 11h30 (un mercredi sur deux)
+          </Typography>
+        </Box>
+        {children}
+        <SignDialog type={title}>
+          Pour les {title}.
+          <Typography>
+            Le prix pour 15 séances de 2h est de {price}€.
+          </Typography>
+          <Typography>
+            Merci d'indiquer l'age et le nombre d'enfants que vous souhaitez
+            inscrire dans la partie "remarques".
+          </Typography>
+          <Typography>
+            Je vous recontacterai rapidement après l'envoi du formulaire pour
+            faire connaissance et valider votre inscription !
+          </Typography>
+        </SignDialog>
+      </Box>
+    </Grid>
+  );
+};
+
 const Card = ({ title, icon, background, children, price }) => {
   const style = useCardStyle({ background });
   return (
@@ -47,11 +88,13 @@ const Card = ({ title, icon, background, children, price }) => {
         </Typography>
         <Box className={style.picto}>{icon}</Box>
         <Box className={style.description}>
-          <Typography variant="h6">Abonnement à l'année</Typography>
+          <Typography variant="h6">du 21 septembre au 15 juin 2021</Typography>
           <Typography variant="h5" style={{ fontWeight: "bold" }}>
-            {price}€ l’année ({price / 30}€ la séance)
+            {price}€ l’année
           </Typography>
-          <Typography variant="h6">30 séances</Typography>
+          <Typography variant="h6">
+            30 séances les lundis ou mardis de 17h à 18h.
+          </Typography>
         </Box>
         {children}
         <SignDialog type={title}>
@@ -106,19 +149,47 @@ const Ateliers = () => {
       >
         Du 21/09/2020 au 12/06/2021
       </Typography>
+      <Typography
+        color="secondary"
+        style={{ textAlign: "center", fontWeight: "bold" }}
+      >
+        Une progression naturelle sur 5 périodes avec des thèmes variés et
+        motivants pour les enfants au fil des fêtes calendaires.
+      </Typography>
       <Grid container>
-        <Card
+        <CardLittleExplorer
           title="Little EXPLORERS 4-7 ans"
           icon={<Forest width={120} />}
           background="#4FBA6F"
           price={360}
-        ></Card>
+        ></CardLittleExplorer>
         <Card
           title="BIG TRAVELLERS 8-11 ans"
           icon={<Travel width={120} />}
           background="#FF757C"
           price={450}
         ></Card>
+
+        <Grid container spacing={6}>
+          <Grid item xs={12} md={6}>
+            <Box mt={4} mb={2}>
+              <Image
+                src="/static/atelier_2.jpg"
+                alt=""
+                style={{ objectFit: "cover", height: 300 }}
+              />
+            </Box>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Box mt={4} mb={2}>
+              <Image
+                src="/static/atelier_1.jpg"
+                alt=""
+                style={{ objectFit: "cover", height: 300 }}
+              />
+            </Box>
+          </Grid>
+        </Grid>
         <Grid container alignItems="center">
           <Infos icon={<Friends width={100} />}>
             <Typography>

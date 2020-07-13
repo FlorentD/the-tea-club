@@ -41,8 +41,9 @@ const Events = () => {
             Matinées happy nature, nouvelles dates :
           </Typography>
           <Typography variant="h6" color="secondary">
-            Le samedi 22 août de 14h à 16h <br />
-            Le samedi 29 août de 10h à 12h
+            Le samedi 22 août de 14h à 16h (7/10 ans)
+            <br />
+            Le samedi 29 août de 10h à 12h (4/6 ans)
           </Typography>
         </Box>
         <Box mt={{ xs: 1, md: 1 }} mb={{ xs: 2, md: 0 }}>
@@ -110,7 +111,7 @@ const Events = () => {
           <Typography variant="h5" color="primary">
             Stage{" "}
             <EnglishHelper title="Stages d'été">Summer clubs</EnglishHelper>{" "}
-            (Pour les collégiens)
+            (pour les collégiens)
           </Typography>
           <Typography variant="h6" color="secondary">
             Thème :{" "}
