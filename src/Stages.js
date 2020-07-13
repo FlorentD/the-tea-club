@@ -202,6 +202,11 @@ const Stages = () => {
           </Box>
         </Card>
       </Grid>
+      <Box mt={2} mb={10}>
+        <Typography variant="h3" color="primary">
+          Evènements passés :
+        </Typography>
+      </Box>
       <Box mt={4}>
         <Typography variant="h4" className={style.title}>
           Thème :{" "}
