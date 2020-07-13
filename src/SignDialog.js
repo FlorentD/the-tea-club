@@ -17,7 +17,11 @@ import TextArea from "./components/form/TextArea";
 import ThankYou from "./svg/ThankYou";
 import Submit from "./components/form/Submit";
 
-const useStyle = makeStyles({
+const useStyle = makeStyles((theme) => ({
+  buttonWrapper: {
+    flexDirection: "column-reverse",
+    [theme.breakpoints.up("md")]: { flexDirection: "row", height: 70 },
+  },
   button: {
     display: "flex",
     padding: 20,
@@ -25,7 +29,7 @@ const useStyle = makeStyles({
     fontWeight: "bold",
     fontSize: 20,
   },
-});
+}));
 
 const SignDialog = ({ children, type, complete = false }) => {
   const style = useStyle();
@@ -123,16 +127,18 @@ const SignDialog = ({ children, type, complete = false }) => {
                     </Button>
                   )}
                   {!messageSent && (
-                    <>
-                      <Button
-                        variant="contained"
-                        size="large"
-                        onClick={() => setOpen(false)}
-                      >
-                        <Box m={2}>Annuler</Box>
-                      </Button>
-                      <Submit>Soumettre mon inscription</Submit>
-                    </>
+                    <Box display="flex" className={style.buttonWrapper}>
+                      <Box m={1}>
+                        <Button
+                          variant="contained"
+                          onClick={() => setOpen(false)}
+                          fullWidth
+                        >
+                          Annuler
+                        </Button>
+                      </Box>
+                      <Submit m={1}>Soumettre mon inscription</Submit>
+                    </Box>
                   )}
                 </DialogActions>
               </>

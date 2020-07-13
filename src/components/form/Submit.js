@@ -4,19 +4,19 @@ import { Box } from "@material-ui/core";
 import { useFormikContext } from "formik";
 import Wheel from "../../svg/Wheel";
 
-const Submit = ({ children }) => {
+const Submit = ({ children, m = 2 }) => {
   const { submitForm, isSubmitting } = useFormikContext();
   return (
-    <Box m={2}>
+    <Box m={m}>
       <Button
-        startIcon={isSubmitting && <Wheel width={40} height={40} />}
+        startIcon={isSubmitting && <Wheel width={30} height={30} />}
         fullWidth
         size="large"
         variant="contained"
         color="primary"
         onClick={submitForm}
       >
-        <Box m={2}>{children}</Box>
+        {children}
       </Button>
     </Box>
   );

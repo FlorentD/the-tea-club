@@ -5,7 +5,6 @@ begin-app
 folder build
 
 @http
-get /api
 post /contact
 post /sign
 

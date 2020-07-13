@@ -6,6 +6,8 @@ import {
   Box,
   Typography,
   makeStyles,
+  withWidth,
+  isWidthUp,
 } from "@material-ui/core";
 import Forest from "./svg/Forest";
 import Travel from "./svg/Travel";
@@ -140,7 +142,7 @@ const Infos = ({ icon, children }) => {
   );
 };
 
-const Ateliers = () => {
+const Ateliers = ({ width }) => {
   return (
     <Container style={{ marginTop: "40px" }}>
       <Grid container>
@@ -164,7 +166,7 @@ const Ateliers = () => {
           Une progression naturelle sur 5 périodes avec des thèmes variés et
           motivants pour les enfants au fil des fêtes calendaires.
         </Typography>
-        <Grid container spacing={6}>
+        <Grid container spacing={isWidthUp("sm", width) ? 6 : 0}>
           <Grid item xs={12} md={6}>
             <Box mt={4} mb={2}>
               <Image
@@ -212,4 +214,4 @@ const Ateliers = () => {
   );
 };
 
-export default Ateliers;
+export default withWidth()(Ateliers);

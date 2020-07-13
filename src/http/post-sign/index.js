@@ -24,7 +24,7 @@ exports.handler = async function http(request) {
             Name: "Florent DUVEAU",
           },
           {
-            Email: "deborahwack@gmail.com",
+            Email: "debtheteaclub@gmail.com",
             Name: "Déborah WACK",
           },
         ],

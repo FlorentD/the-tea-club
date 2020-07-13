@@ -8,6 +8,8 @@ import {
   ListItemText,
   List,
   Hidden,
+  isWidthUp,
+  withWidth,
 } from "@material-ui/core";
 import EnglishHelper from "./components/EnglishHelper";
 import SignDialog from "./SignDialog";
@@ -32,11 +34,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Events = () => {
+const Events = ({ width }) => {
   const style = useStyles();
   return (
     <>
-      <Grid container justify="center" spacing={10}>
+      <Grid
+        container
+        justify="center"
+        spacing={isWidthUp("sm", width) ? 10 : 0}
+      >
         <Grid item xs={12} md={6}>
           <Box mt={4}>
             <Typography variant="h5" color="primary">
@@ -100,9 +106,9 @@ const Events = () => {
               <Box mt={2}>
                 <SignDialog type="marmaille-et-pissenlit">
                   <Typography>
-                    Merci d'indiquer la date souhaitée (vendredi 26 juin ou
-                    dimanche 28 juin), l'age et le nombre d'enfants que vous
-                    souhaitez inscrire dans la partie "Remarques".
+                    Merci d'indiquer la date souhaitée (samedi 22 août ou samedi
+                    29 août), l'age et le nombre d'enfants que vous souhaitez
+                    inscrire dans la partie "Remarques".
                   </Typography>
                   <Typography>Tarif découverte : 20€ par enfant</Typography>
                 </SignDialog>
@@ -152,7 +158,7 @@ const Events = () => {
             <span role="img" aria-label="drapeau du royaume-uni">
               🇬🇧
             </span>{" "}
-            <strong>Formule 5 matinées de 2h de 10h à 12h(150€)</strong>
+            <strong>Formule 5 matinées de 10h à 12h (150€)</strong>
           </Typography>
           <List dense>
             <ListItem>
@@ -205,9 +211,9 @@ const Events = () => {
           <Grid item xs={12} md={6}>
             <SignDialog type="marmaille-et-pissenlit">
               <Typography>
-                Merci d'indiquer la date souhaitée (vendredi 26 juin ou dimanche
-                28 juin), l'age et le nombre d'enfants que vous souhaitez
-                inscrire dans la partie "Remarques".
+                Merci d'indiquer la date souhaitée (samedi 22 août ou samedi 29
+                août), l'age et le nombre d'enfants que vous souhaitez inscrire
+                dans la partie "Remarques".
               </Typography>
               <Typography>Tarif découverte : 20€ par enfant</Typography>
             </SignDialog>
@@ -231,4 +237,4 @@ const Events = () => {
   );
 };
 
-export default Events;
+export default withWidth()(Events);
