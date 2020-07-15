@@ -204,7 +204,7 @@ const Stages = () => {
       </Grid>
       <Box mt={2} mb={10}>
         <Typography variant="h3" color="primary">
-          Evènements passés :
+          Evénements passés :
         </Typography>
       </Box>
       <Box mt={4}>
