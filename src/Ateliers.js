@@ -8,6 +8,9 @@ import {
   makeStyles,
   withWidth,
   isWidthUp,
+  ListItem,
+  ListItemText,
+  List,
 } from "@material-ui/core";
 import Forest from "./svg/Forest";
 import Travel from "./svg/Travel";
@@ -61,6 +64,9 @@ const CardLittleExplorer = ({ title, icon, background, children, price }) => {
             <br />
             un mercredi sur deux de 9h30 à 11h30
           </Typography>
+          <br />
+          <br />
+          <br />
         </Box>
         {children}
         <SignDialog type={title}>
@@ -97,15 +103,27 @@ const Card = ({ title, icon, background, children, price }) => {
             {price}€ l’année
           </Typography>
           <Typography variant="h6">
-            30 séances d'1 heure
-            <br />
-            les lundis ou mardis de 17h à 18h.
+            <Box textAlign="left">créneaux possibles :</Box>
+            <List dense>
+              <ListItem>
+                <ListItemText>
+                  15 séances de 2 heures le mercredi matin ou après-midi
+                </ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText>
+                  30 séances d'1 heure les lundis ou mardis de 17h à 18h.
+                </ListItemText>
+              </ListItem>
+            </List>
           </Typography>
         </Box>
         {children}
         <SignDialog type={title}>
           Pour les {title}.
-          <Typography>Le prix pour 30 séances est de {price}€.</Typography>
+          <Typography>
+            Le prix pour 30 séances d'1h (ou 15 séances de 2h) est de {price}€.
+          </Typography>
           <Typography>
             Merci d'indiquer l'age et le nombre d'enfants que vous souhaitez
             inscrire dans la partie "remarques".
