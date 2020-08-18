@@ -232,7 +232,6 @@ const Prestations = () => {
                 <Typography>
                   forfait 10 séances à l’année ➞ 135 € soit 35€/heure
                 </Typography>
-                <Typography>forfait demi-journée ➞ 150 €</Typography>
               </Box>
             );
           }}
