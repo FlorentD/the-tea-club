@@ -5,7 +5,7 @@ let theme = createMuiTheme({
     fontFamily: ["Itim", "Roboto", "Arial"].join(","),
     fontSize: 18,
     h2: {
-      fontFamily: ["Marck Script", "Roboto", "Arial"].join(","),
+      fontFamily: ["Itim", "Roboto", "Arial"].join(","),
     },
   },
 });

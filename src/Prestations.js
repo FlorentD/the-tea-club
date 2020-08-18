@@ -109,19 +109,57 @@ const Prestations = () => {
           </Typography>
         </Grid>
         <PrestaCard
+          title="Atelier nature"
+          img="/static/presta_nature.jpg"
+          What={() => (
+            <Box>
+              <Typography>
+                Un moment pour que les jeunes oreilles se baignent dans
+                l’anglais sur le thème de la nature.
+              </Typography>
+            </Box>
+          )}
+          where="Chez vous, chez moi, dans le jardin ou sur un lieu défini avec vous (parcs de la région) avec un groupe de 4 à 6 enfants, nous découvrons les premiers mots de la nature environnante."
+          color="lightgreen"
+          How={() => {
+            return (
+              <Box>
+                <Typography>
+                  Observation/répétition avec des jeux, des chants, des
+                  créations naturelles. Quoi de mieux pour pratiquer facilement
+                  la langue ?
+                </Typography>
+                <Typography>Tarif : 50 € / 1 heure</Typography>
+              </Box>
+            );
+          }}
+          signTitle="Prestation // Atelier Nature"
+          SignParagraph={() => {
+            return (
+              <Box>
+                <Typography>
+                  Merci d'indiquer vos choix pour l'atelier nature, je vous
+                  recontacterai rapidement pour organiser la séance !
+                </Typography>
+                <Typography>Tarif : 50 €</Typography>
+              </Box>
+            );
+          }}
+        />
+        <PrestaCard
           title="Teens"
           img="/static/presta_teen.jpg"
           What={() => (
             <Box>
               <Typography>
-                Atelier collectif à l'année pour les collégiens ➞ 4 collégiens
-                par groupe au Pellerin (adaptation des horaires avec emplois du
-                temps des collégiens).
+                Atelier collectif à l'année pour les collégiens <br />➞ 4
+                collégiens par groupe (adaptation des horaires avec les emplois
+                du temps des collégiens).
               </Typography>
             </Box>
           )}
-          where="Cours individuels à mon domicile ou à votre domicile (avec ajout de frais kilométriques)."
-          color="lightgreen"
+          where="Cours individuels à mon domicile au Pellerin ou à votre domicile (avec ajout de frais kilométriques)."
+          color="lightblue"
           How={() => {
             return (
               <Box>
@@ -147,44 +185,6 @@ const Prestations = () => {
             );
           }}
         />
-        <PrestaCard
-          title="Atelier nature"
-          img="/static/presta_nature.jpg"
-          What={() => (
-            <Box>
-              <Typography>
-                1h pour que les jeunes oreilles se baignent dans l’anglais sur
-                le thème de la nature.
-              </Typography>
-            </Box>
-          )}
-          where="Chez vous, chez moi, dans le jardin ou sur un lieu défini avec vous (parcs de la région) avec un groupe de 4 enfants minimum, nous découvrons les premiers mots de la nature environnante."
-          color="lightblue"
-          How={() => {
-            return (
-              <Box>
-                <Typography>
-                  Observation/répétition avec des jeux, des chants, des
-                  créations naturelles. Quoi de mieux pour pratiquer facilement
-                  la langue ?
-                </Typography>
-                <Typography>Tarif : 50 €</Typography>
-              </Box>
-            );
-          }}
-          signTitle="Prestation // Atelier Nature"
-          SignParagraph={() => {
-            return (
-              <Box>
-                <Typography>
-                  Merci d'indiquer vos choix pour l'atelier nature, je vous
-                  recontacterai rapidement pour organiser la séance !
-                </Typography>
-                <Typography>Tarif : 50 €</Typography>
-              </Box>
-            );
-          }}
-        />
         <Grid item xs={12}>
           <Typography color="secondary" className={style.category}>
             Pour les associations ou structures locales :
@@ -198,12 +198,12 @@ const Prestations = () => {
             <Box>
               <Typography>
                 Une initiation aux premières sonorités de l’anglais à travers
-                jeux et chansons.
+                des jeux et des chansons.
               </Typography>
               <Typography className={style.italic}>
-                Exemples d’activités : Say Hello ! se présenter avec Mr Fox,
+                Exemples d’activités : Say Hello ! Se présenter avec Mister Fox,
                 Colourful time : bowling des couleurs, Story time : lecture
-                d’album, Funny animals : jeu d’assemblage des animaux
+                d’album, Funny animals : jeu d’assemblage des animaux.
               </Typography>
             </Box>
           )}
@@ -211,12 +211,8 @@ const Prestations = () => {
             return (
               <Box>
                 <Typography>1H ➞ 45 €</Typography>
-                <Typography>
-                  forfait 4 séances ➞ 160 € soit 40€/heure
-                </Typography>
-                <Typography>
-                  forfait 10 séances à l’année ➞ 135 € soit 35€/heure
-                </Typography>
+                <Typography>forfait 4 séances ➞ 160 €</Typography>
+                <Typography>forfait 10 séances à l’année ➞ 135 €</Typography>
                 <Typography>forfait demi-journée ➞ 150 €</Typography>
               </Box>
             );

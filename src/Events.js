@@ -46,7 +46,7 @@ const Events = ({ width }) => {
         <Grid item xs={12} md={6}>
           <Box mt={4}>
             <Typography variant="h5" color="primary">
-              Matinées happy nature, nouvelles dates :
+              Découvertes happy nature, nouvelles dates :
             </Typography>
             <Typography variant="h6" color="secondary">
               Le samedi 22 août de 14h à 16h (7/10 ans)
@@ -97,7 +97,7 @@ const Events = ({ width }) => {
               <span role="img" aria-label="drapeau du royaume-uni">
                 🇬🇧
               </span>{" "}
-              Tarif découverte : <strong>20€ par enfant</strong>
+              Tarif découverte : <strong>20€ par enfant pour 2 heures</strong>
             </Typography>
             <Typography className={style.typo}>
               Venez vite inscrire votre enfant les places sont limitées !
