@@ -14,7 +14,6 @@ import Contact from "./Contact";
 import BackgroundBottom from "./svg/BackgroundBottom";
 import BigBen from "./svg/BigBen";
 import FillePinceau from "./svg/FillePinceau";
-import Events from "./Events";
 
 const useTitleStyle = makeStyles((theme) => ({
   wrapper: {
