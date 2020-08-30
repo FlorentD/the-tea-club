@@ -8,9 +8,13 @@ import {
   makeStyles,
   withWidth,
   isWidthUp,
-  ListItem,
-  ListItemText,
-  List,
+  TableContainer,
+  Table,
+  TableBody,
+  TableRow,
+  TableCell,
+  TableHead,
+  withStyles,
 } from "@material-ui/core";
 import Forest from "./svg/Forest";
 import Travel from "./svg/Travel";
@@ -19,6 +23,14 @@ import Discount from "./svg/Discount";
 import Receipt from "./svg/Receipt";
 import SignDialog from "./SignDialog";
 import Image from "./components/Image";
+
+const StyledTableRow = withStyles((theme) => ({
+  root: {
+    "&:nth-of-type(even)": {
+      backgroundColor: theme.palette.action.hover,
+    },
+  },
+}))(TableRow);
 
 const useCardStyle = makeStyles({
   root: {
@@ -41,6 +53,25 @@ const useCardStyle = makeStyles({
     textAlign: "center",
     fontWeight: "bold",
   },
+  table: {
+    marginTop: 20,
+  },
+  header: (props) => ({
+    backgroundColor: props.background,
+  }),
+  headerSpan: {
+    color: "white",
+    fontSize: "1.4rem",
+  },
+  dates: {
+    fontSize: "0.9rem",
+    marginTop: 10,
+    textAlign: "left",
+  },
+  schedule: {
+    fontSize: "1.4rem",
+    fontWeight: "bold",
+  },
 });
 
 const CardLittleExplorer = ({ title, icon, background, children, price }) => {
@@ -54,29 +85,71 @@ const CardLittleExplorer = ({ title, icon, background, children, price }) => {
         <Box className={style.picto}>{icon}</Box>
         <Box className={style.description}>
           <Typography variant="h6">
-            du mercredi 23/09/2020 au mercredi 16/06/2021
+            à partir du mardi 22 septembre 2020
           </Typography>
           <Typography variant="h5" style={{ fontWeight: "bold" }}>
             {price}€ l’année
           </Typography>
           <Typography variant="h6">
-            15 séances de 2 heures
-            <br />
-            un mercredi sur deux de 9h30 à 11h30
+            <TableContainer>
+              <Table size="small" className={style.table}>
+                <TableHead className={style.header}>
+                  <TableCell colSpan={2}>
+                    <span className={style.headerSpan}>
+                      Créneaux disponibles
+                    </span>
+                  </TableCell>
+                </TableHead>
+                <TableBody>
+                  <StyledTableRow>
+                    <TableCell>
+                      <strong>Mardi</strong>
+                      <br />
+                      1 heure chaque semaine (30 séances)
+                      <br />
+                      <i>hors vacances scolaires</i>
+                    </TableCell>
+                    <TableCell align="center">
+                      <span className={style.schedule}>17h - 18h</span>
+                    </TableCell>
+                  </StyledTableRow>
+                  <StyledTableRow>
+                    <TableCell>
+                      <strong>Mercredi</strong>
+                      <br />2 heures un mercredi sur deux (15 séances)*
+                    </TableCell>
+                    <TableCell align="center">
+                      <span className={style.schedule}>9h30 - 11h30</span>
+                      <span
+                        style={{
+                          display: "block",
+                          textAlign: "center",
+                          lineHeight: "10px",
+                        }}
+                      >
+                        ou
+                      </span>
+                      <span className={style.schedule}>14h30 - 16h30</span>
+                    </TableCell>
+                  </StyledTableRow>
+                </TableBody>
+              </Table>
+            </TableContainer>
+            <Typography className={style.dates}>
+              * 23&nbsp;septembre, 7&nbsp;octobre, 4&nbsp;novembre,
+              25&nbsp;novembre,9&nbsp;décembre, 6&nbsp;janvier, 20&nbsp;janvier,
+              3&nbsp;février, 17&nbsp;février, 17&nbsp;mars, 31&nbsp;mars,
+              14&nbsp;avril, 12&nbsp;mai, 26&nbsp;mai et 9&nbsp;juin
+            </Typography>
           </Typography>
-          <br />
-          <br />
           <br />
         </Box>
         {children}
         <SignDialog type={title}>
           Pour les {title}.
           <Typography>
-            Le prix pour 15 séances de 2h est de {price}€.
-          </Typography>
-          <Typography>
-            Merci d'indiquer l'age et le nombre d'enfants que vous souhaitez
-            inscrire dans la partie "remarques".
+            Merci d'indiquer l'age, le nombre d'enfants et le créneau sur lequel
+            vous souhaitez les inscrire dans la partie "remarques".
           </Typography>
           <Typography>
             Je vous recontacterai rapidement après l'envoi du formulaire pour
@@ -103,30 +176,65 @@ const Card = ({ title, icon, background, children, price }) => {
             {price}€ l’année
           </Typography>
           <Typography variant="h6">
-            <Box textAlign="left">créneaux possibles :</Box>
-            <List dense>
-              <ListItem>
-                <ListItemText>
-                  15 séances de 2 heures le mercredi matin ou après-midi
-                </ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemText>
-                  30 séances d'1 heure les lundis ou mardis de 17h à 18h.
-                </ListItemText>
-              </ListItem>
-            </List>
+            <TableContainer>
+              <Table size="small" className={style.table}>
+                <TableHead className={style.header}>
+                  <TableCell colSpan={2}>
+                    <span className={style.headerSpan}>
+                      Créneaux disponibles
+                    </span>
+                  </TableCell>
+                </TableHead>
+                <TableBody>
+                  <StyledTableRow>
+                    <TableCell>
+                      <strong>Lundi</strong>
+                      <br />
+                      1 heure chaque semaine (30 séances)
+                      <br />
+                      <i>hors vacances scolaires</i>
+                    </TableCell>
+                    <TableCell align="center">
+                      <span className={style.schedule}>17h - 18h</span>
+                    </TableCell>
+                  </StyledTableRow>
+                  <StyledTableRow>
+                    <TableCell>
+                      <strong>Mercredi</strong>
+                      <br />2 heures un mercredi sur deux (15 séances)*
+                    </TableCell>
+                    <TableCell align="center">
+                      <span className={style.schedule}>9h30 - 11h30</span>
+                      <span
+                        style={{
+                          display: "block",
+                          textAlign: "center",
+                          lineHeight: "10px",
+                        }}
+                      >
+                        ou
+                      </span>
+                      <span className={style.schedule}>14h30 - 16h30</span>
+                    </TableCell>
+                  </StyledTableRow>
+                </TableBody>
+              </Table>
+            </TableContainer>
           </Typography>
+          <Typography className={style.dates}>
+            * 30&nbsp;septembre, 14&nbsp;octobre, 18&nbsp;novembre,
+            2&nbsp;décembre, 16&nbsp;décembre, 13&nbsp;janvier, 27&nbsp;janvier,
+            10&nbsp;février, 10&nbsp;mars, 24&nbsp;mars, 7&nbsp;avril,
+            21&nbsp;avril, 19&nbsp;mai, 2&nbsp;juin, 16&nbsp;juin
+          </Typography>
+          <br />
         </Box>
         {children}
         <SignDialog type={title}>
           Pour les {title}.
           <Typography>
-            Le prix pour 30 séances d'1h (ou 15 séances de 2h) est de {price}€.
-          </Typography>
-          <Typography>
-            Merci d'indiquer l'age et le nombre d'enfants que vous souhaitez
-            inscrire dans la partie "remarques".
+            Merci d'indiquer l'age, le nombre d'enfants et le créneau sur lequel
+            vous souhaitez les inscrire dans la partie "remarques".
           </Typography>
           <Typography>
             Je vous recontacterai rapidement après l'envoi du formulaire pour
@@ -178,7 +286,7 @@ const Ateliers = ({ width }) => {
           title="BIG TRAVELLERS 8-11 ans"
           icon={<Travel width={120} />}
           background="#FF757C"
-          price={450}
+          price={390}
         ></Card>
         <Typography
           variant="h4"
