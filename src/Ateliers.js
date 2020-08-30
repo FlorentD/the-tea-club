@@ -23,6 +23,7 @@ import Discount from "./svg/Discount";
 import Receipt from "./svg/Receipt";
 import SignDialog from "./SignDialog";
 import Image from "./components/Image";
+import Happiness from "./svg/Happiness";
 
 const StyledTableRow = withStyles((theme) => ({
   root: {
@@ -273,25 +274,40 @@ const Infos = ({ icon, children }) => {
 };
 
 const Ateliers = ({ width }) => {
+  const style = useInfoStyle();
   return (
     <Container style={{ marginTop: "40px" }}>
-      <Grid container>
+      <Grid container justify="center">
         <CardLittleExplorer
           title="Little EXPLORERS 4-7 ans"
           icon={<Forest width={120} />}
           background="#4FBA6F"
           price={360}
-        ></CardLittleExplorer>
+        />
         <Card
           title="BIG TRAVELLERS 8-11 ans"
           icon={<Travel width={120} />}
           background="#FF757C"
           price={390}
-        ></Card>
+        />
+        <Grid item xs={12} md={8} className={style.root}>
+          <Box className={style.icon}>
+            <div>
+              <Happiness width={80} />
+            </div>
+          </Box>
+          <Box className={style.text}>
+            <Typography color="primary">
+              Un atelier peut être ajouté sur d’autres horaires du lundi au
+              mercredi à partir de 4 inscrits, n’hésitez pas à me faire part de
+              vos besoins (jour - horaires - âge des enfants)
+            </Typography>
+          </Box>
+        </Grid>
         <Typography
           variant="h4"
           color="secondary"
-          style={{ textAlign: "center", fontWeight: "bold" }}
+          style={{ textAlign: "center", fontWeight: "bold", marginTop: 40 }}
         >
           Une progression naturelle sur 5 périodes avec des thèmes variés et
           motivants pour les enfants au fil des fêtes calendaires.
