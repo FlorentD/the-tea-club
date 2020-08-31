@@ -72,6 +72,20 @@ const useCardStyle = makeStyles({
   schedule: {
     fontSize: "1.4rem",
     fontWeight: "bold",
+    position: "relative",
+  },
+  full: {
+    "&:after": {
+      content: "'complet'",
+      position: "absolute",
+      top: 0,
+      left: 0,
+      color: "red",
+      lineHeight: "26px",
+      transform: "rotate(-10deg)",
+      letterSpacing: "9px",
+      opacity: 0.8,
+    },
   },
 });
 
@@ -120,7 +134,9 @@ const CardLittleExplorer = ({ title, icon, background, children, price }) => {
                       <br />2 heures un mercredi sur deux (15 séances)*
                     </TableCell>
                     <TableCell align="center">
-                      <span className={style.schedule}>9h30 - 11h30</span>
+                      <span className={`${style.schedule} ${style.full}`}>
+                        9h30 - 11h30
+                      </span>
                       <span
                         style={{
                           display: "block",
@@ -172,7 +188,9 @@ const Card = ({ title, icon, background, children, price }) => {
         </Typography>
         <Box className={style.picto}>{icon}</Box>
         <Box className={style.description}>
-          <Typography variant="h6">du 21 septembre au 15 juin 2021</Typography>
+          <Typography variant="h6">
+            à partir du lundi 21 septembre 2020
+          </Typography>
           <Typography variant="h5" style={{ fontWeight: "bold" }}>
             {price}€ l’année
           </Typography>
