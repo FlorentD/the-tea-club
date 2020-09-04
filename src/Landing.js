@@ -75,14 +75,14 @@ const Landing = () => {
         </Box>
         <Grid container spacing={4}>
           <StageRow
-            src="/static/October_4-7.png"
+            src="/static/October_4-7.jpg"
             title="Club 4 - 7 ans"
             dates="Du lundi au vendredi, 9h30 à 11h30"
             FirstButtonLabel={() => <span>3 demi-journées (75€)</span>}
             SecondButtonLabel={() => <span>5 demi-journées (115€)</span>}
           />
           <StageRow
-            src="/static/October_7-11.png"
+            src="/static/October_7-11.jpg"
             title="Club 8 - 11 ans"
             dates="Du lundi au vendredi, 14h à 16h"
             FirstButtonLabel={() => <span>3 demi-journées (75€)</span>}
@@ -96,7 +96,7 @@ const Landing = () => {
         </Box>
         <Grid container spacing={4}>
           <StageRow
-            src="/static/October_11-15.png"
+            src="/static/October_11-15.jpg"
             title="Club collège"
             dates="Du lundi au vendredi, 14h à 16h"
             FirstButtonLabel={() => <span>5 demi-journées (150€)</span>}
