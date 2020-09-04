@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import { Formik } from "formik";
 import Text from "./components/form/Text";
 import {
@@ -31,7 +32,7 @@ const useStyle = makeStyles((theme) => ({
   },
 }));
 
-const SignDialog = ({ children, type, complete = false }) => {
+const SignDialog = ({ children, type, ButtonElement, complete = false }) => {
   const style = useStyle();
   const [open, setOpen] = useState(false);
   const [messageSent, sendMessage] = useState(false);
@@ -43,7 +44,7 @@ const SignDialog = ({ children, type, complete = false }) => {
         className={style.button}
         onClick={() => setOpen(true)}
       >
-        {complete ? "Complet !" : "S'inscrire"}
+        {complete ? "Complet !" : <ButtonElement />}
       </Button>
       <Dialog
         open={open}
@@ -148,6 +149,14 @@ const SignDialog = ({ children, type, complete = false }) => {
       </Dialog>
     </>
   );
+};
+
+SignDialog.propTyes = {
+  ButtonElement: PropTypes.element,
+};
+
+SignDialog.defaultProps = {
+  ButtonElement: () => <span>S'inscrire</span>,
 };
 
 export default SignDialog;

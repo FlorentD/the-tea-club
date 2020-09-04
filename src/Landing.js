@@ -5,6 +5,7 @@ import {
   Box,
   makeStyles,
   useMediaQuery,
+  Grid,
 } from "@material-ui/core";
 import Titeuf from "./svg/Titeuf";
 import Fille from "./svg/Fille";
@@ -14,6 +15,7 @@ import Contact from "./Contact";
 import BackgroundBottom from "./svg/BackgroundBottom";
 import BigBen from "./svg/BigBen";
 import FillePinceau from "./svg/FillePinceau";
+import StageRow from "./components/StageRow";
 
 const useTitleStyle = makeStyles((theme) => ({
   wrapper: {
@@ -66,6 +68,40 @@ const Landing = () => {
       </div>
       <Container style={{ backgroundColor: "white" }}>
         {/*<Events />*/}
+        <Box mt={2} mb={5}>
+          <Typography variant="h3" color="secondary" align="center">
+            Stage Autumn du 19 au 23 octobre 2020
+          </Typography>
+        </Box>
+        <Grid container spacing={4}>
+          <StageRow
+            src="/static/October_4-7.png"
+            title="Club 4 - 7 ans"
+            dates="Du lundi au vendredi, 9h30 à 11h30"
+            FirstButtonLabel={() => <span>3 demi-journées (75€)</span>}
+            SecondButtonLabel={() => <span>5 demi-journées (115€)</span>}
+          />
+          <StageRow
+            src="/static/October_7-11.png"
+            title="Club 8 - 11 ans"
+            dates="Du lundi au vendredi, 14h à 16h"
+            FirstButtonLabel={() => <span>3 demi-journées (75€)</span>}
+            SecondButtonLabel={() => <span>5 demi-journées (115€)</span>}
+          />
+        </Grid>
+        <Box mt={8} mb={5}>
+          <Typography variant="h3" color="primary" align="center">
+            Stage Autumn du 26 au 30 octobre 2020
+          </Typography>
+        </Box>
+        <Grid container spacing={4}>
+          <StageRow
+            src="/static/October_11-15.png"
+            title="Club collège"
+            dates="Du lundi au vendredi, 14h à 16h"
+            FirstButtonLabel={() => <span>5 demi-journées (150€)</span>}
+          />
+        </Grid>
         <LandingCard
           icon={<Cheveux width={mobile ? 100 : 140} />}
           title="The Tea Club c’est avant tout permettre aux enfants de se retrouver pour passer un bon moment en anglais."

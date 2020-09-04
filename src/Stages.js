@@ -105,6 +105,11 @@ const Stages = () => {
   const style = useStyle();
   return (
     <Container style={{ marginTop: "40px" }}>
+      <Box mt={2} mb={10}>
+        <Typography variant="h3" color="primary">
+          Evénements passés :
+        </Typography>
+      </Box>
       <Typography variant="h3" className={style.title}>
         <EnglishHelper title="Stages d'été">Summer clubs</EnglishHelper>
       </Typography>
@@ -188,7 +193,7 @@ const Stages = () => {
             </ListItem>
           </List>
           <Box mt={4}>
-            <SignDialog type="STAGE // Les Ados">
+            <SignDialog type="STAGE // Les Ados" complete>
               Pour les collégiens du 24 au 28 août 2020.
               <Typography>
                 Merci d'indiquer l'age et le nombre d'enfants que vous souhaitez
@@ -202,11 +207,6 @@ const Stages = () => {
           </Box>
         </Card>
       </Grid>
-      <Box mt={2} mb={10}>
-        <Typography variant="h3" color="primary">
-          Evénements passés :
-        </Typography>
-      </Box>
       <Box mt={4}>
         <Typography variant="h4" className={style.title}>
           Thème :{" "}

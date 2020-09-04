@@ -102,9 +102,6 @@ const CardLittleExplorer = ({ title, icon, background, children, price }) => {
           <Typography variant="h6">
             à partir du mardi 22 septembre 2020
           </Typography>
-          <Typography variant="h5" style={{ fontWeight: "bold" }}>
-            {price}€ l’année
-          </Typography>
           <Typography variant="h6">
             <TableContainer>
               <Table size="small" className={style.table}>
@@ -120,7 +117,7 @@ const CardLittleExplorer = ({ title, icon, background, children, price }) => {
                     <TableCell>
                       <strong>Mardi</strong>
                       <br />
-                      1 heure chaque semaine (30 séances)
+                      1 heure chaque semaine
                       <br />
                       <i>hors vacances scolaires</i>
                     </TableCell>
@@ -131,7 +128,7 @@ const CardLittleExplorer = ({ title, icon, background, children, price }) => {
                   <StyledTableRow>
                     <TableCell>
                       <strong>Mercredi</strong>
-                      <br />2 heures un mercredi sur deux (15 séances)*
+                      <br />2 heures un mercredi sur deux*
                     </TableCell>
                     <TableCell align="center">
                       <span className={`${style.schedule} ${style.full}`}>
@@ -153,26 +150,58 @@ const CardLittleExplorer = ({ title, icon, background, children, price }) => {
               </Table>
             </TableContainer>
             <Typography className={style.dates}>
-              * 23&nbsp;septembre, 7&nbsp;octobre, 4&nbsp;novembre,
-              25&nbsp;novembre,9&nbsp;décembre, 6&nbsp;janvier, 20&nbsp;janvier,
-              3&nbsp;février, 17&nbsp;février, 17&nbsp;mars, 31&nbsp;mars,
-              14&nbsp;avril, 12&nbsp;mai, 26&nbsp;mai et 9&nbsp;juin
+              * Vous pouvez me contacter pour connaitre les dates sur l'année
             </Typography>
           </Typography>
           <br />
         </Box>
         {children}
-        <SignDialog type={title}>
-          Pour les {title}.
-          <Typography>
-            Merci d'indiquer l'age, le nombre d'enfants et le créneau sur lequel
-            vous souhaitez les inscrire dans la partie "remarques".
-          </Typography>
-          <Typography>
-            Je vous recontacterai rapidement après l'envoi du formulaire pour
-            faire connaissance et valider votre inscription !
-          </Typography>
-        </SignDialog>
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={6}>
+            <SignDialog
+              type={`${title} année`}
+              ButtonElement={() => (
+                <div style={{ lineHeight: "22px" }}>
+                  S'inscire à l'année
+                  <br />
+                  <span style={{ fontSize: "x-large" }}>360€</span>
+                </div>
+              )}
+            >
+              Inscription à l'année pour les {title} (360€).
+              <Typography>
+                Merci d'indiquer l'age, le nombre d'enfants et le créneau sur
+                lequel vous souhaitez les inscrire dans la partie "remarques".
+              </Typography>
+              <Typography>
+                Je vous recontacterai rapidement après l'envoi du formulaire
+                pour faire connaissance et valider votre inscription !
+              </Typography>
+            </SignDialog>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <SignDialog
+              type={`${title} trimestre`}
+              ButtonElement={() => (
+                <div style={{ lineHeight: "22px" }}>
+                  S'inscire au trimestre
+                  <br />
+                  <span style={{ fontSize: "x-large" }}>140€</span>
+                </div>
+              )}
+            >
+              Inscription pour un semestre pour les {title} (140€).
+              <Typography>
+                Merci d'indiquer l'age, le nombre d'enfants et le créneau sur
+                lequel vous souhaitez les inscrire dans la partie "remarques".
+              </Typography>
+              <Typography>
+                Je vous recontacterai rapidement après l'envoi du formulaire
+                pour faire connaissance et valider votre inscription !
+              </Typography>
+            </SignDialog>
+          </Grid>
+        </Grid>
       </Box>
     </Grid>
   );
@@ -191,9 +220,7 @@ const Card = ({ title, icon, background, children, price }) => {
           <Typography variant="h6">
             à partir du lundi 21 septembre 2020
           </Typography>
-          <Typography variant="h5" style={{ fontWeight: "bold" }}>
-            {price}€ l’année
-          </Typography>
+
           <Typography variant="h6">
             <TableContainer>
               <Table size="small" className={style.table}>
@@ -209,7 +236,7 @@ const Card = ({ title, icon, background, children, price }) => {
                     <TableCell>
                       <strong>Lundi</strong>
                       <br />
-                      1 heure chaque semaine (30 séances)
+                      1 heure chaque semaine
                       <br />
                       <i>hors vacances scolaires</i>
                     </TableCell>
@@ -220,7 +247,7 @@ const Card = ({ title, icon, background, children, price }) => {
                   <StyledTableRow>
                     <TableCell>
                       <strong>Mercredi</strong>
-                      <br />2 heures un mercredi sur deux (15 séances)*
+                      <br />2 heures un mercredi sur deux*
                     </TableCell>
                     <TableCell align="center">
                       <span className={style.schedule}>9h30 - 11h30</span>
@@ -241,25 +268,57 @@ const Card = ({ title, icon, background, children, price }) => {
             </TableContainer>
           </Typography>
           <Typography className={style.dates}>
-            * 30&nbsp;septembre, 14&nbsp;octobre, 18&nbsp;novembre,
-            2&nbsp;décembre, 16&nbsp;décembre, 13&nbsp;janvier, 27&nbsp;janvier,
-            10&nbsp;février, 10&nbsp;mars, 24&nbsp;mars, 7&nbsp;avril,
-            21&nbsp;avril, 19&nbsp;mai, 2&nbsp;juin, 16&nbsp;juin
+            * Vous pouvez me contacter pour connaitre les dates sur l'année
           </Typography>
           <br />
         </Box>
         {children}
-        <SignDialog type={title}>
-          Pour les {title}.
-          <Typography>
-            Merci d'indiquer l'age, le nombre d'enfants et le créneau sur lequel
-            vous souhaitez les inscrire dans la partie "remarques".
-          </Typography>
-          <Typography>
-            Je vous recontacterai rapidement après l'envoi du formulaire pour
-            faire connaissance et valider votre inscription !
-          </Typography>
-        </SignDialog>
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={6}>
+            <SignDialog
+              type={`${title} annee`}
+              ButtonElement={() => (
+                <div style={{ lineHeight: "22px" }}>
+                  S'inscire à l'année
+                  <br />
+                  <span style={{ fontSize: "x-large" }}>390€</span>
+                </div>
+              )}
+            >
+              Inscription à l'année pour les {title} (390€).
+              <Typography>
+                Merci d'indiquer l'age, le nombre d'enfants et le créneau sur
+                lequel vous souhaitez les inscrire dans la partie "remarques".
+              </Typography>
+              <Typography>
+                Je vous recontacterai rapidement après l'envoi du formulaire
+                pour faire connaissance et valider votre inscription !
+              </Typography>
+            </SignDialog>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <SignDialog
+              type={`${title} semestre`}
+              ButtonElement={() => (
+                <div style={{ lineHeight: "22px" }}>
+                  S'inscire au trimestre
+                  <br />
+                  <span style={{ fontSize: "x-large" }}>150€</span>
+                </div>
+              )}
+            >
+              Inscription pour un semestre pour les {title} (150€).
+              <Typography>
+                Merci d'indiquer l'age, le nombre d'enfants et le créneau sur
+                lequel vous souhaitez les inscrire dans la partie "remarques".
+              </Typography>
+              <Typography>
+                Je vous recontacterai rapidement après l'envoi du formulaire
+                pour faire connaissance et valider votre inscription !
+              </Typography>
+            </SignDialog>
+          </Grid>
+        </Grid>
       </Box>
     </Grid>
   );
