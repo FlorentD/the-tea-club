@@ -2,6 +2,7 @@ import React from "react";
 import { Grid, makeStyles, Typography } from "@material-ui/core";
 import PropTypes from "prop-types";
 import SignDialog from "../SignDialog";
+import Image from "./Image";
 
 const useStyles = makeStyles({
   root: {
@@ -58,7 +59,7 @@ const StageRow = ({
   return (
     <Grid item xs={12} md={6}>
       <div className={style.imageContainer}>
-        <img src={src} alt="" className={style.image} />
+        <Image src={src} alt="" className={style.image} />
         <Typography className={style.title} variant="h5">
           {title}
         </Typography>
