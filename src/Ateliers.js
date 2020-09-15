@@ -162,7 +162,7 @@ const CardLittleExplorer = ({ title, icon, background, children, price }) => {
               type={`${title} année`}
               ButtonElement={() => (
                 <div style={{ lineHeight: "22px" }}>
-                  S'inscire à l'année
+                  S'inscrire à l'année
                   <br />
                   <span style={{ fontSize: "x-large" }}>360€</span>
                 </div>
@@ -184,7 +184,7 @@ const CardLittleExplorer = ({ title, icon, background, children, price }) => {
               type={`${title} trimestre`}
               ButtonElement={() => (
                 <div style={{ lineHeight: "22px" }}>
-                  S'inscire au trimestre
+                  S'inscrire au trimestre
                   <br />
                   <span style={{ fontSize: "x-large" }}>140€</span>
                 </div>
@@ -279,7 +279,7 @@ const Card = ({ title, icon, background, children, price }) => {
               type={`${title} annee`}
               ButtonElement={() => (
                 <div style={{ lineHeight: "22px" }}>
-                  S'inscire à l'année
+                  S'inscrire à l'année
                   <br />
                   <span style={{ fontSize: "x-large" }}>390€</span>
                 </div>
@@ -301,7 +301,7 @@ const Card = ({ title, icon, background, children, price }) => {
               type={`${title} semestre`}
               ButtonElement={() => (
                 <div style={{ lineHeight: "22px" }}>
-                  S'inscire au trimestre
+                  S'inscrire au trimestre
                   <br />
                   <span style={{ fontSize: "x-large" }}>150€</span>
                 </div>
