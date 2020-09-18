@@ -15,6 +15,9 @@ import {
   TableCell,
   TableHead,
   withStyles,
+  List,
+  ListItem,
+  ListItemText,
 } from "@material-ui/core";
 import Forest from "./svg/Forest";
 import Travel from "./svg/Travel";
@@ -24,6 +27,7 @@ import Receipt from "./svg/Receipt";
 import SignDialog from "./SignDialog";
 import Image from "./components/Image";
 import Happiness from "./svg/Happiness";
+import SvgFox from "./svg/Fox";
 
 const StyledTableRow = withStyles((theme) => ({
   root: {
@@ -52,6 +56,12 @@ const useCardStyle = makeStyles({
     marginTop: 10,
     marginBottom: 10,
     textAlign: "center",
+    fontWeight: "bold",
+  },
+  descriptionLeft: {
+    marginTop: 10,
+    marginBottom: 10,
+    textAlign: "justify",
     fontWeight: "bold",
   },
   table: {
@@ -89,7 +99,96 @@ const useCardStyle = makeStyles({
   },
 });
 
-const CardLittleExplorer = ({ title, icon, background, children, price }) => {
+const CardLittleFoxes = ({ title, icon, background }) => {
+  const style = useCardStyle({ background });
+  return (
+    <Grid item xs={12} md={8}>
+      <Box className={style.root}>
+        <Typography variant="h5" className={style.title}>
+          {title}
+        </Typography>
+        <Box className={style.picto}>{icon}</Box>
+        <Box className={style.descriptionLeft}>
+          <Typography>
+            Des ateliers de 45 min pour que votre enfant découvre naturellement
+            les sons et tonalités de l’anglais au travers de chansons,
+            histoires, mises en scène, petits jeux… Les mots ou expressions sont
+            accompagnés d’une image ou d’un geste pour être compris
+            spontanément.
+            <br />
+            <br />
+            Pour l’enfant:
+            <List>
+              <ListItem>
+                <ListItemText>
+                  - à travers différents supports audios, visuels et tactiles
+                  tous ses sens sont éveillés
+                </ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText>
+                  - il va découvrir et s’imprégner de cette langue en s’amusant
+                </ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText>
+                  - en confiance avec son parent il participe à un moment
+                  ludique, complice, convivial avec d’autres enfants.
+                </ListItemText>
+              </ListItem>
+            </List>
+            Pour le parent :
+            <List>
+              <ListItem>
+                <ListItemText>
+                  - vous découvrez des chansons, des jeux, du vocabulaire simple
+                  que vous pourrez aisément réinvestir avec votre enfant à la
+                  maison
+                </ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText>
+                  - vous apprenez à encourager, féliciter votre enfant en
+                  anglais - vous partagez un moment privilégié avec votre enfant
+                  dans un petit groupe.
+                </ListItemText>
+              </ListItem>
+            </List>
+          </Typography>
+          <Typography>
+            <strong>groupes de 4 à 6 enfants maximum</strong>
+            <br />
+            <strong>accompagné par un parent</strong>
+            <br />
+            <strong>12 euros le binôme enfant-parent</strong>
+            <br />
+            <strong>durée : 45 minutes 1 samedi par mois</strong>
+            <br />
+          </Typography>
+        </Box>
+        <br />
+        <SignDialog
+          type={`${title}`}
+          ButtonElement={() => (
+            <div style={{ lineHeight: "22px" }}>S'inscrire</div>
+          )}
+        >
+          Inscription pour {title}.
+          <Typography>
+            Merci d'indiquer l'age, le nombre d'enfants et le créneau sur lequel
+            vous souhaitez les inscrire dans la partie "remarques".
+          </Typography>
+          <Typography>
+            Je vous recontacterai rapidement après l'envoi du formulaire pour
+            faire connaissance et valider votre inscription !
+          </Typography>
+        </SignDialog>
+      </Box>
+    </Grid>
+  );
+};
+
+const CardLittleExplorer = ({ title, icon, background, children }) => {
   const style = useCardStyle({ background });
   return (
     <Grid item xs={12} md={6}>
@@ -356,16 +455,19 @@ const Ateliers = ({ width }) => {
     <Container style={{ marginTop: "40px" }}>
       <Grid container justify="center">
         <CardLittleExplorer
-          title="Little EXPLORERS 4-7 ans"
+          title="LITTLE EXPLORERS 4-7 ans"
           icon={<Forest width={120} />}
           background="#4FBA6F"
-          price={360}
         />
         <Card
           title="BIG TRAVELLERS 8-11 ans"
           icon={<Travel width={120} />}
           background="#FF757C"
-          price={390}
+        />
+        <CardLittleFoxes
+          title="LITTLE FOXES"
+          icon={<SvgFox width={120} />}
+          background="#FFCA05"
         />
         <Grid item xs={12} md={8} className={style.root}>
           <Box className={style.icon}>
