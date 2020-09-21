@@ -72,6 +72,15 @@ const Landing = () => {
           <Typography variant="h3" color="secondary" align="center">
             Stage Autumn du 19 au 23 octobre 2020
           </Typography>
+          <Grid container justify="center">
+            <Grid item xs={12} md={10}>
+              <Typography>
+                Autour des thèmes de l'automne et des traditions d'Halloween vos
+                enfants pourront créer, chanter, s'amuser et même cuisiner en
+                anglais !
+              </Typography>
+            </Grid>
+          </Grid>
         </Box>
         <Grid container spacing={4}>
           <StageRow

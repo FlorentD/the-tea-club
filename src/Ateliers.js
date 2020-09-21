@@ -230,19 +230,7 @@ const CardLittleExplorer = ({ title, icon, background, children }) => {
                       <br />2 heures un mercredi sur deux*
                     </TableCell>
                     <TableCell align="center">
-                      <span className={`${style.schedule} ${style.full}`}>
-                        9h30 - 11h30
-                      </span>
-                      <span
-                        style={{
-                          display: "block",
-                          textAlign: "center",
-                          lineHeight: "10px",
-                        }}
-                      >
-                        ou
-                      </span>
-                      <span className={style.schedule}>14h30 - 16h30</span>
+                      <span className={`${style.schedule}`}>9h30 - 11h30</span>
                     </TableCell>
                   </StyledTableRow>
                 </TableBody>
@@ -349,16 +337,6 @@ const Card = ({ title, icon, background, children, price }) => {
                       <br />2 heures un mercredi sur deux*
                     </TableCell>
                     <TableCell align="center">
-                      <span className={style.schedule}>9h30 - 11h30</span>
-                      <span
-                        style={{
-                          display: "block",
-                          textAlign: "center",
-                          lineHeight: "10px",
-                        }}
-                      >
-                        ou
-                      </span>
                       <span className={style.schedule}>14h30 - 16h30</span>
                     </TableCell>
                   </StyledTableRow>
