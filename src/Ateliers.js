@@ -110,21 +110,30 @@ const CardMarmaille = ({ title, icon, background }) => {
         <Box className={style.picto}>{icon}</Box>
         <Box className={style.descriptionLeft}>
           <Typography>
-            🌿 Dans le chouette écrin de Marmaille et Pissenlit à Saint Hilaire
-            de Chaléons, je propose à vos enfants un moment de découverte de la
+            <span role="img" aria-label="emoji feuille">
+              🌿
+            </span>{" "}
+            Dans le chouette écrin de Marmaille et Pissenlit à Saint Hilaire de
+            Chaléons, je propose à vos enfants un moment de découverte de la
             nature en anglais.
           </Typography>
           <br />
           <Typography>
-            👍 Aucun niveau n’est requis, les enfants ont déjà de formidables
+            <span role="img" aria-label="emoji pouce en l'air">
+              👍
+            </span>{" "}
+            Aucun niveau n’est requis, les enfants ont déjà de formidables
             oreilles et capacités de compréhension. Le matériel ludique adapté,
             les mimes et la bonne humeur permettront à tous de passer un bon
             moment sur des thèmes variés tout au long de l’année.
           </Typography>
           <br />
           <Typography>
-            🤩 Au programme : chasse aux trésors de la nature, jeux de
-            devinettes, créations naturelles, chants et histoires en anglais.
+            <span role="img" aria-label="emoji etoiles dans les yeux">
+              🤩
+            </span>{" "}
+            Au programme : chasse aux trésors de la nature, jeux de devinettes,
+            créations naturelles, chants et histoires en anglais.
             <br />
             Des thèmes différents sont proposés au cours de l’année.
             <br /> Entre le bois et la cuisine de gadoue, le parcours de

@@ -15,7 +15,6 @@ import PropTypes from "prop-types";
 import Forest1 from "./svg/Forest1";
 import Trees from "./svg/Trees";
 import SignDialog from "./SignDialog";
-import Landing from "./Landing";
 import StageRow from "./components/StageRow";
 
 const useCardStyle = makeStyles({
