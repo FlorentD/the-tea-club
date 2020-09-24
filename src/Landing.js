@@ -67,10 +67,9 @@ const Landing = () => {
         <BackgroundBottom style={{ position: "absolute", bottom: "-1px" }} />
       </div>
       <Container style={{ backgroundColor: "white" }}>
-        {/*<Events />*/}
         <Box mt={2} mb={5}>
           <Typography variant="h3" color="secondary" align="center">
-            Stage Autumn du 19 au 23 octobre 2020
+            Stages Autumn du 19 au 23 octobre 2020
           </Typography>
           <Grid container justify="center">
             <Grid item xs={12} md={10}>

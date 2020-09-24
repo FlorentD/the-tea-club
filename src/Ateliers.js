@@ -28,6 +28,7 @@ import SignDialog from "./SignDialog";
 import Image from "./components/Image";
 import Happiness from "./svg/Happiness";
 import SvgFox from "./svg/Fox";
+import Forest1 from "./svg/Forest1";
 
 const StyledTableRow = withStyles((theme) => ({
   root: {
@@ -98,11 +99,92 @@ const useCardStyle = makeStyles({
     },
   },
 });
+const CardMarmaille = ({ title, icon, background }) => {
+  const style = useCardStyle({ background });
+  return (
+    <Grid item xs={12} md={6}>
+      <Box className={style.root}>
+        <Typography variant="h5" className={style.title}>
+          {title}
+        </Typography>
+        <Box className={style.picto}>{icon}</Box>
+        <Box className={style.descriptionLeft}>
+          <Typography>
+            🌿 Dans le chouette écrin de Marmaille et Pissenlit à Saint Hilaire
+            de Chaléons, je propose à vos enfants un moment de découverte de la
+            nature en anglais.
+          </Typography>
+          <br />
+          <Typography>
+            👍 Aucun niveau n’est requis, les enfants ont déjà de formidables
+            oreilles et capacités de compréhension. Le matériel ludique adapté,
+            les mimes et la bonne humeur permettront à tous de passer un bon
+            moment sur des thèmes variés tout au long de l’année.
+          </Typography>
+          <br />
+          <Typography>
+            🤩 Au programme : chasse aux trésors de la nature, jeux de
+            devinettes, créations naturelles, chants et histoires en anglais.
+            <br />
+            Des thèmes différents sont proposés au cours de l’année.
+            <br /> Entre le bois et la cuisine de gadoue, le parcours de
+            motricité et les trésors de la nature, les découvertes se font en
+            anglais de manière très naturelle.
+          </Typography>
+          <TableContainer>
+            <Table size="small" className={style.table}>
+              <TableHead className={style.header}>
+                <TableCell colSpan={2}>
+                  <span className={style.headerSpan}>Autumn in the woods</span>
+                </TableCell>
+              </TableHead>
+              <TableBody>
+                <StyledTableRow>
+                  <TableCell>
+                    <strong>10 Octobre 2020</strong>
+                    <br />
+                    4 - 7 ans de 10h à 12h
+                    <br />8 - 11 ans de 14h à 16h
+                  </TableCell>
+                  <TableCell align="center">
+                    <span className={style.schedule}>Tarif : 20€</span>
+                  </TableCell>
+                </StyledTableRow>
+              </TableBody>
+            </Table>
+          </TableContainer>
+          <Box mt={2}>
+            <Typography style={{ color: "green", fontWeight: "bold" }}>
+              Groupes de 4 à 6 enfants. <br />
+              Lieu dit de la Tartouzerie à Saint Hilaire de Chaléons.
+            </Typography>
+          </Box>
+        </Box>
+        <SignDialog
+          type={`${title}`}
+          ButtonElement={() => (
+            <div style={{ lineHeight: "22px" }}>S'inscrire</div>
+          )}
+        >
+          Inscription pour {title}.
+          <Typography>
+            Merci d'indiquer l'age, le nombre d'enfants et le créneau sur lequel
+            vous souhaitez les inscrire dans la partie "remarques".
+          </Typography>
+          <Typography>
+            Je vous recontacterai rapidement après l'envoi du formulaire pour
+            faire connaissance et valider votre inscription !
+          </Typography>
+        </SignDialog>
+      </Box>
+    </Grid>
+  );
+};
 
 const CardLittleFoxes = ({ title, icon, background }) => {
   const style = useCardStyle({ background });
   return (
-    <Grid item xs={12} md={8}>
+    <Grid item xs={12} md={6}>
       <Box className={style.root}>
         <Typography variant="h5" className={style.title}>
           {title}
@@ -127,7 +209,8 @@ const CardLittleFoxes = ({ title, icon, background }) => {
               </ListItem>
               <ListItem>
                 <ListItemText>
-                  - il va découvrir et s’imprégner de cette langue en s’amusant
+                  - il va découvrir la langue et s'en imprégner tout en
+                  s’amusant
                 </ListItemText>
               </ListItem>
               <ListItem>
@@ -149,20 +232,31 @@ const CardLittleFoxes = ({ title, icon, background }) => {
               <ListItem>
                 <ListItemText>
                   - vous apprenez à encourager, féliciter votre enfant en
-                  anglais - vous partagez un moment privilégié avec votre enfant
-                  dans un petit groupe.
+                  anglais
+                </ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText>
+                  - vous partagez un moment privilégié avec votre enfant dans un
+                  petit groupe.
                 </ListItemText>
               </ListItem>
             </List>
           </Typography>
-          <Typography>
-            <strong>groupes de 4 à 6 enfants maximum</strong>
+          <Typography style={{ color: "#d7a001" }}>
+            <strong>
+              Groupes : de 4 à 6 enfants maximum <br />
+              (un enfant accompagné d’un parent).
+            </strong>
             <br />
-            <strong>accompagné par un parent</strong>
+            <strong>Tarif : 12 euros le binôme enfant-parent.</strong>
             <br />
-            <strong>12 euros le binôme enfant-parent</strong>
+            <strong>Durée : 45 minutes</strong>
             <br />
-            <strong>durée : 45 minutes 1 samedi par mois</strong>
+            <strong>
+              Un samedi matin ou mercredi matin par mois <br />
+              (à définir avec le groupe)
+            </strong>
             <br />
           </Typography>
         </Box>
@@ -446,6 +540,11 @@ const Ateliers = ({ width }) => {
           title="LITTLE FOXES"
           icon={<SvgFox width={120} />}
           background="#FFCA05"
+        />
+        <CardMarmaille
+          title="ATELIERS HAPPY NATURE"
+          icon={<Forest1 width={120} />}
+          background="#99D53B"
         />
         <Grid item xs={12} md={8} className={style.root}>
           <Box className={style.icon}>
