@@ -201,6 +201,9 @@ const CardLittleFoxes = ({ title, icon, background }) => {
         <Box className={style.picto}>{icon}</Box>
         <Box className={style.descriptionLeft}>
           <Typography>
+            <span role="img" aria-label="emoji renard">
+              🦊
+            </span>{" "}
             Des ateliers de 45 min pour que votre enfant découvre naturellement
             les sons et tonalités de l’anglais au travers de chansons,
             histoires, mises en scène, petits jeux… Les mots ou expressions sont
@@ -208,6 +211,9 @@ const CardLittleFoxes = ({ title, icon, background }) => {
             spontanément.
             <br />
             <br />
+            <span role="img" aria-label="emoji pouce en l'air">
+              👍
+            </span>{" "}
             Pour l’enfant:
             <List>
               <ListItem>
@@ -229,6 +235,9 @@ const CardLittleFoxes = ({ title, icon, background }) => {
                 </ListItemText>
               </ListItem>
             </List>
+            <span role="img" aria-label="emoji parfait">
+              👌
+            </span>{" "}
             Pour le parent :
             <List>
               <ListItem>
@@ -258,13 +267,14 @@ const CardLittleFoxes = ({ title, icon, background }) => {
               (un enfant accompagné d’un parent).
             </strong>
             <br />
-            <strong>Tarif : 12 euros le binôme enfant-parent.</strong>
+            <strong>Tarif : 12 € le binôme enfant-parent.</strong>
             <br />
             <strong>Durée : 45 minutes</strong>
             <br />
             <strong>
               Un samedi matin ou mercredi matin par mois <br />
-              (à définir avec le groupe)
+              (à définir avec le groupe) <br />
+              Lieu : l'Escapade Le Pellerin
             </strong>
             <br />
           </Typography>
@@ -551,7 +561,7 @@ const Ateliers = ({ width }) => {
           background="#FFCA05"
         />
         <CardMarmaille
-          title="ATELIERS HAPPY NATURE"
+          title="HAPPY NATURE"
           icon={<Forest1 width={120} />}
           background="#99D53B"
         />
