@@ -145,7 +145,7 @@ const Stages = () => {
         <StageRow
           src="/static/October_11-15.jpg"
           title="Club collège"
-          dates="Du lundi au vendredi, 14h à 16h"
+          dates="Du lundi au vendredi, 10h à 12h"
           FirstButtonLabel={() => <span>5 demi-journées (150€)</span>}
         />
       </Grid>
