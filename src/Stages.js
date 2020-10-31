@@ -107,6 +107,11 @@ const Stages = () => {
   return (
     <Container style={{ marginTop: "40px" }}>
       <Box mt={2} mb={5}>
+        <Typography variant="h3" color="primary">
+          Evénements passés :
+        </Typography>
+      </Box>
+      <Box mt={2} mb={5}>
         <Typography variant="h3" color="secondary" align="center">
           Stages Autumn du 19 au 23 octobre 2020
         </Typography>
@@ -149,11 +154,6 @@ const Stages = () => {
           FirstButtonLabel={() => <span>5 demi-journées (150€)</span>}
         />
       </Grid>
-      <Box mt={2} mb={10}>
-        <Typography variant="h3" color="primary">
-          Evénements passés :
-        </Typography>
-      </Box>
       <Typography variant="h3" className={style.title}>
         <EnglishHelper title="Stages d'été">Summer clubs</EnglishHelper>
       </Typography>
