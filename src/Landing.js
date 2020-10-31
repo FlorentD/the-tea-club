@@ -5,7 +5,6 @@ import {
   Box,
   makeStyles,
   useMediaQuery,
-  Grid,
 } from "@material-ui/core";
 import Titeuf from "./svg/Titeuf";
 import Fille from "./svg/Fille";
@@ -15,7 +14,6 @@ import Contact from "./Contact";
 import BackgroundBottom from "./svg/BackgroundBottom";
 import BigBen from "./svg/BigBen";
 import FillePinceau from "./svg/FillePinceau";
-import StageRow from "./components/StageRow";
 
 const useTitleStyle = makeStyles((theme) => ({
   wrapper: {
