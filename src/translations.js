@@ -1,4 +1,4 @@
-export default {
+const translations = {
   welcome: {
     fr: "Avec",
     en: "With",
@@ -32,3 +32,5 @@ export default {
     en: "Did you forget your message?",
   },
 };
+
+export default translations;
