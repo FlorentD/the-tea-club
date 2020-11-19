@@ -14,6 +14,7 @@ import Contact from "./Contact";
 import BackgroundBottom from "./svg/BackgroundBottom";
 import BigBen from "./svg/BigBen";
 import FillePinceau from "./svg/FillePinceau";
+import Carousel from "./Carousel";
 
 const useTitleStyle = makeStyles((theme) => ({
   wrapper: {
@@ -65,6 +66,7 @@ const Landing = () => {
         <BackgroundBottom style={{ position: "absolute", bottom: "-1px" }} />
       </div>
       <Container style={{ backgroundColor: "white" }}>
+        <Carousel />
         <LandingCard
           icon={<Cheveux width={mobile ? 100 : 140} />}
           title="The Tea Club c’est avant tout permettre aux enfants de se retrouver pour passer un bon moment en anglais."
