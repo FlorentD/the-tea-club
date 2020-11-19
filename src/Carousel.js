@@ -1,75 +1,68 @@
 import React from "react";
-import ReactCarousel, {
-  arrowsPlugin,
-  slidesToShowPlugin,
-} from "@brainhubeu/react-carousel";
-import "@brainhubeu/react-carousel/lib/style.css";
+import SwiperCore, { Navigation, Pagination, Keyboard, A11y } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
 import { makeStyles } from "@material-ui/core";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   container: {
-    display: "flex",
-    justifyContent: "center",
-    flexFlow: "row",
-    alignContent: "center",
-    textAlign: "center",
     marginTop: "50px",
   },
-  arrowLeft: {
-    transform: "scale(-1, 1)",
-    fontSize: "2rem",
-    padding: "40px",
-    cursor: "pointer",
-  },
-  arrowRight: {
-    fontSize: "2rem",
-    padding: "40px",
-    cursor: "pointer",
+  image: {
+    width: "220px",
+    height: "220px",
+    [theme.breakpoints.up("md")]: {
+      width: "600px",
+      height: "600px",
+    },
   },
 }));
+
+SwiperCore.use([Navigation, Pagination, Keyboard, A11y]);
 
 const Carousel = () => {
   const styles = useStyles();
   return (
     <div className={styles.container}>
-      <ReactCarousel
-        plugins={[
-          "centered",
-          "infinite",
-          {
-            resolve: slidesToShowPlugin,
-            options: {
-              numberOfSlides: 1,
-            },
-          },
-          {
-            resolve: arrowsPlugin,
-            options: {
-              arrowLeft: <div className={styles.arrowLeft}>&#10148;</div>,
-              arrowRight: <div className={styles.arrowRight}>&#10148;</div>,
-              addArrowClickHandler: true,
-            },
-          },
-        ]}
-        slides={[
+      <Swiper
+        spaceBetween={100}
+        slidesPerView={2}
+        navigation
+        pagination={{ clickable: true }}
+        loop
+        centeredSlides
+        keyboard
+        a11y
+      >
+        <SwiperSlide>
           <img
             src="https://the-tea-club.s3.eu-west-3.amazonaws.com/stage_3.jpg"
             alt="coupon pour un stage de 3 jours, valable un an"
-          />,
+            className={styles.image}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
           <img
             src="https://the-tea-club.s3.eu-west-3.amazonaws.com/stage_5.jpg"
             alt="coupon pour un stage de 5 jours, valable un an"
-          />,
+            className={styles.image}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
           <img
             src="https://the-tea-club.s3.eu-west-3.amazonaws.com/at_home.jpg"
             alt="coupon pour un cours à la maison, valable un an"
-          />,
+            className={styles.image}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
           <img
             src="https://the-tea-club.s3.eu-west-3.amazonaws.com/online.jpg"
             alt="coupon pour un cours en ligne, valable un an"
-          />,
-        ]}
-      />
+            className={styles.image}
+          />
+        </SwiperSlide>
+      </Swiper>
     </div>
   );
 };
