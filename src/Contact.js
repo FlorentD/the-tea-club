@@ -55,7 +55,7 @@ const Contact = () => {
             </Typography>
           </Box>
           <Image
-            src="/static/deborah.jpg"
+            src="https://the-tea-club.s3.eu-west-3.amazonaws.com/deborah.jpg"
             alt="photo de profil de deborah"
             className={style.image}
           />

@@ -3,7 +3,10 @@ import MeCard from "../components/MeCard";
 
 const England = () => {
   return (
-    <MeCard src="/static/telephonebooth_square.jpg" alt="telephonebooth">
+    <MeCard
+      src="https://the-tea-club.s3.eu-west-3.amazonaws.com/telephonebooth_square.jpg"
+      alt="telephonebooth"
+    >
       Après ces premières études, j’ai pris mon courage à deux mains et j’ai
       fait mes valises pour aller vivre <strong>UNE ANNÉE EN ANGLETERRE</strong>{" "}
       comme assistante de français dans les écoles primaires britanniques.

@@ -23,7 +23,7 @@ const iconStyle = new Style({
   image: new Icon({
     anchorXUnits: "fraction",
     anchorYUnits: "pixels",
-    src: "/static/house.svg",
+    src: "https://the-tea-club.s3.eu-west-3.amazonaws.com/house.svg",
   }),
 });
 

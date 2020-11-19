@@ -3,7 +3,11 @@ import MeCard from "../components/MeCard";
 
 const Studies = () => {
   return (
-    <MeCard src="/static/book_square.jpg" alt="book" direction="right">
+    <MeCard
+      src="https://the-tea-club.s3.eu-west-3.amazonaws.com/book_square.jpg"
+      alt="book"
+      direction="right"
+    >
       Avec une marraine professeure d’anglais qui a aiguisé ma curiosité pour la
       langue de Shakespeare, je me suis dirigée après quelques soubresauts
       scientifiques vers ce fameux <strong>CHEMIN DES LANGUES</strong>.

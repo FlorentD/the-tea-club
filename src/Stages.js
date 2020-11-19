@@ -127,14 +127,14 @@ const Stages = () => {
       </Box>
       <Grid container spacing={4}>
         <StageRow
-          src="/static/October_4-7.jpg"
+          src="https://the-tea-club.s3.eu-west-3.amazonaws.com/October_4-7.jpg"
           title="Club 4 - 7 ans"
           dates="Du lundi au vendredi, 9h30 à 11h30"
           FirstButtonLabel={() => <span>3 demi-journées (75€)</span>}
           SecondButtonLabel={() => <span>5 demi-journées (115€)</span>}
         />
         <StageRow
-          src="/static/October_7-11.jpg"
+          src="https://the-tea-club.s3.eu-west-3.amazonaws.com/October_7-11.jpg"
           title="Club 8 - 11 ans"
           dates="Du lundi au vendredi, 14h à 16h"
           FirstButtonLabel={() => <span>3 demi-journées (75€)</span>}
@@ -148,7 +148,7 @@ const Stages = () => {
       </Box>
       <Grid container spacing={4}>
         <StageRow
-          src="/static/October_11-15.jpg"
+          src="https://the-tea-club.s3.eu-west-3.amazonaws.com/October_11-15.jpg"
           title="Club collège"
           dates="Du lundi au vendredi, 10h à 12h"
           FirstButtonLabel={() => <span>5 demi-journées (150€)</span>}
@@ -173,7 +173,7 @@ const Stages = () => {
       <Grid container style={{ marginBottom: 40 }}>
         <Card
           title="Une reprise de l’anglais en douceur pour les collégiens"
-          image="/static/english-college.jpg"
+          image="https://the-tea-club.s3.eu-west-3.amazonaws.com/english-college.jpg"
           background="#012169"
           fullWidth
         >
@@ -279,7 +279,7 @@ const Stages = () => {
       <Grid container style={{ marginBottom: 40 }}>
         <Card
           title="Little EXPLORERS 4-7 ans"
-          image="/static/stage_little_explorers.jpg"
+          image="https://the-tea-club.s3.eu-west-3.amazonaws.com/stage_little_explorers.jpg"
           background="#4FBA6F"
         >
           <List>
@@ -349,7 +349,7 @@ const Stages = () => {
         </Card>
         <Card
           title="BIG TRAVELLERS 8-11 ans"
-          image="/static/stage_big_travellers.jpg"
+          image="https://the-tea-club.s3.eu-west-3.amazonaws.com/stage_big_travellers.jpg"
           background="#FF757C"
           credits={<span>Photo by La Maison de Loulou</span>}
         >

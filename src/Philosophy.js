@@ -19,7 +19,7 @@ const Philosophy = () => {
             <Hidden xsDown>
               <Box mr={10} mt={5}>
                 <Image
-                  src="/static/speak-english.jpg"
+                  src="https://the-tea-club.s3.eu-west-3.amazonaws.com/speak-english.jpg"
                   alt="caterpilar"
                   style={{ borderRadius: "50%" }}
                 />

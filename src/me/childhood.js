@@ -10,7 +10,10 @@ const Childhood = () => {
           <Typography variant="h4">Hello I'm Deborah ! </Typography>
         </Box>
       </Container>
-      <MeCard src="/static/apples_square.jpg" alt="apples">
+      <MeCard
+        src="https://the-tea-club.s3.eu-west-3.amazonaws.com/apples_square.jpg"
+        alt="apples"
+      >
         Je suis née à Metz en Lorraine, dans un bain linguistique plutôt
         allemand et en même temps très curieuse de découvrir cette “langue des
         chansons” apprise dans les autres classes : <strong>l’ANGLAIS</strong>.

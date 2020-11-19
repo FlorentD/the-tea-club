@@ -5,7 +5,10 @@ import MeCard from "../components/MeCard";
 
 const Today = () => {
   return (
-    <MeCard src="/static/jardin_square.jpg" alt="garden">
+    <MeCard
+      src="https://the-tea-club.s3.eu-west-3.amazonaws.com/jardin_square.jpg"
+      alt="garden"
+    >
       En 2018 je suis devenue maman d’une petite fille et afin de la suivre dans
       ses premiers apprentissages dans un cadre plus <strong>NATUREL</strong>,
       j’ai décidé de prendre une disponibilité. Notre famille s’est donc

@@ -110,7 +110,7 @@ const Prestations = () => {
         </Grid>
         <PrestaCard
           title="Atelier nature"
-          img="/static/presta_nature.jpg"
+          img="https://the-tea-club.s3.eu-west-3.amazonaws.com/presta_nature.jpg"
           What={() => (
             <Box>
               <Typography>
@@ -148,7 +148,7 @@ const Prestations = () => {
         />
         <PrestaCard
           title="Teens"
-          img="/static/presta_teen.jpg"
+          img="https://the-tea-club.s3.eu-west-3.amazonaws.com/presta_teen.jpg"
           What={() => (
             <Box>
               <Typography>
@@ -192,7 +192,7 @@ const Prestations = () => {
         </Grid>
         <PrestaCard
           title="Petit bain d’anglais pour les crèches"
-          img="/static/presta_creche.jpg"
+          img="https://the-tea-club.s3.eu-west-3.amazonaws.com/presta_creche.jpg"
           color="lightpink"
           What={() => (
             <Box>

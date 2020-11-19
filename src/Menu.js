@@ -102,7 +102,8 @@ const LogoComp = () => {
 
 const useMenuStyle = makeStyles((theme) => ({
   root: {
-    backgroundImage: "url('/static/background.jpg')",
+    backgroundImage:
+      "url('https://the-tea-club.s3.eu-west-3.amazonaws.com/background.jpg')",
     backgroundSize: "cover",
     borderBottom: "2px solid #98C163",
     [theme.breakpoints.down("md")]: { marginTop: "50px" },

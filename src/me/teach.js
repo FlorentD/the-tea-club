@@ -4,7 +4,11 @@ import MeCard from "../components/MeCard";
 
 const Teach = () => {
   return (
-    <MeCard src="/static/bike_square.jpg" alt="bike" direction="right">
+    <MeCard
+      src="https://the-tea-club.s3.eu-west-3.amazonaws.com/bike_square.jpg"
+      alt="bike"
+      direction="right"
+    >
       À mon retour en France, j’ai poursuivi mes études pour devenir professeur
       des écoles et comme j’avais désormais compris l’importance de pratiquer
       l’anglais régulièrement, j’ai continué à me former et à{" "}

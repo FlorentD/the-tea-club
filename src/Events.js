@@ -56,7 +56,7 @@ const Events = ({ width }) => {
           </Box>
           <Box mt={{ xs: 1, md: 1 }} mb={{ xs: 2, md: 0 }}>
             <Image
-              src="/static/happy_nature_2.jpg"
+              src="https://the-tea-club.s3.eu-west-3.amazonaws.com/happy_nature_2.jpg"
               alt="image de présentation des matinées happy nature"
               className={style.image}
             />
@@ -133,7 +133,7 @@ const Events = ({ width }) => {
           </Box>
           <Box mt={{ xs: 1, md: 1 }} mb={{ xs: 2, md: 0 }}>
             <Image
-              src="/static/english-college.jpg"
+              src="https://the-tea-club.s3.eu-west-3.amazonaws.com/english-college.jpg"
               alt=""
               className={style.image}
             />

@@ -591,7 +591,7 @@ const Ateliers = ({ width }) => {
           <Grid item xs={12} md={6}>
             <Box mt={4} mb={2}>
               <Image
-                src="/static/atelier_2.jpg"
+                src="https://the-tea-club.s3.eu-west-3.amazonaws.com/atelier_2.jpg"
                 alt=""
                 style={{ objectFit: "cover", height: 300 }}
               />
@@ -600,7 +600,7 @@ const Ateliers = ({ width }) => {
           <Grid item xs={12} md={6}>
             <Box mt={4} mb={2}>
               <Image
-                src="/static/atelier_1.jpg"
+                src="https://the-tea-club.s3.eu-west-3.amazonaws.com/atelier_1.jpg"
                 alt=""
                 style={{ objectFit: "cover", height: 300 }}
               />
