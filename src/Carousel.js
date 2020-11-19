@@ -53,19 +53,19 @@ const Carousel = () => {
         ]}
         slides={[
           <img
-            src="/carousel/stage_3.jpg"
+            src="https://the-tea-club.s3.eu-west-3.amazonaws.com/stage_3.jpg"
             alt="coupon pour un stage de 3 jours, valable un an"
           />,
           <img
-            src="/carousel/stage_5.jpg"
+            src="https://the-tea-club.s3.eu-west-3.amazonaws.com/stage_5.jpg"
             alt="coupon pour un stage de 5 jours, valable un an"
           />,
           <img
-            src="/carousel/at_home.jpg"
+            src="https://the-tea-club.s3.eu-west-3.amazonaws.com/at_home.jpg"
             alt="coupon pour un cours à la maison, valable un an"
           />,
           <img
-            src="/carousel/online.jpg"
+            src="https://the-tea-club.s3.eu-west-3.amazonaws.com/online.jpg"
             alt="coupon pour un cours en ligne, valable un an"
           />,
         ]}
