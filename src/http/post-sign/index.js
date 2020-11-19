@@ -1,16 +1,13 @@
 let arc = require("@architect/functions");
-let data = require("@begin/data");
 let mailjet = require("node-mailjet").connect(
   process.env.MJ_APIKEY_PUBLIC,
   process.env.MJ_APIKEY_PRIVATE
 );
-let table = "sign";
 
 let parseBody = arc.http.helpers.bodyParser;
 
 exports.handler = async function http(request) {
   let body = parseBody(request);
-  await data.set({ table, message: { ...body, createdAt: Date.now() } });
   await mailjet.post("send", { version: "v3.1" }).request({
     Messages: [
       {
