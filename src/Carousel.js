@@ -197,7 +197,7 @@ const Carousel = () => {
             Description={() => {
               return (
                 <DialogContentText className={styles.description}>
-                  Durant trois matinées ou après-midis,sur le thème du moment,
+                  Durant trois matinées ou après-midis, sur le thème du moment,
                   votre enfant pourra jouer, découvrir la nature, chanter et
                   créer tout en anglais. Au Pellerin, durant les vacances
                   scolaires, 6 enfants maximum par groupe.
