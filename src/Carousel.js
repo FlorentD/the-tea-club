@@ -366,7 +366,7 @@ const Carousel = () => {
         </SwiperSlide>
         <SwiperSlide>
           <CarouselDialog
-            src="https://the-tea-club.s3.eu-west-3.amazonaws.com/gift_teens.jpg"
+            src="https://the-tea-club.s3.eu-west-3.amazonaws.com/gift_story.jpg"
             alt="coupon pour le soutien d'un collégien"
             title="Soutien collège on line / at home : (11-15 ans)"
             Description={() => {
@@ -388,7 +388,6 @@ const Carousel = () => {
                       capacités.
                     </li>
                   </ul>
-                  !
                 </DialogContentText>
               );
             }}
@@ -418,7 +417,7 @@ const Carousel = () => {
         </SwiperSlide>
         <SwiperSlide>
           <CarouselDialog
-            src="https://the-tea-club.s3.eu-west-3.amazonaws.com/gift_story.jpg"
+            src="https://the-tea-club.s3.eu-west-3.amazonaws.com/gift_teens.jpg"
             alt="coupon pour la lecture d'une histoire et des jeux amusants en anglais"
             title="Story time and funny games : (sur zoom ou à votre domicile ) de 3 à 8 ans"
             Description={() => {
