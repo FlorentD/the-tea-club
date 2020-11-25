@@ -34,6 +34,12 @@ const useStyles = makeStyles((theme) => ({
       height: "600px",
     },
   },
+  description: {
+    color: "#3D994C",
+  },
+  details: {
+    color: "#FF7272",
+  },
 }));
 
 SwiperCore.use([Navigation, Pagination, Keyboard, A11y]);
@@ -190,7 +196,7 @@ const Carousel = () => {
             title="Stage 3 jours : ( de  4 à 11 ans)"
             Description={() => {
               return (
-                <DialogContentText>
+                <DialogContentText className={styles.description}>
                   Durant trois matinées ou après-midis,sur le thème du moment,
                   votre enfant pourra jouer, découvrir la nature, chanter et
                   créer tout en anglais. Au Pellerin, durant les vacances
@@ -204,15 +210,15 @@ const Carousel = () => {
                   <strong>
                     Inscription pour le stage 3 demi-journées (75€).
                   </strong>
-                  <div>
+                  <div className={styles.details}>
                     Merci d'indiquer le prénom, l’âge, le nombre d'enfants et
                     les dates sur lesquelles vous souhaitez les inscrire dans la
                     partie "remarques".
                   </div>
-                  <div>
+                  <Box mt={2}>
                     Je vous recontacterai rapidement après l'envoi du formulaire
                     pour faire connaissance et valider votre inscription !
-                  </div>
+                  </Box>
                 </DialogContentText>
               );
             }}
@@ -225,7 +231,7 @@ const Carousel = () => {
             title="Stage 5 jours : ( de 4 à 11 ans )"
             Description={() => {
               return (
-                <DialogContentText>
+                <DialogContentText className={styles.description}>
                   Durant cinq matinées ou après-midis,sur le thème du moment,
                   votre enfant pourra jouer, découvrir la nature, chanter et
                   créer tout en anglais. Au Pellerin, durant les vacances
@@ -239,15 +245,15 @@ const Carousel = () => {
                   <strong>
                     Inscription pour le stage 5 demi-journées (150€).
                   </strong>
-                  <div>
+                  <div className={styles.details}>
                     Merci d'indiquer le prénom, l’âge, le nombre d'enfants et
                     les dates sur lesquelles vous souhaitez les inscrire dans la
                     partie "remarques".
                   </div>
-                  <div>
+                  <Box mt={2}>
                     Je vous recontacterai rapidement après l'envoi du formulaire
                     pour faire connaissance et valider votre inscription !
-                  </div>
+                  </Box>
                 </DialogContentText>
               );
             }}
@@ -260,7 +266,7 @@ const Carousel = () => {
             title="Atelier “at home” : (de 2 à 11 ans)"
             Description={() => {
               return (
-                <DialogContentText>
+                <DialogContentText className={styles.description}>
                   Offrez à votre enfant un moment privilégié à votre domicile,
                   un tête à tête en anglais pour créer une activité manuelle sur
                   le thème du moment, chanter en anglais, et échanger tout
@@ -272,15 +278,15 @@ const Carousel = () => {
               return (
                 <DialogContentText>
                   <strong>Inscription pour un atelier “at home”</strong>
-                  <div>
+                  <div className={styles.details}>
                     Merci d'indiquer le prénom, l'âge et les dates et horaires
                     sur lesquels vous souhaitez inscrire votre enfant.
                   </div>
-                  <div>
+                  <Box mt={2}>
                     Je vous recontacterai rapidement après l'envoi du formulaire
                     pour faire connaissance et vous donner les détails de
                     l’atelier.
-                  </div>
+                  </Box>
                 </DialogContentText>
               );
             }}
@@ -300,7 +306,7 @@ const Carousel = () => {
             title="Atelier “craft online” : (de 5 à 11 ans)"
             Description={() => {
               return (
-                <DialogContentText>
+                <DialogContentText className={styles.description}>
                   Atelier interactif (avec le logiciel Zoom)
                   <br />
                   1h d’atelier d'arts plastiques, jeux et chansons en anglais
@@ -331,16 +337,16 @@ const Carousel = () => {
               return (
                 <DialogContentText>
                   <strong>Inscription pour un atelier Craft on line</strong>
-                  <div>
+                  <div className={styles.details}>
                     Merci d'indiquer le(s) prénom(s), l'(les)âge(s), le nombre
                     d'enfants et la date/horaire sur lesquels vous souhaitez les
                     inscrire.
                   </div>
-                  <div>
+                  <Box mt={2}>
                     Je vous recontacterai rapidement après l'envoi du formulaire
                     pour faire connaissance et vous donner les détails de
                     l’atelier.
-                  </div>
+                  </Box>
                 </DialogContentText>
               );
             }}
@@ -365,7 +371,7 @@ const Carousel = () => {
             title="Soutien collège on line / at home : (11-15 ans)"
             Description={() => {
               return (
-                <DialogContentText>
+                <DialogContentText className={styles.description}>
                   Pour les collégiens qui souhaitent progresser en anglais
                   <ul>
                     <li>
@@ -390,7 +396,7 @@ const Carousel = () => {
               return (
                 <DialogContentText>
                   <strong>Inscription pour un cours de soutien collège.</strong>
-                  <div>
+                  <div className={styles.details}>
                     Merci d'indiquer le prénom, l’âge de votre enfant, ses
                     disponibilités et le cours souhaité, je vous recontacterai
                     rapidement !
@@ -417,7 +423,7 @@ const Carousel = () => {
             title="Story time and funny games : (sur zoom ou à votre domicile ) de 3 à 8 ans"
             Description={() => {
               return (
-                <DialogContentText>
+                <DialogContentText className={styles.description}>
                   Une douce session autour d’un conte de Noël avec de petits
                   jeux pour rebondir sur le vocabulaire découvert lors de la
                   lecture. Une séance de 45 minutes à votre domicile ou sur
@@ -431,15 +437,15 @@ const Carousel = () => {
                   <strong>
                     Inscription pour un atelier Story time and funny games :
                   </strong>
-                  <div>
+                  <div className={styles.details}>
                     Merci d'indiquer le prénom, l'âge et les dates et horaires
                     sur lesquels vous souhaitez inscrire votre enfant.
                   </div>
-                  <div>
+                  <Box mt={2}>
                     Je vous recontacterai rapidement après l'envoi du formulaire
                     pour faire connaissance et vous donner les détails de
                     l’atelier.
-                  </div>
+                  </Box>
                 </DialogContentText>
               );
             }}
