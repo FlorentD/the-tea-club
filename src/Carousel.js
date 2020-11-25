@@ -67,7 +67,12 @@ const CarouselDialog = ({
         <Grid container>
           <Grid item xs={12} md={7}>
             {messageSent && (
-              <Box display="flex" flexDirection="column" alignItems="center">
+              <Box
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+                m={2}
+              >
                 <ThankYou width={240} />
                 <Typography>
                   Votre inscription a bien été envoyée, je vous recontacterai
@@ -347,6 +352,106 @@ const Carousel = () => {
                     <li>pour 2 enfants : 10 euros par enfant</li>
                     <li>pour 3 enfants : 8 euros par enfants</li>
                     <li>pour 4 enfants : 6 euros par enfant</li>
+                  </ul>
+                </DialogContentText>
+              );
+            }}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CarouselDialog
+            src="https://the-tea-club.s3.eu-west-3.amazonaws.com/gift_teens.jpg"
+            alt="coupon pour le soutien d'un collégien"
+            title="Soutien collège on line / at home : (11-15 ans)"
+            Description={() => {
+              return (
+                <DialogContentText>
+                  Pour les collégiens qui souhaitent progresser en anglais
+                  <ul>
+                    <li>
+                      en reprenant les bonnes bases avec des supports adaptés et
+                      ludiques
+                    </li>
+                    <li>
+                      pour se sentir plus à l’aise à l’oral comme à l’écrit,
+                    </li>
+                    <li>
+                      peu importe le niveau, grâce aux images, mimes et codes
+                      définis ensemble, il est possible de s’exprimer en anglais
+                      en gagnant chaque fois un peu plus confiance en ses
+                      capacités.
+                    </li>
+                  </ul>
+                  !
+                </DialogContentText>
+              );
+            }}
+            Details={() => {
+              return (
+                <DialogContentText>
+                  <strong>Inscription pour un cours de soutien collège.</strong>
+                  <div>
+                    Merci d'indiquer le prénom, l’âge de votre enfant, ses
+                    disponibilités et le cours souhaité, je vous recontacterai
+                    rapidement !
+                  </div>
+                </DialogContentText>
+              );
+            }}
+            Price={() => {
+              return (
+                <DialogContentText>
+                  <ul>
+                    <li>25 € /h cours individuel à domicile</li>
+                    <li>20 € /h cours on line (sur zoom)</li>
+                  </ul>
+                </DialogContentText>
+              );
+            }}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CarouselDialog
+            src="https://the-tea-club.s3.eu-west-3.amazonaws.com/gift_story.jpg"
+            alt="coupon pour la lecture d'une histoire et des jeux amusants en anglais"
+            title="Story time and funny games : (sur zoom ou à votre domicile ) de 3 à 8 ans"
+            Description={() => {
+              return (
+                <DialogContentText>
+                  Une douce session autour d’un conte de Noël avec de petits
+                  jeux pour rebondir sur le vocabulaire découvert lors de la
+                  lecture. Une séance de 45 minutes à votre domicile ou sur
+                  zoom.
+                </DialogContentText>
+              );
+            }}
+            Details={() => {
+              return (
+                <DialogContentText>
+                  <strong>
+                    Inscription pour un atelier Story time and funny games :
+                  </strong>
+                  <div>
+                    Merci d'indiquer le prénom, l'âge et les dates et horaires
+                    sur lesquels vous souhaitez inscrire votre enfant.
+                  </div>
+                  <div>
+                    Je vous recontacterai rapidement après l'envoi du formulaire
+                    pour faire connaissance et vous donner les détails de
+                    l’atelier.
+                  </div>
+                </DialogContentText>
+              );
+            }}
+            Price={() => {
+              return (
+                <DialogContentText>
+                  <ul>
+                    <li>tarif atelier 1h : 20 euros en direct</li>
+                    <li>
+                      sur zoom, tarif à définir avec plusieurs participants
+                      possibles
+                    </li>
                   </ul>
                 </DialogContentText>
               );
