@@ -137,7 +137,7 @@ const CarouselDialog = ({
                 }
               }}
             >
-              {({ values }) => {
+              {() => {
                 return (
                   <>
                     <Text name="firstName" placeholder="Prénom" />
@@ -179,6 +179,9 @@ const Carousel = () => {
   const styles = useStyles();
   return (
     <div className={styles.container}>
+      <Box m={2} align="center" color="#3D994C">
+        <Typography>Cliquez sur l'image pour vous inscrire !</Typography>
+      </Box>
       <Swiper
         spaceBetween={100}
         slidesPerView={2}
