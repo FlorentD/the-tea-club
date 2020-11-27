@@ -180,7 +180,7 @@ const Carousel = () => {
   return (
     <div className={styles.container}>
       <Box m={2} align="center" color="#3D994C">
-        <Typography>Cliquez sur l'image pour vous inscrire !</Typography>
+        <Typography>Cliquez sur l'image pour en savoir plus !</Typography>
       </Box>
       <Swiper
         spaceBetween={100}
