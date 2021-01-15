@@ -32,7 +32,13 @@ const useStyle = makeStyles((theme) => ({
   },
 }));
 
-const SignDialog = ({ children, type, ButtonElement, complete = false }) => {
+const SignDialog = ({
+  children,
+  type,
+  ButtonElement,
+  complete = false,
+  cycle = "",
+}) => {
   const style = useStyle();
   const [open, setOpen] = useState(false);
   const [messageSent, sendMessage] = useState(false);
@@ -91,7 +97,7 @@ const SignDialog = ({ children, type, ButtonElement, complete = false }) => {
           {() => {
             return (
               <>
-                <DialogTitle>Formulaire d'inscription</DialogTitle>
+                <DialogTitle>Formulaire d'inscription {cycle}</DialogTitle>
                 <DialogContent>
                   {messageSent && (
                     <Box

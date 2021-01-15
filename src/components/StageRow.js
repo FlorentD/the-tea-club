@@ -54,6 +54,7 @@ const StageRow = ({
   dates,
   FirstButtonLabel,
   SecondButtonLabel,
+  cycle,
 }) => {
   const style = useStyles();
   return (
@@ -66,8 +67,9 @@ const StageRow = ({
         <Typography className={style.dates}>{dates}</Typography>
         {SecondButtonLabel ? (
           <Grid container spacing={1}>
-            <Grid item xd={12} md={6}>
+            <Grid item xs={12} md={6}>
               <SignDialog
+                cycle={cycle}
                 type={`${title} (3)`}
                 ButtonElement={FirstButtonLabel}
               >
@@ -75,8 +77,9 @@ const StageRow = ({
                 <ContactMessage />
               </SignDialog>
             </Grid>
-            <Grid item xd={12} md={6}>
+            <Grid item xs={12} md={6}>
               <SignDialog
+                cycle={cycle}
                 type={`${title} (5)`}
                 ButtonElement={SecondButtonLabel}
               >
@@ -86,7 +89,11 @@ const StageRow = ({
             </Grid>
           </Grid>
         ) : (
-          <SignDialog type={title} ButtonElement={FirstButtonLabel}>
+          <SignDialog
+            type={title}
+            ButtonElement={FirstButtonLabel}
+            cycle={cycle}
+          >
             Inscription pour le stage {title} pour <FirstButtonLabel />.
             <ContactMessage />
           </SignDialog>
@@ -100,6 +107,7 @@ StageRow.propTypes = {
   src: PropTypes.string,
   title: PropTypes.string.isRequired,
   dates: PropTypes.string.isRequired,
+  cycle: PropTypes.string,
   FirstButtonLabel: PropTypes.func,
   SecondButtonLabel: PropTypes.func,
 };

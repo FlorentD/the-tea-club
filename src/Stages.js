@@ -16,6 +16,7 @@ import Forest1 from "./svg/Forest1";
 import Trees from "./svg/Trees";
 import SignDialog from "./SignDialog";
 import StageRow from "./components/StageRow";
+import Winter2021 from "./stages/Winter2021";
 
 const useCardStyle = makeStyles({
   root: {
@@ -106,6 +107,7 @@ const Stages = () => {
   const style = useStyle();
   return (
     <Container style={{ marginTop: "40px" }}>
+      <Winter2021 />
       <Box mt={2} mb={5}>
         <Typography variant="h3" color="primary">
           Evénements passés :
