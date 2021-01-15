@@ -16,7 +16,7 @@ const Winter2021 = () => {
               s'amuser en anglais.
             </Typography>
             <Typography>
-              Ca se passe durant les vacances de février au Pellerin :
+              Ça se passe durant les vacances de février au Pellerin :
             </Typography>
           </Grid>
         </Grid>
