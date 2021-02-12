@@ -26,7 +26,7 @@ const Winter2021 = () => {
           cycle="Vacances d'hiver 2021"
           src="https://the-tea-club.s3.eu-west-3.amazonaws.com/winter_2021_teens.jpg"
           title="Teens Club, du 24 au 26 février"
-          dates="Du lundi au vendredi, 10h à 12h pour les collégiens"
+          dates="Du mercredi au vendredi, 10h à 12h pour les collégiens"
           FirstButtonLabel={() => <span>3 demi-journées (90€)</span>}
         />
       </Grid>
