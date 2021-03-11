@@ -5,6 +5,7 @@ import {
   Box,
   makeStyles,
   useMediaQuery,
+  Grid,
 } from "@material-ui/core";
 import Titeuf from "./svg/Titeuf";
 import Fille from "./svg/Fille";
@@ -15,6 +16,9 @@ import BackgroundBottom from "./svg/BackgroundBottom";
 import BigBen from "./svg/BigBen";
 import FillePinceau from "./svg/FillePinceau";
 import Spring2021 from "./stages/Spring2021";
+import Springtime from "./ateliers/Springtime";
+import CreativeEaster from "./ateliers/CreativeEaster";
+import SpringButterflies from "./ateliers/SpringButterflies";
 
 const useTitleStyle = makeStyles((theme) => ({
   wrapper: {
@@ -66,6 +70,11 @@ const Landing = () => {
         <BackgroundBottom style={{ position: "absolute", bottom: "-1px" }} />
       </div>
       <Container style={{ backgroundColor: "white" }}>
+        <Grid container spacing={3}>
+          <Springtime />
+          <CreativeEaster />
+          <SpringButterflies />
+        </Grid>
         <Spring2021 />
         <LandingCard
           icon={<Cheveux width={mobile ? 100 : 140} />}
