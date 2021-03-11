@@ -7,7 +7,7 @@ const Springtime = () => {
   return (
     <Card
       title="It’s Springtime!"
-      image="https://the-tea-club.s3.eu-west-3.amazonaws.com/sprintime.jpg"
+      image="https://the-tea-club.s3.eu-west-3.amazonaws.com/springtime.jpg"
     >
       <Box mt={2}>
         <Typography paragraph>

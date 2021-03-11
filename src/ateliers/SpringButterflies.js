@@ -7,7 +7,7 @@ const SpringButterflies = () => {
   return (
     <Card
       title="Spring Butterflies"
-      image="https://the-tea-club.s3.eu-west-3.amazonaws.com/marmaille.jpg"
+      image="https://the-tea-club.s3.eu-west-3.amazonaws.com/butterflies.jpg"
     >
       <Box mt={2}>
         <Typography paragraph>
