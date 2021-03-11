@@ -17,6 +17,7 @@ import Trees from "./svg/Trees";
 import SignDialog from "./SignDialog";
 import StageRow from "./components/StageRow";
 import Winter2021 from "./stages/Winter2021";
+import Spring2021 from "./stages/Spring2021";
 
 const useCardStyle = makeStyles({
   root: {
@@ -107,12 +108,13 @@ const Stages = () => {
   const style = useStyle();
   return (
     <Container style={{ marginTop: "40px" }}>
-      <Winter2021 />
+      <Spring2021 />
       <Box mt={2} mb={5}>
         <Typography variant="h3" color="primary">
           Evénements passés :
         </Typography>
       </Box>
+      <Winter2021 />
       <Box mt={2} mb={5}>
         <Typography variant="h3" color="secondary" align="center">
           Stages Autumn du 19 au 23 octobre 2020
