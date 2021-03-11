@@ -6,7 +6,7 @@ import Card from "../components/Card";
 const CreativeEaster = () => {
   return (
     <Card
-      title="Rabbits, chicks and chocolate eggs are out!"
+      title="Easter"
       image="https://the-tea-club.s3.eu-west-3.amazonaws.com/easter.jpg"
     >
       <Box mt={2}>

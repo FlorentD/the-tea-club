@@ -15,7 +15,10 @@ const Spring2021 = () => {
     <>
       <Box mt={2} mb={5}>
         <Typography variant="h3" color="secondary" align="center">
-          26 au 30 avril, Explore the Jungle!
+          Stage vacances : Explore the Jungle!
+        </Typography>
+        <Typography variant="h4" color="secondary" align="center">
+          Du 26 au 30 avril
         </Typography>
         <Grid container justify="center">
           <Grid item xs={12} md={10}>
