@@ -11,9 +11,9 @@ const Springtime = () => {
     >
       <Box mt={2}>
         <Typography paragraph>
-          Quelle belle saison qui arrive, vous souhaitez faire découvrir ou
-          pratiquer l’anglais à votre enfant lors d’une activité créative et
-          dans la bonne humeur c’est par ici -->
+          Le printemps arrive, vous souhaitez faire découvrir ou pratiquer
+          l’anglais à votre enfant lors d’une activité créative et dans la bonne
+          humeur c’est par ici -->
         </Typography>
         <Typography paragraph>
           J’accueillerai avec joie vos enfants au jardin pour réaliser des
@@ -30,7 +30,7 @@ const Springtime = () => {
           </li>
           <li>
             <Typography>
-              Atelier 7-10 ans de 11h à 12h Créé ta carte pop up du printemps.
+              Atelier 7-10 ans de 11h à 12h Décore ton coquetier.
             </Typography>
           </li>
         </ul>
