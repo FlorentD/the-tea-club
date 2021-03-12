@@ -28,8 +28,11 @@ const SpringButterflies = () => {
             <Typography>16h-17h : 3 - 6 ans</Typography>
           </li>
         </ul>
+        <Typography>
+          Tarif 1h30 : <strong>15€ par duo enfant-accompagnant</strong>
+        </Typography>
         <Typography paragraph>
-          Tarif : <strong>12€ par duo enfant-accompagnant</strong>
+          Tarif 1h : <strong>12€ par duo enfant-accompagnant</strong>
         </Typography>
         <Typography paragraph>
           Lieu : <strong>La Tartouzerie 44680 Saint Hilaire de Chaléons</strong>
