@@ -24,7 +24,7 @@ const CreativeEaster = () => {
           </li>
           <li>
             <Typography>
-              Atelier 7-10 ans de 11h à 12h / Crée ta carte pop up du printemps.
+              Atelier 7-10 ans de 11h à 12h / Décore ton coquetier.
             </Typography>
           </li>
         </ul>

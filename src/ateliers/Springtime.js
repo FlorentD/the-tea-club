@@ -24,13 +24,13 @@ const Springtime = () => {
         <ul>
           <li>
             <Typography>
-              Atelier 3-6 ans de 10h à 11h45 Jardin créatif et manuel pour les
+              Atelier 3-6 ans de 10h à 11h45 / Jardin créatif et manuel pour les
               petites mains.
             </Typography>
           </li>
           <li>
             <Typography>
-              Atelier 7-10 ans de 11h à 12h Décore ton coquetier.
+              Atelier 7-10 ans de 11h à 12h / Crée ta carte pop up du printemps.
             </Typography>
           </li>
         </ul>
